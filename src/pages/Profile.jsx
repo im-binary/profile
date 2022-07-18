@@ -1,9 +1,16 @@
 import React from "react";
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
+import { mainSection } from "../style/theme";
 
 export default function Profile() {
   return (
-    <section>
+    <section css={profileContainer}>
       <h2>안녕하세요</h2>
     </section>
   );
 }
+
+const profileContainer = css`
+  ${mainSection}
+`;

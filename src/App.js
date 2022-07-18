@@ -1,11 +1,18 @@
-import Nav from "./pages/Nav";
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
+import Info from "./components/Info";
+import Nav from "./components/Nav";
 
-function App() {
+export default function App() {
   return (
-    <>
+    <section css={appContainer}>
+      <Info />
       <Nav />
-    </>
+    </section>
   );
 }
 
-export default App;
+const appContainer = css`
+  width: 300px;
+  margin-right: 10px;
+`;
