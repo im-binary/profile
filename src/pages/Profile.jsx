@@ -1,7 +1,7 @@
 import React from "react";
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { mainSection } from "../style/theme";
+import { mainSectionContainer } from "../style/main";
 
 export default function Profile() {
   return (
@@ -12,5 +12,5 @@ export default function Profile() {
 }
 
 const profileContainer = css`
-  ${mainSection}
+  ${mainSectionContainer}
 `;
