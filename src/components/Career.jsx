@@ -33,11 +33,11 @@ const careerContainer = css`
   }
 
   ul {
+    padding: 20px;
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 5px 10px;
     ${contentFontSize16}
-    padding: 20px;
 
     li {
       padding: 2px 4px;
@@ -47,6 +47,7 @@ const careerContainer = css`
     li:nth-of-type(2) {
       border-radius: 3px;
       background-color: ${mainColor};
+      font-weight: bold;
     }
 
     li:nth-of-type(4n + 1):not(li:first-of-type),
