@@ -1,18 +1,5 @@
-/** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
-import Info from "./components/Info";
-import Nav from "./components/Nav";
+import Header from "./components/Header";
 
 export default function App() {
-  return (
-    <section css={appContainer}>
-      <Info />
-      <Nav />
-    </section>
-  );
+  return <Header />;
 }
-
-const appContainer = css`
-  width: 300px;
-  margin-right: 10px;
-`;
