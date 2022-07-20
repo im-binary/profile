@@ -3,6 +3,7 @@ import React from "react";
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { URLs } from "../constant";
+import { contentFontSize16, garyNomalBorderBottom, grayBorder, contentFontSize40 } from "../style/main";
 
 export default function Info() {
   return (
@@ -49,11 +50,11 @@ const infoContainer = css`
 
   h1 {
     margin: 40px 0;
-    font-size: 4rem;
+    ${contentFontSize40}
   }
 
   p {
-    border: 1px solid rgba(55, 53, 47, 0.16);
+    ${grayBorder}
     border-radius: 20px;
     padding: 20px;
   }
@@ -63,7 +64,7 @@ const infoContainer = css`
     justify-content: space-between;
     gap: 30px;
     line-height: 1.5;
-    font-size: 1.6rem;
+    ${contentFontSize16}
   }
 
   .description {
@@ -88,9 +89,7 @@ const infoContainer = css`
 
       a span {
         margin-right: 10px;
-        vertical-align: middle;
-        /* text-decoration-line: underline; */
-        border-bottom: 0.1rem solid rgba(55, 53, 47, 0.16);
+        ${garyNomalBorderBottom}
       }
     }
   }
