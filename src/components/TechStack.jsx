@@ -14,13 +14,16 @@ export default function TechStack() {
         <li>JavaScript</li>
         <li>React</li>
         <li>React Redux</li>
-        <li>Emotion, styled-components</li>
+        <li>Emotion</li>
+        <li>styled-components</li>
       </ul>
     </article>
   );
 }
 
 const techStackContainer = css`
+  margin: 30px 0;
+
   h2 {
     ${contentFontSize30}
     ${garyTitleBorderBottom};
@@ -30,11 +33,13 @@ const techStackContainer = css`
     padding: 20px;
     display: flex;
     gap: 10px;
+    ${contentFontSize16};
+    align-items: center;
+    flex-wrap: wrap;
 
     li {
       padding: 3px 6px;
-      ${contentFontSize16}
-      background-color:${mainColor};
+      background-color: ${mainColor};
       color: ${boxTextColor};
       border-radius: 3px;
     }
