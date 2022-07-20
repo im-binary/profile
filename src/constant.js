@@ -6,4 +6,5 @@ export const URLs = {
   pongdangWorld: "https://github.com/pongdang/pongdang.world",
   pongdangDiary: "https://github.com/pongdang/pongdang-diary",
   searchJJAL: "https://github.com/pongdang/cat-project",
+  functionalCodingBook: "https://velog.io/@pongdang/series/쏙쏙-들어오는-함수형-코딩",
 };
