@@ -2,7 +2,7 @@ import React from "react";
 
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { garyTitleBorderBottom, contentFontSize, garyNomalBorderBottom } from "../style/main";
+import { garyTitleBorderBottom, contentFontSize16, contentFontSize30, mainColor, subColor } from "../style/main";
 
 export default function Career() {
   return (
@@ -11,6 +11,12 @@ export default function Career() {
       <ul>
         <li>회사명</li>
         <li>근무기간</li>
+        <li>없음</li>
+        <li>저의 경력이,, 되어주세요 🌹</li>
+        <li>없음</li>
+        <li>저의 경력이,, 되어주세요 🌹</li>
+        <li>없음</li>
+        <li>저의 경력이,, 되어주세요 🌹</li>
         <li>없음</li>
         <li>저의 경력이,, 되어주세요 🌹</li>
       </ul>
@@ -23,22 +29,29 @@ const careerContainer = css`
 
   h2 {
     ${garyTitleBorderBottom};
+    ${contentFontSize30}
   }
 
   ul {
     display: grid;
     grid-template-columns: 4fr 1fr;
-    gap: 15px;
-    ${contentFontSize}
-    padding-top: 20px;
+    gap: 5px 10px;
+    ${contentFontSize16}
+    padding: 20px;
+
+    li {
+      padding: 2px 4px;
+    }
 
     li:first-of-type,
     li:nth-of-type(2) {
-      ${garyNomalBorderBottom}
+      border-radius: 3px;
+      background-color: ${mainColor};
     }
 
-    li:nth-of-type(2n + 1) {
-      margin: 0 0 0 20px;
+    li:nth-of-type(4n + 1):not(li:first-of-type),
+    li:nth-of-type(4n + 2):not(li:nth-of-type(2)) {
+      background-color: ${subColor};
     }
   }
 `;
