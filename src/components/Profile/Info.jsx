@@ -2,8 +2,8 @@ import React from "react";
 
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { URLs } from "../constant";
-import { contentFontSize16, garyNomalBorderBottom, grayBorder, contentFontSize40 } from "../style/main";
+import { URLs } from "../../constant";
+import { contentFontSize16, garyNomalBorderBottom, grayBorder, contentFontSize40 } from "../../style/main";
 
 export default function Info() {
   return (

@@ -2,7 +2,7 @@ import React from "react";
 
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { garyTitleBorderBottom, contentFontSize16, contentFontSize30, mainColor, subColor } from "../style/main";
+import { garyTitleBorderBottom, contentFontSize16, contentFontSize30, mainColor, subColor } from "../../style/main";
 
 export default function Career() {
   return (

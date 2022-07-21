@@ -2,7 +2,7 @@ import React from "react";
 
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { contentFontSize16, contentFontSize30, garyTitleBorderBottom, mainColor, subColor } from "../style/main";
+import { contentFontSize16, contentFontSize30, garyTitleBorderBottom, mainColor, subColor } from "../../style/main";
 
 export default function Education() {
   return (

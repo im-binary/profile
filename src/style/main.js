@@ -2,7 +2,7 @@ import { css } from "@emotion/react";
 
 export const mainSectionContainer = css`
   border: 1px solid;
-  min-height: calc(100vh - 43px);
+  min-height: 100vh;
   max-width: 1200px;
   margin: 0 auto;
   padding: 100px 40px;

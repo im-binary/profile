@@ -2,8 +2,8 @@ import React from "react";
 
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { contentFontSize30, garyTitleBorderBottom, mainColor } from "../style/main";
-import { URLs } from "../constant";
+import { contentFontSize30, garyTitleBorderBottom, mainColor } from "../../style/main";
+import { URLs } from "../../constant";
 
 export default function BooksInfo() {
   return (
