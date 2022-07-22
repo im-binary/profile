@@ -79,7 +79,7 @@ const projectInfoContainer = css`
   div {
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
 
     section {
@@ -91,11 +91,12 @@ const projectInfoContainer = css`
       box-shadow: rgb(15 15 15 / 10%) 2px 4px 4px 0px, rgb(15 15 15 / 10%) 4px 4px 10px;
       transition: all 0.3s ease-in-out;
       transform: translateY(0);
+      opacity: 0.7;
 
       &:hover {
-        background-color: ${mainColor};
         transition: all 0.3s ease-in-out;
         transform: translateY(-5px);
+        opacity: 1;
       }
 
       img {
