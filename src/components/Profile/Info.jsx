@@ -3,7 +3,7 @@ import React from "react";
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { URLs } from "../../constant";
-import { contentFontSize16, garyNomalBorderBottom, grayBorder, contentFontSize40 } from "../../style/main";
+import { contentFontSize16, garyNomalBorderBottom, grayBorder, contentFontSize40, mainColor } from "../../style/main";
 
 export default function Info() {
   return (
@@ -86,6 +86,12 @@ const infoContainer = css`
 
     li {
       margin: 4px 0;
+
+      a {
+        &:hover {
+          background-color: ${mainColor};
+        }
+      }
 
       a span {
         margin-right: 10px;
