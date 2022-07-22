@@ -19,18 +19,21 @@ export default function Header() {
   );
 }
 const navContainer = css`
-  /* border: 1px solid; */
+  background-color: #fff;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 999;
 
   ul {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 100px;
+    justify-content: start;
     ${contentFontSize16};
+    border: 1px solid;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   li {
@@ -47,7 +50,6 @@ const navContainer = css`
   }
 
   a {
-    /* border: 1px solid; */
     display: inline-block;
     padding: 15px 30px;
   }
