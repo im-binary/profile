@@ -2,7 +2,7 @@ import React from "react";
 
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { contentFontSize30, garyTitleBorderBottom, mainColor } from "../../style/main";
+import { contentFontSize30, garyTitleBorderBottom } from "../../style/main";
 import { URLs } from "../../constant";
 
 export default function BooksInfo() {
@@ -11,12 +11,6 @@ export default function BooksInfo() {
       <h2>독서</h2>
       <div>
         <section onClick={() => window.open(URLs.functionalCodingBook, "_blank")}>
-          <img src='images/functional-coding.jpeg' alt='쏙쏙 들어오는 함수형 코딩' />
-        </section>
-        <section>
-          <img src='images/functional-coding.jpeg' alt='쏙쏙 들어오는 함수형 코딩' />
-        </section>
-        <section>
           <img src='images/functional-coding.jpeg' alt='쏙쏙 들어오는 함수형 코딩' />
         </section>
       </div>
@@ -35,7 +29,7 @@ const booksInfoContainer = css`
   div {
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
 
     section {
@@ -48,13 +42,18 @@ const booksInfoContainer = css`
       transform: translateY(0);
 
       &:hover {
-        background-color: ${mainColor};
         transition: all 0.3s ease-in-out;
         transform: translateY(-5px);
       }
+
       img {
         width: 100%;
         display: block;
+        opacity: 0.7;
+
+        &:hover {
+          opacity: 1;
+        }
       }
     }
   }
