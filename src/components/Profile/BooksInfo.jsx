@@ -10,8 +10,10 @@ export default function BooksInfo() {
     <article css={booksInfoContainer}>
       <h2>독서</h2>
       <div>
-        <section onClick={() => window.open(URLs.functionalCodingBook, "_blank")}>
-          <img src='images/functional-coding.jpeg' alt='쏙쏙 들어오는 함수형 코딩' />
+        <section>
+          <a href={URLs.functionalCodingBook} target='_blank' rel='noreferrer'>
+            <img src='images/functional-coding.jpeg' alt='쏙쏙 들어오는 함수형 코딩' />
+          </a>
         </section>
       </div>
     </article>
@@ -43,7 +45,7 @@ const booksInfoContainer = css`
 
       &:hover {
         transition: all 0.3s ease-in-out;
-        transform: translateY(-5px);
+        transform: translateY(-8px);
       }
 
       img {

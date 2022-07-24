@@ -77,7 +77,7 @@ const projectInfoContainer = css`
   }
 
   div {
-    padding: 20px;
+    margin: 20px 0;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
@@ -95,7 +95,7 @@ const projectInfoContainer = css`
 
       &:hover {
         transition: all 0.3s ease-in-out;
-        transform: translateY(-5px);
+        transform: translateY(-8px);
         opacity: 1;
       }
 
@@ -108,12 +108,17 @@ const projectInfoContainer = css`
         background-color: ${mainColor};
         display: inline-block;
       }
+
+      p {
+        margin: 0 20px;
+      }
     }
   }
 
   .tech-stack {
     display: flex;
     gap: 10px;
+    margin: 0 20px;
 
     li {
       padding: 3px 6px;
