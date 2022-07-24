@@ -1,21 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { contentFontSize16, contentFontSize30, garyTitleBorderBottom, mainColor, boxTextColor } from "../../style/main";
+import axios from "axios";
 
 export default function TechStack() {
+  const [techStackData, setTechStackData] = useState([]);
+
+  const techStackAPIurl = "/data/Profile/techStackData.json";
+
+  const getTechStackData = async () => {
+    await axios.get(techStackAPIurl).then((res) => {
+      const dataList = res.data.techStackData;
+      setTechStackData(dataList);
+    });
+  };
+
+  useEffect(() => {
+    getTechStackData();
+  }, []);
+
   return (
     <article css={techStackContainer}>
       <h2>기술 스택</h2>
       <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>React Redux</li>
-        <li>Emotion</li>
-        <li>styled-components</li>
+        {techStackData.map((item) => (
+          <React.Fragment key={`techStack-${item.id}`}>
+            <li>{item.teckStackName}</li>
+          </React.Fragment>
+        ))}
       </ul>
     </article>
   );
