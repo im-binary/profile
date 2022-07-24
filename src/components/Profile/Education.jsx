@@ -1,20 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { contentFontSize16, contentFontSize30, garyTitleBorderBottom, mainColor, subColor } from "../../style/main";
+import axios from "axios";
 
 export default function Education() {
+  const [educatioList, setEducationList] = useState([]);
+  const educationAPIurl = "/data/educationData.json";
+
+  const educationAPI = async () => {
+    await axios.get(educationAPIurl).then((res) => {
+      const dataList = res.data.educationData;
+      setEducationList(dataList);
+    });
+  };
+
+  useEffect(() => {
+    educationAPI();
+  }, []);
+
   return (
     <article css={educationContainer}>
       <h2>교육</h2>
       <ul>
-        <li>과정</li>
-        <li>기간</li>
-        <li>일팔공 REACT 기초반</li>
-        <li>2021.12.13 ~ 2022.03.04</li>
-        <li>CodeStates ing ...</li>
-        <li>2022.04.25 ~</li>
+        {educatioList.map((item) => (
+          <React.Fragment key={`education-${item.id}`}>
+            <li>{item.course}</li>
+            <li>{item.period}</li>
+          </React.Fragment>
+        ))}
       </ul>
     </article>
   );
