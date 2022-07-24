@@ -1,10 +1,17 @@
 {
   "educationData": [
     {
-      "course": "일팔공 REACT 기초반p",
+      "id": 1,
+      "course": "과정",
+      "period": "기간"
+    },
+    {
+      "id": 2,
+      "course": "일팔공 REACT 기초반",
       "period": "2021.12.13 ~ 2022.03.04"
     },
     {
+      "id": 3,
       "course": "CodeStates ing ...",
       "period": "2022.04.25 ~"
     }
