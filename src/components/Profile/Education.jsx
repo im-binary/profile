@@ -7,7 +7,7 @@ import axios from "axios";
 
 export default function Education() {
   const [educatioList, setEducationList] = useState([]);
-  const educationAPIurl = "/data/educationData.json";
+  const educationAPIurl = "/data/Profile/educationData.json";
 
   const educationAPI = async () => {
     await axios.get(educationAPIurl).then((res) => {
