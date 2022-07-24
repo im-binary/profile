@@ -1,0 +1,32 @@
+{
+  "techStackData": [
+    {
+      "id": 1,
+      "teckStackName": "HTML"
+    },
+    {
+      "id": 2,
+      "teckStackName": "CSS"
+    },
+    {
+      "id": 3,
+      "teckStackName": "JavaScript"
+    },
+    {
+      "id": 4,
+      "teckStackName": "React"
+    },
+    {
+      "id": 5,
+      "teckStackName": "React Redux"
+    },
+    {
+      "id": 6,
+      "teckStackName": "Emotion"
+    },
+    {
+      "id": 7,
+      "teckStackName": "styled-components"
+    }
+  ]
+}
