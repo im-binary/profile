@@ -1,0 +1,36 @@
+{
+  "projectInfoData": [
+    {
+      "id": "1",
+      "name": "🏠 Vanilla JS로 구현한 블로그",
+      "period": "2021.06.22 ~ 2021.09.02",
+      "teckStack": { "id": "1", "name": ["JavaScript"] },
+      "repositoryLink": "https://github.com/pongdang/pongdang.github.io",
+      "projectImage": "https://cdn.pixabay.com/photo/2016/01/22/16/59/tiger-1156205_1280.jpg"
+    },
+    {
+      "id": "2",
+      "name": "🏠 React로 구현한 블로그",
+      "period": "2022.01.28 ~ 2022.03.29",
+      "teckStack": { "id": "2", "name": ["React", "React Redux", "emotion"] },
+      "repositoryLink": "https://github.com/pongdang/pongdang.world",
+      "projectImage": "https://cdn.pixabay.com/photo/2016/01/22/16/59/tiger-1156205_1280.jpg"
+    },
+    {
+      "id": "3",
+      "name": "📓 다이어리",
+      "period": "2022.06.03 ~ 2022.07.09",
+      "teckStack": { "id": "3", "name": ["Next.js", "React", "styled-components"] },
+      "repositoryLink": "https://github.com/pongdang/pongdang-diary",
+      "projectImage": "https://cdn.pixabay.com/photo/2016/01/22/16/59/tiger-1156205_1280.jpg"
+    },
+    {
+      "id": "4",
+      "name": "📷 Search JJAL",
+      "period": "2022.07.18",
+      "teckStack": { "id": "4", "name": ["React", "styled-components"] },
+      "repositoryLink": "https://github.com/pongdang/cat-project",
+      "projectImage": "https://cdn.pixabay.com/photo/2016/01/22/16/59/tiger-1156205_1280.jpg"
+    }
+  ]
+}
