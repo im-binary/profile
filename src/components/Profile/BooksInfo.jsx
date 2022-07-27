@@ -1,20 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { contentFontSize30, garyTitleBorderBottom } from "../../style/main";
-import { URLs } from "../../constant";
+import axios from "axios";
 
 export default function BooksInfo() {
+  const [bookList, setBookList] = useState([]);
+  const bookAPIurl = "/data/Profile/bookInfoData.json";
+
+  const getBookInfoData = async () => {
+    await axios.get(bookAPIurl).then((res) => {
+      const dataList = res.data.bookInfoData;
+      setBookList(dataList);
+    });
+  };
+
+  useEffect(() => {
+    getBookInfoData();
+  }, []);
+
   return (
     <article css={booksInfoContainer}>
       <h2>독서</h2>
       <div>
-        <section>
-          <a href={URLs.functionalCodingBook} target='_blank' rel='noreferrer'>
-            <img src='images/functional-coding.jpeg' alt='쏙쏙 들어오는 함수형 코딩' />
-          </a>
-        </section>
+        {bookList.map((item) => (
+          <section key={`book-${item.id}`}>
+            <a href={item.bookLink} target='_blank' rel='noreferrer'>
+              <img src={item.bookImage} alt={item.bookName} />
+            </a>
+          </section>
+        ))}
       </div>
     </article>
   );
