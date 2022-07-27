@@ -24,5 +24,4 @@ export default function Profile() {
 
 const profileContainer = css`
   ${mainSectionContainer};
-  border: none;
 `;

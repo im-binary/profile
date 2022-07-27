@@ -31,7 +31,6 @@ const navContainer = css`
     align-items: center;
     justify-content: start;
     ${contentFontSize16};
-    border: 1px solid;
     max-width: 1200px;
     margin: 0 auto;
   }
