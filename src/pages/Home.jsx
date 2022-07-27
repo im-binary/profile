@@ -1,16 +1,14 @@
 import React from "react";
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { mainSectionContainer } from "../style/main";
+import MotionImage from "../components/home/MotionImage";
 
 export default function Home() {
   return (
     <section css={homeContainer}>
-      <h1>Home</h1>
+      <MotionImage />
     </section>
   );
 }
 
-const homeContainer = css`
-  ${mainSectionContainer}
-`;
+const homeContainer = css``;
