@@ -1,68 +1,46 @@
-import React from "react";
-import { URLs } from "../../constant";
+import React, { useEffect, useState } from "react";
 
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { garyTitleBorderBottom, contentFontSize16, contentFontSize30, mainColor, boxTextColor } from "../../style/main";
+import axios from "axios";
 
 export default function ProjectInfo() {
+  const [projectList, setProjectList] = useState([]);
+
+  const getProjecInfotData = async () => {
+    await axios.get("/data/Profile/projectInfoData.json").then((res) => {
+      const dataList = res.data.projectInfoData;
+      setProjectList(dataList);
+    });
+  };
+
+  useEffect(() => {
+    getProjecInfotData();
+  }, []);
+
   return (
     <article css={projectInfoContainer}>
       <h2>프로젝트</h2>
       <div>
-        <a href={URLs.pongdangToday} target='_blank' rel='noreferrer'>
-          <section>
-            <img src='https://cdn.pixabay.com/photo/2016/01/22/16/59/tiger-1156205_1280.jpg' alt='' />
-            <div>
-              <p>🏠 Vanilla JS로 구현한 블로그</p>
-              <p>2021.06.22 ~ 2021.09.02</p>
-              <ul className='tech-stack'>
-                <li>JavaScript</li>
-              </ul>
-            </div>
-          </section>
-        </a>
-        <a href={URLs.pongdangWorld} target='_blank' rel='noreferrer'>
-          <section>
-            <img src='https://cdn.pixabay.com/photo/2016/01/22/16/59/tiger-1156205_1280.jpg' alt='' />
-            <div>
-              <p>🏠 React로 구현한 블로그</p>
-              <p>2022.01.28 ~ 2022.03.29</p>
-              <ul className='tech-stack'>
-                <li>React</li>
-                <li>React Redux</li>
-                <li>emotion</li>
-              </ul>
-            </div>
-          </section>
-        </a>
-        <a href={URLs.pongdangDiary} target='_blank' rel='noreferrer'>
-          <section>
-            <img src='https://cdn.pixabay.com/photo/2016/01/22/16/59/tiger-1156205_1280.jpg' alt='' />
-            <div>
-              <p>📓 다이어리</p>
-              <p>2022.06.03 ~ 2022.07.09</p>
-              <ul className='tech-stack'>
-                <li>Next.js</li>
-                <li>React</li>
-                <li>styled-components</li>
-              </ul>
-            </div>
-          </section>
-        </a>
-        <a href={URLs.searchJJAL} target='_blank' rel='noreferrer'>
-          <section>
-            <img src='https://cdn.pixabay.com/photo/2016/01/22/16/59/tiger-1156205_1280.jpg' alt='' />
-            <div>
-              <p>📷 Search JJAL</p>
-              <p>2022.07.18</p>
-              <ul className='tech-stack'>
-                <li>React</li>
-                <li>styled-components</li>
-              </ul>
-            </div>
-          </section>
-        </a>
+        {projectList.map((item) => (
+          <React.Fragment key={`project-${item.id}`}>
+            <a href={item.repositoryLink} target='_blank' rel='noreferrer'>
+              <section>
+                <img src={item.projectImage} alt='' />
+                <div>
+                  <p>{item.name}</p>
+                  <p>{item.period}</p>
+                  <ul className='tech-stack'>
+                    {item.teckStack.name.map((x, index) => (
+                      <li key={`techStack-${index}`}>{x}</li>
+                    ))}
+                  </ul>
+                </div>
+              </section>
+            </a>
+          </React.Fragment>
+        ))}
       </div>
     </article>
   );
