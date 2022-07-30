@@ -9,7 +9,6 @@ export default function Router() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    console.log("Router");
   }, [pathname]);
 
   return (
