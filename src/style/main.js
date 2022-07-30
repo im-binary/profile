@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 export const mainSectionContainer = css`
   min-height: 100vh;
   max-width: 1200px;
+  min-width: 334px;
   margin: 0 auto;
   padding: 100px 40px;
 `;
