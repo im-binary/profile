@@ -1,24 +1,31 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { contentFontSize30, garyTitleBorderBottom } from "../../style/main";
-import axios from "axios";
+import { useFetch } from "../../hooks/fetch";
 
 export default function BooksInfo() {
-  const [bookList, setBookList] = useState([]);
-  const bookAPIurl = "/data/Profile/bookInfoData.json";
+  // const [bookList, setBookList] = useState([]);
+  // const bookAPIurl = "/data/Profile/bookInfoData.json";
 
-  const getBookInfoData = async () => {
-    await axios.get(bookAPIurl).then((res) => {
-      const dataList = res.data.bookInfoData;
-      setBookList(dataList);
-    });
-  };
+  // const getBookInfoData = async () => {
+  //   await axios.get(bookAPIurl).then((res) => {
+  //     const dataList = res.data.bookInfoData;
+  //     return dataList;
+  //   });
+  // };
 
-  useEffect(() => {
-    getBookInfoData();
-  }, []);
+  // useEffect(() => {
+  //   getBookInfoData().then((dataList) => {
+  //     setBookList(dataList);
+  //   });
+  // }, []);
+
+  const fetchUrl = "/data/Profile/bookInfoData.json";
+  const fetchStorage = "bookInfoData";
+
+  const { dataList: bookList } = useFetch(fetchUrl, fetchStorage);
 
   return (
     <article css={booksInfoContainer}>

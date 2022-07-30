@@ -1,24 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { contentFontSize16, contentFontSize30, garyTitleBorderBottom, mainColor, subColor } from "../../style/main";
-import axios from "axios";
+import { useFetch } from "../../hooks/fetch";
 
 export default function Education() {
-  const [educatioList, setEducationList] = useState([]);
-  const educationAPIurl = "/data/Profile/educationData.json";
+  const fetchUrl = "/data/Profile/educationData.json";
+  const fetchStorage = "educationData";
 
-  const getEducationData = async () => {
-    await axios.get(educationAPIurl).then((res) => {
-      const dataList = res.data.educationData;
-      setEducationList(dataList);
-    });
-  };
-
-  useEffect(() => {
-    getEducationData();
-  }, []);
+  const { dataList: educatioList } = useFetch(fetchUrl, fetchStorage);
 
   return (
     <article css={educationContainer}>

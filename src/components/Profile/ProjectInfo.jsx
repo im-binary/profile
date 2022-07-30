@@ -1,23 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { garyTitleBorderBottom, contentFontSize16, contentFontSize30, mainColor, boxTextColor } from "../../style/main";
-import axios from "axios";
+import { useFetch } from "../../hooks/fetch";
 
 export default function ProjectInfo() {
-  const [projectList, setProjectList] = useState([]);
+  const fetchUrl = "/data/Profile/projectInfoData.json";
+  const fetchStorage = "projectInfoData";
 
-  const getProjecInfotData = async () => {
-    await axios.get("/data/Profile/projectInfoData.json").then((res) => {
-      const dataList = res.data.projectInfoData;
-      setProjectList(dataList);
-    });
-  };
-
-  useEffect(() => {
-    getProjecInfotData();
-  }, []);
+  const { dataList: projectList } = useFetch(fetchUrl, fetchStorage);
 
   return (
     <article css={projectInfoContainer}>
