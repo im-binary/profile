@@ -47,7 +47,6 @@ const motionImgContainer = css`
     font-weight: 700;
     letter-spacing: -3px;
     line-height: 1.2;
-    color: black;
   }
 
   img {
