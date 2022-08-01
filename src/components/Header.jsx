@@ -1,25 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { NavLink } from "react-router-dom";
 import { contentFontSize16, mainColor } from "../style/main";
-import { useDispatch, useSelector } from "react-redux";
-import { changeThemeMode } from "../redux/actions/themeAction";
+import { useSelector } from "react-redux";
 
 export default function Header() {
   const state = useSelector((state) => state);
-  const [theme, setTheme] = useState(state);
 
-  const dispatch = useDispatch();
-
-  const handleChangeMode = () => {
-    dispatch(changeThemeMode(!theme));
-    setTheme(!theme);
-  };
-
-  console.log(state);
   return (
-    <nav css={navContainer}>
+    <nav css={navContainer(state)}>
       <ul>
         <li>
           <NavLink to='/'>Home</NavLink>
@@ -27,15 +17,12 @@ export default function Header() {
         <li>
           <NavLink to='/profile'>Profile</NavLink>
         </li>
-        <li className='themeButton' onClick={handleChangeMode}>
-          {state ? "🌝" : "🌚"}
-        </li>
       </ul>
     </nav>
   );
 }
-const navContainer = css`
-  background-color: #fff;
+const navContainer = (state) => css`
+  background-color: ${state ? "#eeeeee" : "#2c2c2f"};
   position: fixed;
   top: 0;
   left: 0;
@@ -48,29 +35,31 @@ const navContainer = css`
     justify-content: start;
     ${contentFontSize16};
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 16px 0px 0 16px;
   }
 
   li {
     cursor: pointer;
+    border-width: 1.8px 1.8px 0px 1.8px;
+    border-style: solid;
+    border-radius: 10px 10px 0 0;
 
     &:hover {
       background-color: ${mainColor};
     }
 
     .active {
-      background-color: ${mainColor};
-      border-bottom: 2px solid;
+      background-color: ${state ? "#fff" : "#202124"};
     }
+  }
 
-    &.themeButton {
-      font-size: 3rem;
-      margin-left: 2px;
-    }
+  li + li {
+    margin-left: 6px;
   }
 
   a {
     display: inline-block;
     padding: 15px 30px;
+    border-radius: 10px 10px 0 0;
   }
 `;

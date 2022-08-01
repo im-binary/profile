@@ -14,7 +14,7 @@ export default function Profile() {
   const state = useSelector((state) => state);
 
   return (
-    <main css={profileContainer({ state })}>
+    <main css={profileContainer}>
       <Info state={state} />
       <Career />
       <TechStack />
@@ -25,7 +25,6 @@ export default function Profile() {
   );
 }
 
-const profileContainer = ({ state }) => css`
+const profileContainer = css`
   ${mainSectionContainer};
-  color: ${state ? "#000" : "#fff"};
 `;

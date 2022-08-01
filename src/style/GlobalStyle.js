@@ -11,5 +11,6 @@ export default function GlobalStyle() {
 const style = (state) => css`
   body {
     background-color: ${state ? "#fff" : "#202124"};
+    color: ${state ? "#000" : "#eeeeee"};
   }
 `;
