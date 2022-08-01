@@ -8,20 +8,24 @@ import TechStack from "../components/Profile/TechStack";
 import Education from "../components/Profile/Education";
 import ProjectInfo from "../components/Profile/ProjectInfo";
 import BooksInfo from "../components/Profile/BooksInfo";
+import { useSelector } from "react-redux";
 
 export default function Profile() {
+  const state = useSelector((state) => state);
+
   return (
-    <main css={profileContainer}>
-      <Info />
+    <main css={profileContainer({ state })}>
+      <Info state={state} />
       <Career />
       <TechStack />
       <Education />
-      <ProjectInfo />
-      <BooksInfo />
+      <ProjectInfo state={state} />
+      <BooksInfo state={state} />
     </main>
   );
 }
 
-const profileContainer = css`
+const profileContainer = ({ state }) => css`
   ${mainSectionContainer};
+  color: ${state ? "#000" : "#fff"};
 `;

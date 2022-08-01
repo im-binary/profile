@@ -3,11 +3,11 @@ import React from "react";
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { URLs } from "../../constant";
-import { contentFontSize16, garyNomalBorderBottom, grayBorder, contentFontSize40, mainColor } from "../../style/main";
+import { contentFontSize16, contentFontSize40, mainColor } from "../../style/main";
 
-export default function Info() {
+export default function Info({ state }) {
   return (
-    <article css={infoContainer}>
+    <article css={infoContainer(state)}>
       <img src='https://avatars.githubusercontent.com/u/76990149?v=4' alt='프로필 고양이 사진' />
       <h1>Profile | 전이진</h1>
       <section>
@@ -41,7 +41,7 @@ export default function Info() {
   );
 }
 
-const infoContainer = css`
+const infoContainer = (state) => css`
   img {
     width: 256px;
     height: 256px;
@@ -50,11 +50,11 @@ const infoContainer = css`
 
   h1 {
     margin: 40px 0;
-    ${contentFontSize40}
+    ${contentFontSize40};
   }
 
   p {
-    ${grayBorder}
+    border: ${state ? "1px solid rgba(55, 53, 47, 0.16)" : "1px solid rgba(255, 255, 255, 0.5)"};
     border-radius: 20px;
     padding: 20px;
   }
@@ -64,7 +64,7 @@ const infoContainer = css`
     justify-content: space-between;
     gap: 30px;
     line-height: 1.5;
-    ${contentFontSize16}
+    ${contentFontSize16};
   }
 
   .description {
@@ -95,7 +95,7 @@ const infoContainer = css`
 
       a span {
         margin-right: 10px;
-        ${garyNomalBorderBottom}
+        border-bottom: ${state ? "1px solid rgba(55, 53, 47, 0.16)" : "1px solid rgba(255, 255, 255, 0.5)"};
       }
     }
   }

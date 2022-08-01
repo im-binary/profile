@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { NavLink } from "react-router-dom";
 import { contentFontSize16, mainColor } from "../style/main";
+import { useDispatch, useSelector } from "react-redux";
+import { changeThemeMode } from "../redux/actions/themeAction";
 
 export default function Header() {
+  const state = useSelector((state) => state);
+  const [theme, setTheme] = useState(state);
+
+  const dispatch = useDispatch();
+
+  const handleChangeMode = () => {
+    dispatch(changeThemeMode(!theme));
+    setTheme(!theme);
+  };
+
+  console.log(state);
   return (
     <nav css={navContainer}>
       <ul>
@@ -13,6 +26,9 @@ export default function Header() {
         </li>
         <li>
           <NavLink to='/profile'>Profile</NavLink>
+        </li>
+        <li className='themeButton' onClick={handleChangeMode}>
+          {state ? "🌝" : "🌚"}
         </li>
       </ul>
     </nav>
@@ -45,6 +61,11 @@ const navContainer = css`
     .active {
       background-color: ${mainColor};
       border-bottom: 2px solid;
+    }
+
+    &.themeButton {
+      font-size: 3rem;
+      margin-left: 2px;
     }
   }
 

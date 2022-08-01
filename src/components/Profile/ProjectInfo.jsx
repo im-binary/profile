@@ -5,14 +5,14 @@ import { css } from "@emotion/react";
 import { garyTitleBorderBottom, contentFontSize16, contentFontSize30, mainColor, boxTextColor } from "../../style/main";
 import { useFetch } from "../../hooks/fetch";
 
-export default function ProjectInfo() {
+export default function ProjectInfo({ state }) {
   const fetchUrl = "/data/Profile/projectInfoData.json";
   const fetchStorage = "projectInfoData";
 
   const { dataList: projectList } = useFetch(fetchUrl, fetchStorage);
 
   return (
-    <article css={projectInfoContainer}>
+    <article css={projectInfoContainer(state)}>
       <h2>프로젝트</h2>
       <div>
         {projectList.map((item) => (
@@ -38,7 +38,7 @@ export default function ProjectInfo() {
   );
 }
 
-const projectInfoContainer = css`
+const projectInfoContainer = (state) => css`
   margin: 30px 0;
 
   h2 {
@@ -58,7 +58,9 @@ const projectInfoContainer = css`
       overflow: hidden;
       ${contentFontSize16};
       cursor: pointer;
-      box-shadow: rgb(15 15 15 / 10%) 2px 4px 4px 0px, rgb(15 15 15 / 10%) 4px 4px 10px;
+      box-shadow: ${state
+        ? "rgb(15 15 15 / 10%) 2px 4px 4px 0px, rgb(15 15 15 / 10%) 4px 4px 10px"
+        : "rgb(0 0 0 / 10%) 2px 4px 4px 0px, rgb(0 0 0 / 10%) 4px 4px 10px"};
       transition: all 0.3s ease-in-out;
       transform: translateY(0);
       opacity: 0.7;

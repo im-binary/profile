@@ -5,30 +5,14 @@ import { css } from "@emotion/react";
 import { contentFontSize30, garyTitleBorderBottom } from "../../style/main";
 import { useFetch } from "../../hooks/fetch";
 
-export default function BooksInfo() {
-  // const [bookList, setBookList] = useState([]);
-  // const bookAPIurl = "/data/Profile/bookInfoData.json";
-
-  // const getBookInfoData = async () => {
-  //   await axios.get(bookAPIurl).then((res) => {
-  //     const dataList = res.data.bookInfoData;
-  //     return dataList;
-  //   });
-  // };
-
-  // useEffect(() => {
-  //   getBookInfoData().then((dataList) => {
-  //     setBookList(dataList);
-  //   });
-  // }, []);
-
+export default function BooksInfo({ state }) {
   const fetchUrl = "/data/Profile/bookInfoData.json";
   const fetchStorage = "bookInfoData";
 
   const { dataList: bookList } = useFetch(fetchUrl, fetchStorage);
 
   return (
-    <article css={booksInfoContainer}>
+    <article css={booksInfoContainer(state)}>
       <h2>독서</h2>
       <div>
         {bookList.map((item) => (
@@ -43,7 +27,7 @@ export default function BooksInfo() {
   );
 }
 
-const booksInfoContainer = css`
+const booksInfoContainer = (state) => css`
   margin: 30px 0;
 
   h2 {
@@ -62,7 +46,9 @@ const booksInfoContainer = css`
       border-width: 1.5px;
       overflow: hidden;
       cursor: pointer;
-      box-shadow: rgb(15 15 15 / 10%) 2px 4px 4px 0px, rgb(15 15 15 / 10%) 4px 4px 10px;
+      box-shadow: ${state
+        ? "rgb(15 15 15 / 10%) 2px 4px 4px 0px, rgb(15 15 15 / 10%) 4px 4px 10px"
+        : "rgb(0 0 0 / 10%) 2px 4px 4px 0px, rgb(0 0 0 / 10%) 4px 4px 10px"};
       transition: all 0.3s ease-in-out;
       transform: translateY(0);
 
