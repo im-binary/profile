@@ -53,6 +53,11 @@ const educationContainer = css`
     font-weight: bold;
   }
 
+  li:nth-of-type(4n - 1),
+  li:nth-of-type(4n) {
+    background-color: rgb(221 221 221 / 16%);
+  }
+
   li:nth-of-type(4n + 1):not(li:first-of-type),
   li:nth-of-type(4n + 2):not(li:nth-of-type(2)) {
     background-color: ${subColor};
