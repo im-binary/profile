@@ -23,6 +23,7 @@ export default function Image({ id, text, transform }) {
 }
 
 const motionImgContainer = css`
+  font-family: "GangwonEduPowerExtraBoldA";
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -45,7 +46,7 @@ const motionImgContainer = css`
     margin: 0;
     font-size: 5.6rem;
     font-weight: 700;
-    letter-spacing: -3px;
+    letter-spacing: 2px;
     line-height: 1.2;
   }
 

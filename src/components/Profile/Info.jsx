@@ -49,6 +49,8 @@ const infoContainer = (state) => css`
   }
 
   h1 {
+    font-family: "GangwonEduPowerExtraBoldA";
+    letter-spacing: 2px;
     margin: 40px 0;
     ${contentFontSize40};
   }

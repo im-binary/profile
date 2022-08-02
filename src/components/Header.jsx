@@ -23,6 +23,7 @@ export default function Header() {
 }
 const navContainer = (state) => css`
   background-color: ${state ? "#eeeeee" : "#2c2c2f"};
+  font-family: "GangwonEduPowerExtraBoldA";
   position: fixed;
   top: 0;
   left: 0;
