@@ -1,9 +1,9 @@
-import { Is_Dark_Mode } from "../actions/themeAction";
+import { Is_Light_Mode } from "../actions/themeAction";
 
-const initialState = false;
+const initialState = true;
 
 const themeAction = (state = initialState, action) => {
-  if (action.type === Is_Dark_Mode) {
+  if (action.type === Is_Light_Mode) {
     return action.themeMode;
   }
   return state;
