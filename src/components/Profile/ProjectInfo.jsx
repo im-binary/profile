@@ -2,7 +2,15 @@ import React from "react";
 
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { garyTitleBorderBottom, contentFontSize16, contentFontSize30, mainColor, boxTextColor } from "../../style/main";
+import {
+  garyTitleBorderBottom,
+  contentFontSize16,
+  contentFontSize30,
+  mainColor,
+  boxTextColor,
+  lightBoxShadow,
+  darkBoxShadow,
+} from "../../style/main";
 import { useFetch } from "../../hooks/fetch";
 
 export default function ProjectInfo({ state }) {
@@ -58,9 +66,7 @@ const projectInfoContainer = (state) => css`
       overflow: hidden;
       ${contentFontSize16};
       cursor: pointer;
-      box-shadow: ${state
-        ? "rgb(15 15 15 / 10%) 2px 4px 4px 0px, rgb(15 15 15 / 10%) 4px 4px 10px"
-        : "rgb(0 0 0 / 10%) 2px 4px 4px 0px, rgb(0 0 0 / 10%) 4px 4px 10px"};
+      box-shadow: ${state ? lightBoxShadow : darkBoxShadow};
       transition: all 0.3s ease-in-out;
       transform: translateY(0);
       opacity: 0.7;

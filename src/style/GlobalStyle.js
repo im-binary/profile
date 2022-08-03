@@ -1,6 +1,7 @@
 import React from "react";
 import { Global, css } from "@emotion/react";
 import { useSelector } from "react-redux";
+import { darkBackgroundColor, darkFontColor, lightBackgroundColor, lightFontColor } from "./main";
 
 export default function GlobalStyle() {
   const state = useSelector((state) => state);
@@ -19,8 +20,8 @@ const style = (state) => css`
     font-style: normal;
   }
   body {
-    background-color: ${state ? "#fff" : "#202124"};
-    color: ${state ? "#000" : "#eeeeee"};
+    background-color: ${state ? lightBackgroundColor : darkBackgroundColor};
+    color: ${state ? lightFontColor : darkFontColor};
     font-family: Nanum Gothic;
   }
 `;

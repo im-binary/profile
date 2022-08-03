@@ -3,7 +3,15 @@ import React from "react";
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { URLs } from "../../constant";
-import { contentFontSize16, contentFontSize40, mainColor } from "../../style/main";
+import {
+  contentFontSize16,
+  contentFontSize40,
+  grayBorder,
+  graytNomalBorderBottom,
+  mainColor,
+  whiteBorder,
+  whiteNomalBorderBottom,
+} from "../../style/main";
 
 export default function Info({ state }) {
   return (
@@ -56,7 +64,7 @@ const infoContainer = (state) => css`
   }
 
   p {
-    border: ${state ? "1px solid rgba(55, 53, 47, 0.16)" : "1px solid rgba(255, 255, 255, 0.5)"};
+    ${state ? grayBorder : whiteBorder};
     border-radius: 20px;
     padding: 20px;
   }
@@ -97,7 +105,7 @@ const infoContainer = (state) => css`
 
       a span {
         margin-right: 10px;
-        border-bottom: ${state ? "1px solid rgba(55, 53, 47, 0.16)" : "1px solid rgba(255, 255, 255, 0.5)"};
+        ${state ? graytNomalBorderBottom : whiteNomalBorderBottom};
       }
     }
   }

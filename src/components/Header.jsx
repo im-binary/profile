@@ -2,7 +2,14 @@ import React from "react";
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { NavLink } from "react-router-dom";
-import { contentFontSize16, mainColor } from "../style/main";
+import {
+  contentFontSize16,
+  darkBackgroundColor,
+  lightBackgroundColor,
+  mainColor,
+  navDarkBackgroundColor,
+  navLightBackgroundColor,
+} from "../style/main";
 import { useSelector } from "react-redux";
 
 export default function Header() {
@@ -22,7 +29,7 @@ export default function Header() {
   );
 }
 const navContainer = (state) => css`
-  background-color: ${state ? "#eeeeee" : "#2c2c2f"};
+  background-color: ${state ? navLightBackgroundColor : navDarkBackgroundColor};
   font-family: "GangwonEduPowerExtraBoldA";
   position: fixed;
   top: 0;
@@ -50,7 +57,7 @@ const navContainer = (state) => css`
     }
 
     .active {
-      background-color: ${state ? "#fff" : "#202124"};
+      background-color: ${state ? lightBackgroundColor : darkBackgroundColor};
     }
   }
 

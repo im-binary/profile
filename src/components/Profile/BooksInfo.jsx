@@ -2,7 +2,7 @@ import React from "react";
 
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { contentFontSize30, garyTitleBorderBottom } from "../../style/main";
+import { contentFontSize30, darkBoxShadow, garyTitleBorderBottom, lightBoxShadow } from "../../style/main";
 import { useFetch } from "../../hooks/fetch";
 
 export default function BooksInfo({ state }) {
@@ -46,9 +46,7 @@ const booksInfoContainer = (state) => css`
       border-width: 1.5px;
       overflow: hidden;
       cursor: pointer;
-      box-shadow: ${state
-        ? "rgb(15 15 15 / 10%) 2px 4px 4px 0px, rgb(15 15 15 / 10%) 4px 4px 10px"
-        : "rgb(0 0 0 / 10%) 2px 4px 4px 0px, rgb(0 0 0 / 10%) 4px 4px 10px"};
+      box-shadow: ${state ? lightBoxShadow : darkBoxShadow};
       transition: all 0.3s ease-in-out;
       transform: translateY(0);
 
