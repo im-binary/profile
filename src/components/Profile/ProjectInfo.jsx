@@ -93,6 +93,7 @@ const projectInfoContainer = (state) => css`
 
   .tech-stack {
     display: flex;
+    align-items: center;
     gap: 10px;
     margin: 0 20px;
 
