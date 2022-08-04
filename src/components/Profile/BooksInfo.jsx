@@ -58,11 +58,6 @@ const booksInfoContainer = (state) => css`
       img {
         width: 100%;
         display: block;
-        opacity: 0.7;
-
-        &:hover {
-          opacity: 1;
-        }
       }
     }
   }

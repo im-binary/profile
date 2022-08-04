@@ -69,12 +69,10 @@ const projectInfoContainer = (state) => css`
       box-shadow: ${state ? lightBoxShadow : darkBoxShadow};
       transition: all 0.3s ease-in-out;
       transform: translateY(0);
-      opacity: 0.7;
 
       &:hover {
         transition: all 0.3s ease-in-out;
         transform: translateY(-8px);
-        opacity: 1;
       }
 
       img {
