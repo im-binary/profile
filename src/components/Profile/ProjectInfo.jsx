@@ -12,15 +12,17 @@ import {
   darkBoxShadow,
 } from "../../style/main";
 import { useFetch } from "../../hooks/fetch";
+import { useTheme } from "../../hooks/theme";
 
-export default function ProjectInfo({ state }) {
+export default function ProjectInfo() {
   const fetchUrl = "/data/Profile/projectInfoData.json";
   const fetchStorage = "projectInfoData";
+  const [theme] = useTheme();
 
   const { dataList: projectList } = useFetch(fetchUrl, fetchStorage);
 
   return (
-    <article css={projectInfoContainer(state)}>
+    <article css={projectInfoContainer(theme)}>
       <h2>프로젝트</h2>
       <div>
         {projectList.map((item) => (
@@ -46,7 +48,7 @@ export default function ProjectInfo({ state }) {
   );
 }
 
-const projectInfoContainer = (state) => css`
+const projectInfoContainer = (theme) => css`
   margin: 30px 0;
 
   h2 {
@@ -66,7 +68,7 @@ const projectInfoContainer = (state) => css`
       overflow: hidden;
       ${contentFontSize16};
       cursor: pointer;
-      box-shadow: ${state ? lightBoxShadow : darkBoxShadow};
+      box-shadow: ${theme === "light" ? lightBoxShadow : darkBoxShadow};
       transition: all 0.3s ease-in-out;
       transform: translateY(0);
 

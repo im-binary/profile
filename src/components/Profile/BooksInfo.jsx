@@ -4,15 +4,17 @@ import React from "react";
 import { css } from "@emotion/react";
 import { contentFontSize30, darkBoxShadow, garyTitleBorderBottom, lightBoxShadow } from "../../style/main";
 import { useFetch } from "../../hooks/fetch";
+import { useTheme } from "../../hooks/theme";
 
-export default function BooksInfo({ state }) {
+export default function BooksInfo() {
+  const [theme] = useTheme();
   const fetchUrl = "/data/Profile/bookInfoData.json";
   const fetchStorage = "bookInfoData";
 
   const { dataList: bookList } = useFetch(fetchUrl, fetchStorage);
 
   return (
-    <article css={booksInfoContainer(state)}>
+    <article css={booksInfoContainer(theme)}>
       <h2>독서</h2>
       <div>
         {bookList.map((item) => (
@@ -27,7 +29,7 @@ export default function BooksInfo({ state }) {
   );
 }
 
-const booksInfoContainer = (state) => css`
+const booksInfoContainer = (theme) => css`
   margin: 30px 0;
 
   h2 {
@@ -46,7 +48,7 @@ const booksInfoContainer = (state) => css`
       border-width: 1.5px;
       overflow: hidden;
       cursor: pointer;
-      box-shadow: ${state ? lightBoxShadow : darkBoxShadow};
+      box-shadow: ${theme === "light" ? lightBoxShadow : darkBoxShadow};
       transition: all 0.3s ease-in-out;
       transform: translateY(0);
 

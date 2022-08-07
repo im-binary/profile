@@ -12,10 +12,13 @@ import {
   whiteBorder,
   whiteNomalBorderBottom,
 } from "../../style/main";
+import { useTheme } from "../../hooks/theme";
 
-export default function Info({ state }) {
+export default function Info() {
+  const [theme] = useTheme();
+
   return (
-    <article css={infoContainer(state)}>
+    <article css={infoContainer(theme)}>
       <img src='https://avatars.githubusercontent.com/u/76990149?v=4' alt='프로필 고양이 사진' />
       <h1>Profile | 전이진</h1>
       <section>
@@ -49,7 +52,7 @@ export default function Info({ state }) {
   );
 }
 
-const infoContainer = (state) => css`
+const infoContainer = (theme) => css`
   img {
     width: 256px;
     height: 256px;
@@ -64,7 +67,7 @@ const infoContainer = (state) => css`
   }
 
   p {
-    ${state ? grayBorder : whiteBorder};
+    ${theme === "light" ? grayBorder : whiteBorder};
     border-radius: 20px;
     padding: 20px;
   }
@@ -105,7 +108,7 @@ const infoContainer = (state) => css`
 
       a span {
         margin-right: 10px;
-        ${state ? graytNomalBorderBottom : whiteNomalBorderBottom};
+        ${theme === "light" ? graytNomalBorderBottom : whiteNomalBorderBottom};
       }
     }
   }

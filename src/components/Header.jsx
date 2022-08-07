@@ -10,13 +10,13 @@ import {
   navDarkBackgroundColor,
   navLightBackgroundColor,
 } from "../style/main";
-import { useSelector } from "react-redux";
+import { useTheme } from "../hooks/theme";
 
 export default function Header() {
-  const state = useSelector((state) => state);
+  const [theme] = useTheme();
 
   return (
-    <nav css={navContainer(state)}>
+    <nav css={navContainer(theme)}>
       <ul>
         <li>
           <NavLink to='/'>Home</NavLink>
@@ -28,8 +28,8 @@ export default function Header() {
     </nav>
   );
 }
-const navContainer = (state) => css`
-  background-color: ${state ? navLightBackgroundColor : navDarkBackgroundColor};
+const navContainer = (theme) => css`
+  background-color: ${theme === "light" ? navLightBackgroundColor : navDarkBackgroundColor};
   font-family: "GangwonEduPowerExtraBoldA";
   position: fixed;
   top: 0;
@@ -57,7 +57,7 @@ const navContainer = (state) => css`
     }
 
     .active {
-      background-color: ${state ? lightBackgroundColor : darkBackgroundColor};
+      background-color: ${theme === "light" ? lightBackgroundColor : darkBackgroundColor};
     }
   }
 

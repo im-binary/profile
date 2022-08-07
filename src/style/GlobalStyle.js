@@ -1,15 +1,15 @@
 import React from "react";
 import { Global, css } from "@emotion/react";
-import { useSelector } from "react-redux";
 import { darkBackgroundColor, darkFontColor, lightBackgroundColor, lightFontColor } from "./main";
+import { useTheme } from "../hooks/theme";
 
 export default function GlobalStyle() {
-  const state = useSelector((state) => state);
+  const [theme] = useTheme();
 
-  return <Global styles={style(state)} />;
+  return <Global styles={style(theme)} />;
 }
 
-const style = (state) => css`
+const style = (theme) => css`
   @import url("https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800");
 
   @font-face {
@@ -20,8 +20,8 @@ const style = (state) => css`
     font-style: normal;
   }
   body {
-    background-color: ${state ? lightBackgroundColor : darkBackgroundColor};
-    color: ${state ? lightFontColor : darkFontColor};
+    background-color: ${theme === "light" ? lightBackgroundColor : darkBackgroundColor};
+    color: ${theme === "light" ? lightFontColor : darkFontColor};
     font-family: Nanum Gothic;
   }
 `;
