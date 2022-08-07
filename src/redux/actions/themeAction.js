@@ -1,8 +1,8 @@
-export const Is_Light_Mode = "Is_Light_Mode";
+export const CHANGE_THEME = "CHANGE_THEME";
 
-export const changeThemeMode = (themeMode) => {
+export const changeTheme = (theme) => {
   return {
-    type: Is_Light_Mode,
-    themeMode,
+    type: CHANGE_THEME,
+    theme,
   };
 };
