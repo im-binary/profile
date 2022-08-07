@@ -1,12 +1,13 @@
-import { Is_Light_Mode } from "../actions/themeAction";
+import { CHANGE_THEME } from "../actions/themeAction";
 
-const initialState = true;
+const initialTheme = localStorage.getItem("theme") ?? "light";
 
-const themeAction = (state = initialState, action) => {
-  if (action.type === Is_Light_Mode) {
-    return action.themeMode;
+const themeAction = (theme = initialTheme, action) => {
+  if (action.type === CHANGE_THEME) {
+    localStorage.setItem("theme", action.theme);
+    return action.theme;
   }
-  return state;
+  return theme;
 };
 
 export default themeAction;
