@@ -29,7 +29,8 @@
       "name": "📷 Search JJAL",
       "period": "2022.07.18",
       "teckStack": { "id": "4", "name": ["React", "styled-components"] },
-      "projectImage": "https://cdn.pixabay.com/photo/2016/01/22/16/59/tiger-1156205_1280.jpg"
+      "repositoryLink": "https://github.com/pongdang/cat-project",
+      "projectImage": "/images/project/jjal.png"
     }
   ]
 }
