@@ -40,7 +40,7 @@ const careerContainer = css`
     ${contentFontSize16}
 
     li {
-      padding: 2px 4px;
+      padding: 4px 6px;
       display: flex;
       align-items: center;
     }
