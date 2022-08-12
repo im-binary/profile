@@ -2,7 +2,13 @@ import React from "react";
 
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { contentFontSize30, darkBoxShadow, garyTitleBorderBottom, lightBoxShadow } from "../../style/main";
+import {
+  contentFontSize30,
+  darkBoxShadow,
+  garyTitleBorderBottom,
+  lightBoxShadow,
+  whiteTitleBorderBottom,
+} from "../../style/main";
 import { useFetch } from "../../hooks/fetch";
 import { useTheme } from "../../hooks/theme";
 
@@ -34,7 +40,7 @@ const booksInfoContainer = (theme) => css`
 
   h2 {
     ${contentFontSize30}
-    ${garyTitleBorderBottom};
+    ${theme === "light" ? garyTitleBorderBottom : whiteTitleBorderBottom}
   }
 
   div {

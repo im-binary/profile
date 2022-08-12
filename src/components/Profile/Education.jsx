@@ -2,17 +2,26 @@ import React from "react";
 
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { contentFontSize16, contentFontSize30, garyTitleBorderBottom, mainColor, subColor } from "../../style/main";
+import {
+  contentFontSize16,
+  contentFontSize30,
+  garyTitleBorderBottom,
+  mainColor,
+  subColor,
+  whiteTitleBorderBottom,
+} from "../../style/main";
 import { useFetch } from "../../hooks/fetch";
+import { useTheme } from "../../hooks/theme";
 
 export default function Education() {
   const fetchUrl = "/data/Profile/educationData.json";
   const fetchStorage = "educationData";
+  const [theme] = useTheme();
 
   const { dataList: educatioList } = useFetch(fetchUrl, fetchStorage);
 
   return (
-    <article css={educationContainer}>
+    <article css={educationContainer(theme)}>
       <h2>교육</h2>
       <ul>
         {educatioList.map((item) => (
@@ -26,12 +35,12 @@ export default function Education() {
   );
 }
 
-const educationContainer = css`
+const educationContainer = (theme) => css`
   margin: 30px 0;
 
   h2 {
     ${contentFontSize30}
-    ${garyTitleBorderBottom};
+    ${theme === "light" ? garyTitleBorderBottom : whiteTitleBorderBottom}
   }
 
   ul {

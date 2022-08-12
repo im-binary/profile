@@ -2,17 +2,26 @@ import React from "react";
 
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { contentFontSize16, contentFontSize30, garyTitleBorderBottom, mainColor, boxTextColor } from "../../style/main";
+import {
+  contentFontSize16,
+  contentFontSize30,
+  garyTitleBorderBottom,
+  mainColor,
+  boxTextColor,
+  whiteTitleBorderBottom,
+} from "../../style/main";
 import { useFetch } from "../../hooks/fetch";
+import { useTheme } from "../../hooks/theme";
 
 export default function TechStack() {
   const fetchUrl = "/data/Profile/techStackData.json";
   const fetchStorage = "techStackData";
+  const [theme] = useTheme();
 
   const { dataList: techStackData } = useFetch(fetchUrl, fetchStorage);
 
   return (
-    <article css={techStackContainer}>
+    <article css={techStackContainer(theme)}>
       <h2>기술 스택</h2>
       <ul>
         {techStackData.map((item) => (
@@ -25,12 +34,12 @@ export default function TechStack() {
   );
 }
 
-const techStackContainer = css`
+const techStackContainer = (theme) => css`
   margin: 30px 0;
 
   h2 {
     ${contentFontSize30}
-    ${garyTitleBorderBottom};
+    ${theme === "light" ? garyTitleBorderBottom : whiteTitleBorderBottom}
   }
 
   ul {

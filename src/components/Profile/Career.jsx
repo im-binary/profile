@@ -2,11 +2,21 @@ import React from "react";
 
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { garyTitleBorderBottom, contentFontSize16, contentFontSize30, mainColor, subColor } from "../../style/main";
+import {
+  garyTitleBorderBottom,
+  contentFontSize16,
+  contentFontSize30,
+  mainColor,
+  subColor,
+  whiteTitleBorderBottom,
+} from "../../style/main";
+import { useTheme } from "../../hooks/theme";
 
 export default function Career() {
+  const [theme] = useTheme();
+
   return (
-    <article css={careerContainer}>
+    <article css={careerContainer(theme)}>
       <h2>경력</h2>
       <ul>
         <li>회사명</li>
@@ -24,11 +34,11 @@ export default function Career() {
   );
 }
 
-const careerContainer = css`
+const careerContainer = (theme) => css`
   margin: 30px 0;
 
   h2 {
-    ${garyTitleBorderBottom};
+    ${theme === "light" ? garyTitleBorderBottom : whiteTitleBorderBottom}
     ${contentFontSize30}
   }
 
