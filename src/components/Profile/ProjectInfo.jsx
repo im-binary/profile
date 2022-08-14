@@ -62,6 +62,7 @@ const projectInfoContainer = (theme) => css`
 
   .container {
     margin: 20px 0;
+
     @media (max-width: 878px) {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
