@@ -12,6 +12,10 @@ import {
   darkBoxShadow,
   whiteTitleBorderBottom,
   subColor,
+  navLightBackgroundColor,
+  navDarkBackgroundColor,
+  darkFontColor,
+  lightFontColor,
 } from "../../style/main";
 import { useFetch } from "../../hooks/fetch";
 import { useTheme } from "../../hooks/theme";
@@ -128,8 +132,15 @@ const projectInfoContainer = (theme) => css`
           display: block;
           font-size: 1.5rem;
           margin-left: auto;
+          padding: 10px 12px;
           border: none;
-          padding: 4px 6px;
+          border-radius: 20px;
+          background-color: ${theme === "light" ? navLightBackgroundColor : navDarkBackgroundColor};
+
+          &:hover {
+            background-color: ${theme === "light" ? navDarkBackgroundColor : navLightBackgroundColor};
+            color: ${theme === "light" ? darkFontColor : lightFontColor};
+          }
         }
 
         .tech-stack {
