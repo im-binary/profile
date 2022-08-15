@@ -35,6 +35,15 @@
       "repositoryLink": "https://github.com/pongdang/cat-project",
       "projectImage": "/images/project/jjal.png",
       "projectLink": "search-jjal.vercel.app/"
+    },
+    {
+      "id": "5",
+      "name": "📇 My Profile",
+      "period": "2022.07.18 ~ 2022.08.07",
+      "teckStack": { "id": "5", "name": ["React", "React Redux", "emotion"] },
+      "repositoryLink": "https://github.com/pongdang/profile",
+      "projectImage": "/images/project/profile.png",
+      "projectLink": "https://profile-pongdang.vercel.app/"
     }
   ]
 }
