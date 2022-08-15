@@ -42,7 +42,9 @@ export default function ProjectInfo() {
                 ))}
               </ul>
               <button>
-                <a href={item.repositoryLink}>repository 보러가기</a>
+                <a href={item.repositoryLink} target='_blank' rel='noreferrer'>
+                  repository 보러가기
+                </a>
               </button>
             </div>
           </section>
