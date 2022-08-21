@@ -39,17 +39,20 @@ export default function ProjectInfo() {
             <div>
               <p>{item.name}</p>
               <p>{item.period}</p>
-              <p>프로젝트 설명</p>
+              <p>{item.summary}</p>
               <ul className='tech-stack'>
                 {item.teckStack.name.map((x, index) => (
                   <li key={`techStack-${index}`}>{x}</li>
                 ))}
               </ul>
-              <button>
-                <a href={item.repositoryLink} target='_blank' rel='noreferrer'>
-                  repository 보러가기
-                </a>
-              </button>
+              <div>
+                <button>자세히 보기</button>
+                <button>
+                  <a href={item.repositoryLink} target='_blank' rel='noreferrer'>
+                    repository 보러가기
+                  </a>
+                </button>
+              </div>
             </div>
           </section>
         ))}
@@ -82,14 +85,7 @@ const projectInfoContainer = (theme) => css`
       border-radius: 20px;
       overflow: hidden;
       margin-top: 20px;
-      transform: translateY(0px);
-      transition: all 0.3s ease-in-out;
       box-shadow: ${theme === "light" ? lightBoxShadow : darkBoxShadow};
-
-      &:hover {
-        transition: all 0.3s ease-in-out;
-        transform: translateY(-8px);
-      }
 
       @media (max-width: 878px) {
         display: grid;
@@ -107,9 +103,10 @@ const projectInfoContainer = (theme) => css`
 
       div {
         padding: 20px;
+        position: relative;
 
         p + p {
-          margin: 10px 0;
+          margin: 16px 0;
         }
 
         p:first-of-type {
@@ -125,29 +122,41 @@ const projectInfoContainer = (theme) => css`
         }
 
         p:nth-of-type(3) {
-          ${contentFontSize16}
+          height: 80px;
+          display: flex;
+          align-items: center;
+          line-height: 1.5;
         }
 
-        button {
-          display: block;
-          font-size: 1.5rem;
-          margin-left: auto;
-          padding: 10px 12px;
-          border: none;
-          border-radius: 20px;
-          background-color: ${theme === "light" ? navLightBackgroundColor : navDarkBackgroundColor};
+        div {
+          display: flex;
+          gap: 10px;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0;
 
-          &:hover {
-            background-color: ${theme === "light" ? navDarkBackgroundColor : navLightBackgroundColor};
-            color: ${theme === "light" ? darkFontColor : lightFontColor};
+          button {
+            display: block;
+            font-size: 1.5rem;
+            padding: 10px 12px;
+            border: none;
+            border-radius: 20px;
+            background-color: ${theme === "light" ? navLightBackgroundColor : navDarkBackgroundColor};
+            cursor: pointer;
+
+            &:hover {
+              background-color: ${theme === "light" ? navDarkBackgroundColor : navLightBackgroundColor};
+              color: ${theme === "light" ? darkFontColor : lightFontColor};
+            }
           }
         }
 
         .tech-stack {
           display: flex;
+          flex-wrap: wrap;
           align-items: center;
           gap: 10px;
-          margin: 10px 0;
+          margin: 10px 0 20px;
 
           li {
             ${contentFontSize16}
