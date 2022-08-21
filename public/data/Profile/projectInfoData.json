@@ -4,7 +4,9 @@
       "id": "1",
       "name": "🏠 Vanilla JS로 구현한 블로그",
       "period": "2021.06.22 ~ 2021.09.02",
-      "teckStack": { "id": "1", "name": ["JavaScript"] },
+      "summary": "공부하고 만들고 읽은 것들을 정리하기 위해 만든 개인 블로그 입니다.",
+      "description": " GitHub Pages로 배포하였고, 도메인을 구매한 뒤 도메인 DNS를 설정 후 커스텀 도메인 등록하여 ",
+      "teckStack": { "id": "1", "name": ["HTML", "CSS", "JavaScript"] },
       "repositoryLink": "https://github.com/pongdang/pongdang.github.io",
       "projectImage": "/images/project/today.png",
       "projectLink": "https://blog.pongdang.today/"
@@ -13,7 +15,8 @@
       "id": "2",
       "name": "🏠 React로 구현한 블로그",
       "period": "2022.01.28 ~ 2022.03.29",
-      "teckStack": { "id": "2", "name": ["React", "React Redux", "emotion"] },
+      "summary": "공부한 기록들을 남기기 위한 개인 블로그 입니다.",
+      "teckStack": { "id": "2", "name": ["HTML", "CSS", "React", "React Redux", "emotion"] },
       "repositoryLink": "https://github.com/pongdang/pongdang.world",
       "projectImage": "/images/project/world.png",
       "projectLink": "https://pongdang.world/"
@@ -22,7 +25,8 @@
       "id": "3",
       "name": "📓 다이어리",
       "period": "2022.06.03 ~ 2022.07.09",
-      "teckStack": { "id": "3", "name": ["Next.js", "React", "styled-components"] },
+      "summary": "그날의 생각이나 본 것들을 정리하기 위한 개인 다이어리 사이트 입니다.",
+      "teckStack": { "id": "3", "name": ["HTML", "CSS", "Next.js", "React", "styled-components"] },
       "repositoryLink": "https://github.com/pongdang/pongdang-diary",
       "projectImage": "/images/project/diary.png",
       "projectLink": "https://diary.pongdang.today/diary"
@@ -31,16 +35,18 @@
       "id": "4",
       "name": "📷 Search JJAL",
       "period": "2022.07.18",
-      "teckStack": { "id": "4", "name": ["React", "styled-components"] },
+      "summary": "키워드에 따른 gif를 찾아볼 수 있는 사이트 입니다.",
+      "teckStack": { "id": "4", "name": ["HTML", "CSS", "React", "styled-components"] },
       "repositoryLink": "https://github.com/pongdang/cat-project",
       "projectImage": "/images/project/jjal.png",
-      "projectLink": "search-jjal.vercel.app/"
+      "projectLink": "https://search-jjal.vercel.app/"
     },
     {
       "id": "5",
       "name": "📇 My Profile",
       "period": "2022.07.18 ~ 2022.08.07",
-      "teckStack": { "id": "5", "name": ["React", "React Redux", "emotion"] },
+      "summary": "개인 포트폴리오 사이트 입니다.",
+      "teckStack": { "id": "5", "name": ["HTML", "CSS", "React", "React Redux", "emotion"] },
       "repositoryLink": "https://github.com/pongdang/profile",
       "projectImage": "/images/project/profile.png",
       "projectLink": "https://profile-pongdang.vercel.app/"
