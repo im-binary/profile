@@ -6,7 +6,7 @@ import Info from "../components/Profile/Info";
 import Career from "../components/Profile/Career";
 import TechStack from "../components/Profile/TechStack";
 import Education from "../components/Profile/Education";
-import ProjectInfo from "../components/Profile/ProjectInfo";
+import ProjectCard from "../components/Profile/ProjectCard";
 import BooksInfo from "../components/Profile/BooksInfo";
 import Introduce from "../components/Profile/Introduce";
 
@@ -18,7 +18,7 @@ export default function Profile() {
       <Career />
       <TechStack />
       <Education />
-      <ProjectInfo />
+      <ProjectCard />
       <BooksInfo />
     </main>
   );
