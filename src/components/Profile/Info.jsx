@@ -20,14 +20,19 @@ export default function Info() {
   return (
     <article css={infoContainer(theme)}>
       <img src='https://avatars.githubusercontent.com/u/76990149?v=4' alt='프로필 고양이 사진' />
-      <h1>Profile | 전이진</h1>
+      <h1>
+        전이진 (
+        <a href={URLs.github} target='_blank' rel='noreferrer'>
+          pongdang
+        </a>
+        )
+      </h1>
       <section>
         <p className='description'>
           <span>🙌</span>
           <span>
-            프론트엔드 개발자를 지망하고 있는 전이진입니다.
-            <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi quas obcaecati nisi maxime facilis et.
+            작성된 코드에 쉽게 만족하지 않고 더 나은 방향을 끊임없이, 만족할 때까지 포기하지 않고 모색하는 프론트엔드
+            개발자가 되고 싶습니다.
           </span>
         </p>
         <ul>
@@ -64,6 +69,12 @@ const infoContainer = (theme) => css`
     letter-spacing: 2px;
     margin: 40px 0;
     ${contentFontSize40};
+
+    a {
+      &:hover {
+        color: ${theme === "light" ? "#ffc23a" : "#80879d"};
+      }
+    }
   }
 
   p {
