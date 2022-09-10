@@ -13,13 +13,15 @@ import {
   whiteNomalBorderBottom,
 } from "../../style/main";
 import { useTheme } from "../../hooks/theme";
+import UpdateDate from "../Common/UpdateDate";
+import Hits from "../Common/Hits";
 
 export default function Info() {
   const [theme] = useTheme();
 
   return (
     <article css={infoContainer(theme)}>
-      <img src='https://avatars.githubusercontent.com/u/76990149?v=4' alt='프로필 고양이 사진' />
+      <img className='profile' src='https://avatars.githubusercontent.com/u/76990149?v=4' alt='프로필 고양이 사진' />
       <h1>
         전이진 (
         <a href={URLs.github} target='_blank' rel='noreferrer'>
@@ -27,6 +29,11 @@ export default function Info() {
         </a>
         )
       </h1>
+
+      <Hits />
+
+      <UpdateDate yyyymmdd={"20220910"} />
+
       <section>
         <p className='description'>
           <span>🙌</span>
@@ -58,7 +65,7 @@ export default function Info() {
 }
 
 const infoContainer = (theme) => css`
-  img {
+  img.profile {
     width: 256px;
     height: 256px;
     border-radius: 50%;
