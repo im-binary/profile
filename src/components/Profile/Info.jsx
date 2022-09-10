@@ -23,7 +23,7 @@ export default function Info() {
       <h1>
         전이진 (
         <a href={URLs.github} target='_blank' rel='noreferrer'>
-          pongdang
+          @pongdang
         </a>
         )
       </h1>
