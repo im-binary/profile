@@ -21,7 +21,9 @@ export default function Info() {
 
   return (
     <article css={infoContainer(theme)}>
-      <img className='profile' src='https://avatars.githubusercontent.com/u/76990149?v=4' alt='프로필 고양이 사진' />
+      <div className='profile'>
+        <img src='/images/my-image.jpeg' alt='전이진 프로필 사진' />
+      </div>
       <h1>
         전이진 (
         <a href={URLs.github} target='_blank' rel='noreferrer'>
@@ -65,10 +67,17 @@ export default function Info() {
 }
 
 const infoContainer = (theme) => css`
-  img.profile {
+  div.profile {
+    text-align: center;
     width: 256px;
     height: 256px;
     border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
   }
 
   h1 {
