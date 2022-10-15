@@ -6,7 +6,6 @@ import {
   contentFontSize16,
   contentFontSize30,
   garyTitleBorderBottom,
-  mainColor,
   boxTextColor,
   whiteTitleBorderBottom,
 } from "../../style/main";
@@ -26,7 +25,20 @@ export default function TechStack() {
       <ul>
         {techStackData.map((item) => (
           <React.Fragment key={`techStack-${item.id}`}>
-            <li>{item.teckStackName}</li>
+            <li>
+              <img src={item.teckStackImage} alt={item.teckStackName} />
+              <div>
+                <p
+                  css={css`
+                    font-weight: bold;
+                    color: ${boxTextColor};
+                  `}
+                >
+                  {item.teckStackName}
+                </p>
+                <p>{item.techDescription}</p>
+              </div>
+            </li>
           </React.Fragment>
         ))}
       </ul>
@@ -44,17 +56,33 @@ const techStackContainer = (theme) => css`
 
   ul {
     padding: 20px;
-    display: flex;
-    gap: 10px;
+    gap: 14px;
     ${contentFontSize16};
     align-items: center;
     flex-wrap: wrap;
+    line-height: 1.5;
 
     li {
-      padding: 3px 6px;
-      background-color: ${mainColor};
-      color: ${boxTextColor};
-      border-radius: 3px;
+      display: grid;
+      grid-template-columns: 50px 1fr;
+      padding: 10px 0;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        justify-self: center;
+      }
+
+      p {
+        width: 100%;
+      }
+
+      p + p {
+        margin-top: 5px;
+      }
     }
   }
 `;
