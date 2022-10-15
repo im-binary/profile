@@ -1,6 +1,6 @@
 import React from "react";
-
 /** @jsxImportSource @emotion/react */
+
 import { css } from "@emotion/react";
 import {
   garyTitleBorderBottom,
@@ -89,6 +89,7 @@ const projectInfoContainer = (theme) => css`
     section {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      grid-template-rows: 335px;
       ${contentFontSize16}
       border-radius: 20px;
       overflow: hidden;
@@ -131,9 +132,10 @@ const projectInfoContainer = (theme) => css`
         }
 
         p:nth-of-type(3) {
-          height: 80px;
           display: flex;
           align-items: center;
+          height: 95px;
+          overflow: scroll;
           line-height: 1.5;
         }
 
