@@ -16,6 +16,7 @@ import {
 import { useFetch } from "../../hooks/fetch";
 import { useTheme } from "../../hooks/theme";
 import CircleButton from "../Common/CircleButton";
+import { Link } from "react-router-dom";
 
 export default function ProjectCard() {
   const fetchUrl = "/data/Profile/projectInfoData.json";
@@ -51,7 +52,9 @@ export default function ProjectCard() {
                   light={<img src='/images/icons/github-light-icon.png' alt='' />}
                   dark={<img src='/images/icons/github-dark-icon.png' alt='' />}
                 />
-                <CircleButton>•••</CircleButton>
+                <Link to='/portfolio' target='_blank'>
+                  <CircleButton>?</CircleButton>
+                </Link>
               </div>
               <p>{item.name}</p>
               <p>{item.period}</p>
