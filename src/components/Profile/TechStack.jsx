@@ -13,7 +13,7 @@ import { useFetch } from "../../hooks/fetch";
 import { useTheme } from "../../hooks/theme";
 
 export default function TechStack() {
-  const fetchUrl = "/data/Profile/techStackData.json";
+  const fetchUrl = "/data/profile/techStackData.json";
   const fetchStorage = "techStackData";
   const [theme] = useTheme();
 
