@@ -44,6 +44,7 @@ export default function Info() {
             개발자가 되고 싶습니다.
           </span>
         </p>
+
         <ul>
           <li>
             <a href={URLs.email} target='_blank' rel='noreferrer'>
@@ -93,36 +94,37 @@ const infoContainer = (theme) => css`
     }
   }
 
-  p {
-    ${theme === "light" ? grayBorder : whiteBorder};
-    border-radius: 20px;
-    padding: 20px;
-  }
-
   section {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
+    gap: 10px;
     line-height: 1.5;
     ${contentFontSize16};
   }
 
   .description {
+    border-left-color: ${theme === "light" ? grayBorder : whiteBorder};
+    border-left-width: 10px;
+    border-left-style: solid;
+    padding: 10px 20px;
+    font-weight: 600;
+
     width: 60%;
     display: flex;
-    align-items: center;
     gap: 10px;
 
     span:first-of-type {
       height: 100%;
-      margin-top: 14px;
     }
   }
 
   ul {
     width: 40%;
-    padding: 20px;
     overflow: scroll;
+    border-left-color: ${theme === "light" ? grayBorder : whiteBorder};
+    border-left-width: 10px;
+    border-left-style: solid;
+    padding: 10px 20px;
 
     li {
       margin: 4px 0;

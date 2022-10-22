@@ -32,9 +32,7 @@ export const garyTitleBorderBottom = css`
   padding-bottom: 8px;
 `;
 
-export const grayBorder = css`
-  border: 1px solid rgba(55, 53, 47, 0.16);
-`;
+export const grayBorder = "rgba(55, 53, 47, 0.16)";
 
 // dark Mode
 export const darkBackgroundColor = "#202124";
@@ -54,9 +52,7 @@ export const whiteTitleBorderBottom = css`
   padding-bottom: 8px;
 `;
 
-export const whiteBorder = css`
-  border: 1px solid rgba(255, 255, 255, 0.5);
-`;
+export const whiteBorder = "rgba(255, 255, 255, 0.5)";
 
 // font size
 export const contentFontSize16 = css`

@@ -49,6 +49,11 @@ const booksInfoContainer = (theme) => css`
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
 
+    @media (max-width: 400px) {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
     section {
       border-radius: 10px;
       border-width: 1.5px;
