@@ -1,0 +1,10 @@
+{
+  "bookInfoData": [
+    {
+      "id": 1,
+      "bookName": "쏙쏙 들어오는 함수형 코딩",
+      "bookLink": "https://velog.io/@pongdang/series/쏙쏙-들어오는-함수형-코딩",
+      "bookImage": "images/book/functional-coding.jpeg"
+    }
+  ]
+}
