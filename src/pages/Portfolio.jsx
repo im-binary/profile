@@ -2,19 +2,31 @@
 import { css } from "@emotion/react";
 import { mainSectionContainer } from "../style/main";
 import { useMoveScroll } from "../hooks/useMoveScroll";
+import ProjectPart from "../components/Portfolio/ProjectPart";
+import { useFetch } from "../hooks/fetch";
 
 export default function Portfolio() {
-  const menuText = ["야옹", "멍멍", "어흥"];
+  const menuText = ["🐶 ㅅㅊ.", "🏠 pongdang의 블로그 모음"];
   const { elementRef: menuRef, onMoveToElement: onMoveToMenu } = useMoveScroll(menuText);
+
+  const fetchUrl = "data/portfolio/projectDetailsData.json";
+  const fetchStorage = "projectDetailsData";
+
+  const { dataList: projectDetailsData } = useFetch(fetchUrl, fetchStorage);
 
   return (
     <main css={portfolioContainer}>
       <h1>portfolio</h1>
-      {menuText.map((el, index) => (
-        <button type='button' onClick={() => onMoveToMenu(index)} key={el}>
-          {el}
-        </button>
-      ))}
+      <ul>
+        {menuText.map((projectName, index) => (
+          <li key={`project-name-${index}`}>
+            <button type='button' onClick={() => onMoveToMenu(index)}>
+              {projectName}
+            </button>
+          </li>
+        ))}
+      </ul>
+
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam necessitatibus quaerat beatae debitis quod hic
         recusandae eveniet similique est? Ex temporibus assumenda tempore repellendus dignissimos labore, repellat optio
@@ -31,105 +43,16 @@ export default function Portfolio() {
         neque veniam.
       </p>
 
-      {menuText.map((el, index) => (
+      {menuText.map((projectName, index) => (
         <div
-          ref={menuRef.current[index]}
+          ref={menuRef?.current[index]}
           css={css`
             padding-top: 100px;
           `}
-          key={el}
+          key={`project-name-${index}`}
         >
-          <h2>{el}</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam necessitatibus quaerat beatae debitis quod
-            hic recusandae eveniet similique est? Ex temporibus assumenda tempore repellendus dignissimos labore,
-            repellat optio neque veniam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam necessitatibus quaerat beatae debitis quod
-            hic recusandae eveniet similique est? Ex temporibus assumenda tempore repellendus dignissimos labore,
-            repellat optio neque veniam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam necessitatibus quaerat beatae debitis quod
-            hic recusandae eveniet similique est? Ex temporibus assumenda tempore repellendus dignissimos labore,
-            repellat optio neque veniam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam necessitatibus quaerat beatae debitis quod
-            hic recusandae eveniet similique est? Ex temporibus assumenda tempore repellendus dignissimos labore,
-            repellat optio neque veniam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam necessitatibus quaerat beatae debitis quod
-            hic recusandae eveniet similique est? Ex temporibus assumenda tempore repellendus dignissimos labore,
-            repellat optio neque veniam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam necessitatibus quaerat beatae debitis quod
-            hic recusandae eveniet similique est? Ex temporibus assumenda tempore repellendus dignissimos labore,
-            repellat optio neque veniam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam necessitatibus quaerat beatae debitis quod
-            hic recusandae eveniet similique est? Ex temporibus assumenda tempore repellendus dignissimos labore,
-            repellat optio neque veniam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam necessitatibus quaerat beatae debitis quod
-            hic recusandae eveniet similique est? Ex temporibus assumenda tempore repellendus dignissimos labore,
-            repellat optio neque veniam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam necessitatibus quaerat beatae debitis quod
-            hic recusandae eveniet similique est? Ex temporibus assumenda tempore repellendus dignissimos labore,
-            repellat optio neque veniam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam necessitatibus quaerat beatae debitis quod
-            hic recusandae eveniet similique est? Ex temporibus assumenda tempore repellendus dignissimos labore,
-            repellat optio neque veniam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam necessitatibus quaerat beatae debitis quod
-            hic recusandae eveniet similique est? Ex temporibus assumenda tempore repellendus dignissimos labore,
-            repellat optio neque veniam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam necessitatibus quaerat beatae debitis quod
-            hic recusandae eveniet similique est? Ex temporibus assumenda tempore repellendus dignissimos labore,
-            repellat optio neque veniam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam necessitatibus quaerat beatae debitis quod
-            hic recusandae eveniet similique est? Ex temporibus assumenda tempore repellendus dignissimos labore,
-            repellat optio neque veniam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam necessitatibus quaerat beatae debitis quod
-            hic recusandae eveniet similique est? Ex temporibus assumenda tempore repellendus dignissimos labore,
-            repellat optio neque veniam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam necessitatibus quaerat beatae debitis quod
-            hic recusandae eveniet similique est? Ex temporibus assumenda tempore repellendus dignissimos labore,
-            repellat optio neque veniam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam necessitatibus quaerat beatae debitis quod
-            hic recusandae eveniet similique est? Ex temporibus assumenda tempore repellendus dignissimos labore,
-            repellat optio neque veniam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam necessitatibus quaerat beatae debitis quod
-            hic recusandae eveniet similique est? Ex temporibus assumenda tempore repellendus dignissimos labore,
-            repellat optio neque veniam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam necessitatibus quaerat beatae debitis quod
-            hic recusandae eveniet similique est? Ex temporibus assumenda tempore repellendus dignissimos labore,
-            repellat optio neque veniam.
-          </p>
+          <h2>{projectName}</h2>
+          <ProjectPart projectDetailsData={projectDetailsData[index]} />
         </div>
       ))}
     </main>
@@ -139,3 +62,20 @@ export default function Portfolio() {
 const portfolioContainer = css`
   ${mainSectionContainer};
 `;
+
+// const MeunUl = styled.ul`
+//     width: 40%;
+//     overflow: scroll;
+//     border-left-color: ${theme === "light" ? grayBorder : whiteBorder};
+//     border-left-width: 10px;
+//     border-left-style: solid;
+//     padding: 10px 20px;
+
+//     li {
+//       margin: 4px 0;\
+
+//       a {
+//         &:hover {
+//           background-color: ${mainColor};
+//         }
+// `;

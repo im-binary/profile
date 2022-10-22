@@ -14,7 +14,7 @@ import { useFetch } from "../../hooks/fetch";
 import { useTheme } from "../../hooks/theme";
 
 export default function Education() {
-  const fetchUrl = "/data/Profile/educationData.json";
+  const fetchUrl = "/data/profile/educationData.json";
   const fetchStorage = "educationData";
   const [theme] = useTheme();
 

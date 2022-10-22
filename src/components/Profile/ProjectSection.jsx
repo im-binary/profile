@@ -19,7 +19,7 @@ import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 
 export default function ProjectSection() {
-  const fetchUrl = "/data/Profile/projectInfoData.json";
+  const fetchUrl = "/data/profile/projectInfoData.json";
   const fetchStorage = "projectInfoData";
   const [theme] = useTheme();
 

@@ -1,0 +1,154 @@
+{
+  "projectDetailsData": [
+    {
+      "id": "1",
+      "name": "🐶 ㅅㅊ.",
+      "period": "2022.09.07 ~ 2022.10.12",
+      "summary": "우리 강아지의 사회성 향상을 위한 반려견 산책 동네 모임 플랫폼 입니다!/n '부산광역시 해운대구 우동' 설정하시면 등록된 모임을 확인할 수 있습니다!",
+      "part": [
+        {
+          "id": "1",
+          "title": "Form 기능",
+          "contentList": [
+            {
+              "id": "1",
+              "summary": "회원가입, 로그인 폼에 'react-hook-form' 을 도입해 상태관리의 책임을 위임하여 코드 퀄리티를 높였습니다."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "title": "조건부 UI",
+          "contentList": [
+            {
+              "id": "1",
+              "summary": "모임 참여와 관련된 버튼이 사용자의 상태에 따라 ＇참여한 모임입니다＇, ＇모임 참여하기＇ 또는 안 보이도록 처리했습니다."
+            },
+            {
+              "id": "2",
+              "summary": "모임이 현재 모집중인지, 마감인지에 따라 UI를 다르게 처리했습니다."
+            },
+            {
+              "id": "3",
+              "summary": "자신이 작성한 댓글에만 수정/삭제 버튼을 볼 수 있도록 처리했습니다."
+            }
+          ]
+        },
+        {
+          "id": "3",
+          "title": "사용성 개선",
+          "contentList": [
+            {
+              "id": "1",
+              "summary": "회원 가입 후 자동 로그인이 되도록 했습니다."
+            },
+            {
+              "id": "2",
+              "summary": "모임 상세페이지에 소개탭과 공지사항 탭이 있는데, 탭 이동시에 발생하던 플리커 현상을 다이나믹 라우트로 해결했습니다."
+            },
+            {
+              "id": "3",
+              "summary": "모임 상세페이지의 탭을 오갈 때마다 쌓이던 history를 Next/link 컴포넌트의 replace 속성을 통해 해결했습니다."
+            },
+            {
+              "id": "4",
+              "summary": "데이터를 받는 동안 이탈을 막기 위해 스켈레톤 UI를 적용했습니다."
+            }
+          ]
+        },
+        {
+          "id": "4",
+          "title": "라이브러리 커스텀 사용",
+          "contentList": [
+            {
+              "id": "1",
+              "summary": "'react-datepicker' 라이브러리의 기본 스타일을 프로젝트에 맞게끔 스타일 변경을 했습니다."
+            }
+          ]
+        },
+        {
+          "id": "5",
+          "title": "데이터 처리",
+          "contentList": [
+            {
+              "id": "1",
+              "summary": "모임을 작성할 때 입력 받은 요일을 순서대로 정렬하여 백엔드에 요청을 보내도록 했습니다."
+            },
+            {
+              "id": "2",
+              "summary": "백엔드에서 보내주는 'yyyy.mm.dd' 날짜의 형태를  'yyyy년 mm월 dd일' 로 변환하여 보여줄 수 있도록 했습니다."
+            },
+            {
+              "id": "3",
+              "summary": "백엔드에서 보내주는 'hh:mm:ss' 시간의 형태를 'a h시 mm분'으로 변환하여 보여줄 수 있도록 했습니다."
+            }
+          ]
+        },
+        {
+          "id": "6",
+          "title": "트러블슈팅",
+          "contentList": [
+            {
+              "id": "1",
+              "summary": "안드로이드 핸드폰에서는 깨지던 스타일을 chrome://inspect를 활용하여 디버깅을 했습니다."
+            }
+          ]
+        }
+      ],
+      "problems": [
+        {
+          "id": "1",
+          "title": "두 페이지로 구현된 탭메뉴 이동시 스크롤 유지 및 플리커 현상 제거",
+          "contentLink": "https://pong-dang.notion.site/0c6825472c984ab5818c19cbd3c46597"
+        }
+      ],
+      "teckStack": { "id": "4", "name": ["HTML", "CSS", "Next.js", "react-query", "Recoil", "emotion"] },
+      "repositoryLink": "https://github.com/codestates-seb/seb39_main_026",
+      "projectImage": "https://raw.githubusercontent.com/codestates-seb/seb39_main_026/main/metaImage.png",
+      "projectLink": "https://sancheck.vercel.app/"
+    },
+    {
+      "id": "2",
+      "name": "🏠 pongdang의 블로그 모음",
+      "period": "2021.06 ~ 2022.06",
+      "summary": "배운 것들을 적용해보기 위해서 블로그를 하나씩 만들다 보니 생각보다 개수가 많아졌습니다./n 블로그는 총 3개로 JavaScript, React, Next.js를 적용하여 만들었습니다.",
+      "part": [
+        {
+          "id": "1",
+          "title": "조건부 UI",
+          "contentList": [
+            {
+              "id": "1",
+              "summary": "React의 ContextAPI와 styled-components를 활용하여 라이트모드/다크모드를 적용했습니다."
+            },
+            {
+              "id": "2",
+              "summary": "모드에 따라 애니메이션이 다르게 보이도록 하여 앱의 귀여움을 증가시켰습니다."
+            },
+            {
+              "id": "3",
+              "summary": "Redux를 사용하여 사용자가 원하는 대로 ＇썸네일, 제목 같이 보기＇, ＇제목만 보기＇ 와 같이 목록의 형태를 변화시킬 수 있도록 했습니다."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "title": "사용성 개선",
+          "contentList": [
+            {
+              "id": "1",
+              "summary": "데이터를 받는 동안 이탈을 막기 위해 스켈레톤 UI를 적용했습니다."
+            }
+          ]
+        }
+      ],
+      "teckStack": {
+        "id": "1",
+        "name": ["HTML", "CSS", "JavaScript", "React", "Next.js", "emotion", "styled-components", "React Redux"]
+      },
+      "repositoryLink": "https://github.com/pongdang/pongdang.today",
+      "projectImage": "/images/project/today.png",
+      "projectLink": "https://pongdang-today.vercel.app"
+    }
+  ]
+}
