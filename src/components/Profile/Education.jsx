@@ -55,6 +55,7 @@ const educationContainer = (theme) => css`
     padding: 4px 6px;
     display: flex;
     align-items: center;
+    word-break: keep-all;
   }
 
   li:first-of-type,
