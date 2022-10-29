@@ -32,7 +32,7 @@ export default function Info() {
 
       <Hits />
 
-      <UpdateDate yyyymmdd={"20221015"} />
+      <UpdateDate yyyymmdd={"20221029"} />
 
       <section>
         <p className='description'>
