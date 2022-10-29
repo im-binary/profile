@@ -21,9 +21,7 @@ export default function Info() {
 
   return (
     <article css={infoContainer(theme)}>
-      <div className='profile'>
-        <img src='/images/my-image.jpeg' alt='전이진 프로필 사진' />
-      </div>
+      <div className='profile'>{/* <img src='/images/my-image.jpeg' alt='전이진 프로필 사진' /> */}</div>
       <h1>
         전이진 (
         <a href={URLs.github} target='_blank' rel='noreferrer'>
@@ -39,10 +37,7 @@ export default function Info() {
       <section>
         <p className='description'>
           <span>🙌</span>
-          <span>
-            작성된 코드에 쉽게 만족하지 않고 더 나은 방향을 끊임없이, 만족할 때까지 포기하지 않고 모색하는 프론트엔드
-            개발자가 되고 싶습니다.
-          </span>
+          <span>어제보다 더 나은 신입 개발자, 전이진입니다.</span>
         </p>
 
         <ul>
@@ -74,10 +69,12 @@ const infoContainer = (theme) => css`
     height: 256px;
     border-radius: 50%;
     overflow: hidden;
+    border: 1px solid;
 
     img {
       object-fit: cover;
-      height: 100%;
+
+      width: 100%;
     }
   }
 
@@ -110,12 +107,10 @@ const infoContainer = (theme) => css`
     font-weight: 600;
 
     width: 60%;
-    display: flex;
     gap: 10px;
-
-    span:first-of-type {
-      height: 100%;
-    }
+    display: flex;
+    align-items: center;
+    flex-direction: row;
   }
 
   ul {
@@ -143,11 +138,6 @@ const infoContainer = (theme) => css`
   }
 
   @media (max-width: 743px) {
-    img {
-      display: block;
-      margin: 0 auto;
-    }
-
     section {
       flex-wrap: wrap;
       justify-content: center;
