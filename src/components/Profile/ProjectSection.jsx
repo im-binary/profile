@@ -15,7 +15,7 @@ import {
 import { useFetch } from "../../hooks/fetch";
 import { useTheme } from "../../hooks/theme";
 import CircleButton from "../Common/CircleButton";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 
 export default function ProjectSection() {
@@ -59,9 +59,9 @@ export default function ProjectSection() {
                 light={<img src='/images/icons/github-light-icon.png' alt='' />}
                 dark={<img src='/images/icons/github-dark-icon.png' alt='' />}
               />
-              <Link to='/portfolio' target='_blank'>
-                <CircleButton>?</CircleButton>
-              </Link>
+              {/* <Link to='/portfolio' target='_blank'> */}
+              <CircleButton>?</CircleButton>
+              {/* </Link> */}
             </ButtonContainer>
 
             <ProjectCardTextContainer>
