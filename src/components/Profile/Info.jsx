@@ -21,7 +21,9 @@ export default function Info() {
 
   return (
     <article css={infoContainer(theme)}>
-      <div className='profile'>{/* <img src='/images/my-image.jpeg' alt='전이진 프로필 사진' /> */}</div>
+      <div className='profile'>
+        <img src='/images/my-image.jpeg' alt='전이진 프로필 사진' />
+      </div>
       <h1>
         전이진 (
         <a href={URLs.github} target='_blank' rel='noreferrer'>
@@ -72,8 +74,7 @@ const infoContainer = (theme) => css`
     border: 1px solid;
 
     img {
-      object-fit: cover;
-
+      margin-top: -14px;
       width: 100%;
     }
   }
