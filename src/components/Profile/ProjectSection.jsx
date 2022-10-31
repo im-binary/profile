@@ -37,31 +37,34 @@ export default function ProjectSection() {
       <Container>
         {projectList.map((item) => (
           <ProjectCard key={`project-${item.id}`} theme>
-            <a href={item.projectLink} target='_blank' rel='noreferrer'>
-              <img
-                css={css`
-                  display: block;
-                  width: 100%;
-                  height: 150px;
-                  object-fit: cover;
-                  overflow: hidden;
-                `}
-                src={item.projectImage}
-                alt=''
-              />
-            </a>
+            <img
+              css={css`
+                display: block;
+                width: 100%;
+                height: 150px;
+                object-fit: cover;
+                overflow: hidden;
+              `}
+              src={item.projectImage}
+              alt=''
+            />
 
             <ButtonContainer>
-              <CircleButton
-                onClick={() => {
-                  window.open(item.repositoryLink, "_blank");
-                }}
-                light={<img src='/images/icons/github-light-icon.png' alt='' />}
-                dark={<img src='/images/icons/github-dark-icon.png' alt='' />}
-              />
-              {/* <Link to='/portfolio' target='_blank'> */}
-              <CircleButton>?</CircleButton>
-              {/* </Link> */}
+              <div className='circle-button-container'>
+                <CircleButton
+                  onClick={() => {
+                    window.open(item.repositoryLink, "_blank");
+                  }}
+                  light={<img src='/images/icons/github-light-icon.png' alt='' />}
+                  dark={<img src='/images/icons/github-dark-icon.png' alt='' />}
+                />
+                <CircleButton>📜</CircleButton>
+              </div>
+              <a href={item.projectLink} target='_blank' rel='noreferrer'>
+                <CircleButton type='button' className='themore-button'>
+                  🌐 보러가기
+                </CircleButton>
+              </a>
             </ButtonContainer>
 
             <ProjectCardTextContainer>
@@ -119,12 +122,25 @@ const ButtonContainer = styled.div`
   position: absolute;
   top: 10px;
   right: 10px;
+  left: 10px;
   display: flex;
   gap: 10px;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 0;
   margin: 0 0 10px;
+
+  .themore-button {
+    width: auto;
+    border-radius: 8px;
+    padding: 0 10px;
+    font-weight: bold;
+  }
+
+  .circle-button-container {
+    display: flex;
+    gap: 10px;
+  }
 `;
 
 const ProjectCardTextContainer = styled.div`
