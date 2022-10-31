@@ -47,7 +47,7 @@
     },
     {
       "id": "5",
-      "name": "📝 modern-todo",
+      "name": "📝 modern todo",
       "period": "2022.10.12 ~ 2022.10.16",
       "summary": "3rd party 라이브러리 없이 만든 모던한 todo App/n w/ Suspense, ErrorBoundary",
       "teckStack": { "id": "4", "name": ["HTML", "CSS", "React", "context API", "emotion"] },
