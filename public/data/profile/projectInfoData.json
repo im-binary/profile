@@ -11,7 +11,7 @@
         "name": ["HTML", "CSS", "JavaScript", "React", "Next.js", "emotion", "styled-components", "React Redux"]
       },
       "repositoryLink": "https://github.com/pongdang/pongdang.today",
-      "projectImage": "/images/project/today.png",
+      "projectImage": "/images/project/blog.png",
       "projectLink": "https://pongdang-today.vercel.app"
     },
 
@@ -24,16 +24,6 @@
       "repositoryLink": "https://github.com/pongdang/cat-project",
       "projectImage": "/images/project/jjal.png",
       "projectLink": "https://search-jjal.vercel.app/"
-    },
-    {
-      "id": "3",
-      "name": "📇 My Profile",
-      "period": "2022.07.18 ~ 2022.08.07",
-      "summary": "개인 프로필 사이트 입니다.",
-      "teckStack": { "id": "3", "name": ["HTML", "CSS", "React", "React Redux", "emotion"] },
-      "repositoryLink": "https://github.com/pongdang/profile",
-      "projectImage": "/images/project/profile.png",
-      "projectLink": "https://profile-pongdang.vercel.app/"
     },
     {
       "id": "4",
