@@ -4,8 +4,7 @@ import React from "react";
 import { css } from "@emotion/react";
 import {
   garyTitleBorderBottom,
-  contentFontSize16,
-  contentFontSize30,
+  fontSize,
   mainColor,
   boxTextColor,
   lightBoxShadow,
@@ -15,7 +14,6 @@ import {
 import { useFetch } from "../../hooks/fetch";
 import { useTheme } from "../../hooks/theme";
 import CircleButton from "../Common/CircleButton";
-// import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 
 export default function ProjectSection() {
@@ -24,12 +22,6 @@ export default function ProjectSection() {
   const [theme] = useTheme();
 
   const { dataList: projectList } = useFetch(fetchUrl, fetchStorage);
-
-  // TODO: 조금 더 좋은 방법 생각해보기
-  const putNewline = (data) => {
-    const paragraph = data.split("/n");
-    return paragraph;
-  };
 
   return (
     <article css={projectInfoContainer(theme)}>
@@ -58,11 +50,19 @@ export default function ProjectSection() {
                   light={<img src='/images/icons/github-light-icon.png' alt='' />}
                   dark={<img src='/images/icons/github-dark-icon.png' alt='' />}
                 />
-                <CircleButton>📜</CircleButton>
+                {item.troubleshootLink && (
+                  <CircleButton
+                    onClick={() => {
+                      window.open(item.troubleshootLink, "_blank");
+                    }}
+                  >
+                    📜
+                  </CircleButton>
+                )}
               </div>
               <a href={item.projectLink} target='_blank' rel='noreferrer'>
                 <CircleButton type='button' className='themore-button'>
-                  🌐 보러가기
+                  👉 보러가기
                 </CircleButton>
               </a>
             </ButtonContainer>
@@ -71,9 +71,7 @@ export default function ProjectSection() {
               <ProjectName>{item.name}</ProjectName>
               <ProjectPeriod>{item.period}</ProjectPeriod>
               <ProjectSummary>
-                {putNewline(item.summary).map((summary, index) => (
-                  <p key={`summary-${index}`}>{summary}</p>
-                ))}
+                <p>{item.summary}</p>
               </ProjectSummary>
               <TeckStackContainer>
                 {item.teckStack.name.map((x, index) => (
@@ -93,7 +91,7 @@ const projectInfoContainer = (theme) => css`
 
   h2 {
     ${theme === "light" ? garyTitleBorderBottom : whiteTitleBorderBottom}
-    ${contentFontSize30}
+    ${fontSize.contentFontSize30}
   }
 `;
 
@@ -112,7 +110,7 @@ const Container = styled.div`
 
 const ProjectCard = styled.section`
   position: relative;
-  ${contentFontSize16}
+  ${fontSize.contentFontSize16}
   border-radius: 3px;
   overflow: hidden;
   box-shadow: ${(props) => (props.theme === "light" ? lightBoxShadow : darkBoxShadow)};
@@ -145,7 +143,6 @@ const ButtonContainer = styled.div`
 
 const ProjectCardTextContainer = styled.div`
   padding: 20px;
-  position: relative;
 
   p {
     line-height: 1.5;
@@ -185,8 +182,11 @@ const TeckStackContainer = styled.ul`
 `;
 
 const ProjectSummary = styled.div`
+  font-size: 1.4rem;
   padding: 10px;
   height: 100px;
   margin-top: 16px;
   overflow: scroll;
+  white-space: pre-wrap;
+  word-break: keep-all;
 `;

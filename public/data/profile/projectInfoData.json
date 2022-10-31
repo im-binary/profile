@@ -4,7 +4,7 @@
       "id": "1",
       "name": "🏠 pongdang의 블로그 모음",
       "period": "2021.06 ~ 2022.06",
-      "summary": "배운 것들을 적용해보기 위해서 블로그를 하나씩 만들다 보니 생각보다 개수가 많아졌습니다./n 블로그는 총 3개로 JavaScript, React, Next.js를 적용하여 만들었습니다.",
+      "summary": "배운 것들을 적용해보기 위해서 블로그를 하나씩 만들다 보니 생각보다 개수가 많아졌습니다.\n블로그는 총 3개로 JavaScript, React, Next.js를 적용하여 만들었습니다.",
       "description": "GitHub Pages로 배포하였고, 도메인을 구매한 뒤 도메인 DNS를 설정 후 커스텀 도메인 등록하여 ",
       "teckStack": {
         "id": "1",
@@ -29,17 +29,18 @@
       "id": "4",
       "name": "🐶 ㅅㅊ.",
       "period": "2022.09.07 ~ 2022.10.12",
-      "summary": "우리 강아지의 사회성 향상을 위한 로컬 반려견 산책 모임 플랫폼 입니다!/n '부산광역시 해운대구 우동' 설정하시면 등록된 모임을 확인할 수 있습니다!",
+      "summary": "우리 강아지의 사회성 향상을 위한 로컬 반려견 산책 모임 플랫폼 입니다!\n'부산광역시 해운대구 우동' 설정하시면 등록된 모임을 확인할 수 있습니다!",
       "teckStack": { "id": "4", "name": ["HTML", "CSS", "Next.js", "react-query", "Recoil", "emotion"] },
       "repositoryLink": "https://github.com/codestates-seb/seb39_main_026",
       "projectImage": "https://raw.githubusercontent.com/codestates-seb/seb39_main_026/main/metaImage.png",
-      "projectLink": "https://sancheck.vercel.app/"
+      "projectLink": "https://sancheck.vercel.app/",
+      "troubleshootLink": "https://pong-dang.notion.site/28f3ea78c7b74aadb1d7fa2a6bc272eb?v=4593b9711f944a2da2449bf08896989f"
     },
     {
       "id": "5",
       "name": "📝 modern todo",
       "period": "2022.10.12 ~ 2022.10.16",
-      "summary": "3rd party 라이브러리 없이 만든 모던한 todo App/n w/ Suspense, ErrorBoundary",
+      "summary": "3rd party 라이브러리 없이 만든 모던한 todo App\nw/ Suspense, ErrorBoundary",
       "teckStack": { "id": "4", "name": ["HTML", "CSS", "React", "context API", "emotion"] },
       "repositoryLink": "https://github.com/pongdang/modern-todo",
       "projectImage": "/images/project/todo.png",

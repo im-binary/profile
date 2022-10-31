@@ -2,14 +2,7 @@ import React from "react";
 
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import {
-  contentFontSize16,
-  contentFontSize30,
-  garyTitleBorderBottom,
-  mainColor,
-  subColor,
-  whiteTitleBorderBottom,
-} from "../../style/main";
+import { fontSize, garyTitleBorderBottom, mainColor, subColor, whiteTitleBorderBottom } from "../../style/main";
 import { useFetch } from "../../hooks/fetch";
 import { useTheme } from "../../hooks/theme";
 
@@ -34,7 +27,13 @@ export default function Education() {
                 {item.course}
               </a>
             </li>
-            <li>{item.period}</li>
+            <li
+              css={css`
+                white-space: pre-wrap;
+              `}
+            >
+              {item.period}
+            </li>
             <li>
               <a
                 href={item.certificates}
@@ -58,7 +57,7 @@ const educationContainer = (theme) => css`
   margin: 30px 0;
 
   h2 {
-    ${contentFontSize30}
+    ${fontSize.contentFontSize30}
     ${theme === "light" ? garyTitleBorderBottom : whiteTitleBorderBottom}
   }
 
@@ -67,7 +66,7 @@ const educationContainer = (theme) => css`
     display: grid;
     grid-template-columns: 1fr 1fr 60px;
     gap: 5px 10px;
-    ${contentFontSize16};
+    ${fontSize.contentFontSize16};
     overflow: scroll;
   }
 

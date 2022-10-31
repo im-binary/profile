@@ -3,7 +3,7 @@ import React from "react";
 import { css } from "@emotion/react";
 import { NavLink } from "react-router-dom";
 import {
-  contentFontSize16,
+  fontSize,
   darkBackgroundColor,
   lightBackgroundColor,
   mainColor,
@@ -55,7 +55,7 @@ const navContainer = (theme) => css`
     display: flex;
     align-items: center;
     justify-content: start;
-    ${contentFontSize16};
+    ${fontSize.contentFontSize16};
     margin: 16px 16px 0 16px;
   }
 

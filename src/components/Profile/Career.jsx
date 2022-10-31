@@ -2,14 +2,7 @@ import React from "react";
 
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import {
-  garyTitleBorderBottom,
-  contentFontSize16,
-  contentFontSize30,
-  mainColor,
-  subColor,
-  whiteTitleBorderBottom,
-} from "../../style/main";
+import { garyTitleBorderBottom, fontSize, mainColor, subColor, whiteTitleBorderBottom } from "../../style/main";
 import { useTheme } from "../../hooks/theme";
 
 export default function Career() {
@@ -39,7 +32,7 @@ const careerContainer = (theme) => css`
 
   h2 {
     ${theme === "light" ? garyTitleBorderBottom : whiteTitleBorderBottom}
-    ${contentFontSize30}
+    ${fontSize.contentFontSize30}
   }
 
   ul {
@@ -47,7 +40,7 @@ const careerContainer = (theme) => css`
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 5px 10px;
-    ${contentFontSize16}
+    ${fontSize.contentFontSize16}
 
     li {
       padding: 4px 6px;

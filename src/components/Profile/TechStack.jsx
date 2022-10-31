@@ -2,13 +2,7 @@ import React from "react";
 
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import {
-  contentFontSize16,
-  contentFontSize30,
-  garyTitleBorderBottom,
-  boxTextColor,
-  whiteTitleBorderBottom,
-} from "../../style/main";
+import { fontSize, garyTitleBorderBottom, boxTextColor, whiteTitleBorderBottom } from "../../style/main";
 import { useFetch } from "../../hooks/fetch";
 import { useTheme } from "../../hooks/theme";
 
@@ -50,14 +44,14 @@ const techStackContainer = (theme) => css`
   margin: 30px 0;
 
   h2 {
-    ${contentFontSize30}
+    ${fontSize.contentFontSize30}
     ${theme === "light" ? garyTitleBorderBottom : whiteTitleBorderBottom}
   }
 
   ul {
     padding: 20px;
     gap: 14px;
-    ${contentFontSize16};
+    ${fontSize.contentFontSize16};
     align-items: center;
     flex-wrap: wrap;
     line-height: 1.5;

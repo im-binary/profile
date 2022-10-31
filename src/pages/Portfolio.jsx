@@ -62,20 +62,3 @@ export default function Portfolio() {
 const portfolioContainer = css`
   ${mainSectionContainer};
 `;
-
-// const MeunUl = styled.ul`
-//     width: 40%;
-//     overflow: scroll;
-//     border-left-color: ${theme === "light" ? grayBorder : whiteBorder};
-//     border-left-width: 10px;
-//     border-left-style: solid;
-//     padding: 10px 20px;
-
-//     li {
-//       margin: 4px 0;\
-
-//       a {
-//         &:hover {
-//           background-color: ${mainColor};
-//         }
-// `;

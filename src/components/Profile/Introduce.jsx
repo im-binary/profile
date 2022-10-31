@@ -3,7 +3,7 @@ import React from "react";
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { useTheme } from "../../hooks/theme";
-import { contentFontSize16, contentFontSize30, garyTitleBorderBottom, whiteTitleBorderBottom } from "../../style/main";
+import { fontSize, garyTitleBorderBottom, whiteTitleBorderBottom } from "../../style/main";
 
 export default function Introduce() {
   const [theme] = useTheme();
@@ -18,8 +18,8 @@ export default function Introduce() {
           `}
         >
           안녕하세요! 어제보다 더 나은 신입 개발자, 전이진입니다. 코드스테이츠 부트캠프를 통해 개발을 배우고
-          수료하였습니다. 필요한 서비스가 생기면 만들어보며 시간을 보내고 있습니다. 요즘에는 간단하고 단순한 웹,
-          앱이라도 가독성 좋은 코드로 작성해보는 것에 재미를 느끼고 있습니다.
+          수료하였습니다. 필요한 서비스가 생기면 만들어보며 시간을 보내고 있습니다. 요즘에는 간단하고 단순한 서비스라도
+          가독성 좋은 코드로 작성해보는 것에 재미를 느끼고 있습니다.
         </p>
         <p
           css={css`
@@ -27,12 +27,11 @@ export default function Introduce() {
             text-indent: 16px;
           `}
         >
-          개발 공부를 하기 전까지 작가가 되기 위해 소설을 쓰는 일을 했습니다. 오랫동안 글을 써오면서 동료가 악의적인
-          표절 신고를 당해 수상이 취소된 것을 보기도 하고, 글을 표절당해보기도 했습니다. 모두 사람으로부터 글을 지키기
-          위해 가진 것이나 사유를 나누는 것에 박해질 수밖에 없었습니다. 이러한 생태계가 익숙해질 때쯤 개발자들은 코드를
-          서로 공유하고, 리뷰하며 자신의 생각을 감추지 않고 말하며 서로의 성장을 진심으로 돕는다는 것을 알게 되면서 그
-          문화에 매력을 느꼈습니다. 그 문화에 섞여 더 이상 가진 것들을 꼭꼭 숨기지 않고 나누고 싶어 개발을 시작하게
-          되었습니다.
+          개발 공부를 하기 전까지 작가가 되기 위해 글쓰는 일을 했습니다. 오랫동안 글을 써오면서 동료가 악의적인 표절
+          신고를 당해 수상이 취소된 것을 보기도 하고, 글을 표절당해보기도 했습니다. 모두 사람으로부터 글을 지키기 위해
+          가진 것이나 사유를 나누는 것에 박해질 수밖에 없었습니다. 이러한 생태계가 익숙해질 때쯤 개발자들은 코드를 서로
+          공유하고, 리뷰하며 자신의 생각을 감추지 않고 말하며 서로의 성장을 진심으로 돕는다는 것을 알게 되면서 그 문화에
+          매력을 느꼈습니다. 그 문화에 섞여 더 이상 가진 것들을 꼭꼭 숨기지 않고 나누고 싶어 개발을 시작하게 되었습니다.
         </p>
         <p
           css={css`
@@ -64,12 +63,12 @@ const introduce = (theme) => css`
 
   h2 {
     ${theme === "light" ? garyTitleBorderBottom : whiteTitleBorderBottom}
-    ${contentFontSize30}
+    ${fontSize.contentFontSize30}
   }
 
   section {
     margin: 20px;
-    ${contentFontSize16};
+    ${fontSize.contentFontSize16};
     line-height: 1.5;
 
     p span {

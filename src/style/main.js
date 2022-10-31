@@ -54,15 +54,14 @@ export const whiteTitleBorderBottom = css`
 
 export const whiteBorder = "rgba(255, 255, 255, 0.5)";
 
-// font size
-export const contentFontSize16 = css`
-  font-size: 1.6rem;
-`;
-
-export const contentFontSize30 = css`
-  font-size: 3rem;
-`;
-
-export const contentFontSize40 = css`
-  font-size: 4rem;
-`;
+export const fontSize = {
+  contentFontSize16: css`
+    font-size: 1.6rem;
+  `,
+  contentFontSize30: css`
+    font-size: 3rem;
+  `,
+  contentFontSize40: css`
+    font-size: 4rem;
+  `,
+};

@@ -4,8 +4,7 @@ import React from "react";
 import { css } from "@emotion/react";
 import { URLs } from "../../constant";
 import {
-  contentFontSize16,
-  contentFontSize40,
+  fontSize,
   grayBorder,
   graytNomalBorderBottom,
   mainColor,
@@ -34,7 +33,7 @@ export default function Info() {
 
       <Hits />
 
-      <UpdateDate yyyymmdd={"20221029"} />
+      <UpdateDate yyyymmdd={"20221101"} />
 
       <section>
         <p className='description'>
@@ -83,7 +82,7 @@ const infoContainer = (theme) => css`
     font-family: "GangwonEduPowerExtraBoldA";
     letter-spacing: 2px;
     margin: 40px 0;
-    ${contentFontSize40};
+    ${fontSize.contentFontSize40};
 
     a {
       &:hover {
@@ -97,7 +96,7 @@ const infoContainer = (theme) => css`
     justify-content: space-between;
     gap: 10px;
     line-height: 1.5;
-    ${contentFontSize16};
+    ${fontSize.contentFontSize16};
   }
 
   .description {
@@ -106,7 +105,7 @@ const infoContainer = (theme) => css`
     border-left-style: solid;
     padding: 10px 20px;
     font-weight: 600;
-
+    font-size: 2rem;
     width: 60%;
     gap: 10px;
     display: flex;

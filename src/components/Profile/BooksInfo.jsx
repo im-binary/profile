@@ -3,7 +3,7 @@ import React from "react";
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import {
-  contentFontSize30,
+  fontSize,
   darkBoxShadow,
   garyTitleBorderBottom,
   lightBoxShadow,
@@ -39,7 +39,7 @@ const booksInfoContainer = (theme) => css`
   margin: 30px 0;
 
   h2 {
-    ${contentFontSize30}
+    ${fontSize.contentFontSize30}
     ${theme === "light" ? garyTitleBorderBottom : whiteTitleBorderBottom}
   }
 

@@ -3,35 +3,35 @@
     {
       "id": 2,
       "course": "빔캠프 CSS 첫걸음",
-      "period": "2021.07.20 ~ 2021.08.06",
+      "period": "21.07.20 ~ 21.08.06 (3주)",
       "site": "https://veamcamp.com/camp/css-babystep/",
       "certificates": "https://certificates.pongdang.me/css-babystep.png"
     },
     {
       "id": 3,
       "course": "일팔공 REACT 기초반",
-      "period": "2021.12.13 ~ 2022.03.04",
+      "period": "21.12.13 ~ 22.03.04 (12주)",
       "site": "https://megastudyacademy.co.kr/camp/event/bootcamp_react#",
       "certificates": "https://certificates.pongdang.me/react-basiccamp.jpg"
     },
     {
       "id": 4,
       "course": "코드스테이츠",
-      "period": "2022.04.25 ~ 2022.10.19",
+      "period": "22.04.25 ~ 22.10.19 (16주)",
       "site": "https://www.codestates.com/course/frontend-engineering?gclid=CjwKCAjw5P2aBhAlEiwAAdY7dMdI6OKTI-9GmijFvfouSMqLb160-nc5GuQYxtocIQ2ipyjhhoOcuxoCTTIQAvD_BwE",
       "certificates": "https://certificates.pongdang.me/codestates.pdf"
     },
     {
       "id": 5,
       "course": "빔캠프 CSS 한 걸음 더",
-      "period": "2022.10.23 ~ ing",
+      "period": "22.10.23 ~ ing (6주)",
       "site": "https://veamcamp.com/camp/css-nextstep/",
       "certificates": "https://certificates.pongdang.me/css-nextstep.png"
     },
     {
       "id": 6,
       "course": "원티드 프리온보딩 프론트엔드 코스",
-      "period": "2022.10.24 ~ ing",
+      "period": "22.10.24 ~ ing (4주)",
       "site": "https://www.wanted.co.kr/events/pre_ob_fe_7",
       "certificates": "https://www.wanted.co.kr/events/pre_ob_fe_7"
     }
