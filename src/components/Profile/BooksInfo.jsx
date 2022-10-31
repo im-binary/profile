@@ -20,11 +20,11 @@ export default function BooksInfo() {
   const { dataList: bookList } = useFetch(fetchUrl, fetchStorage);
 
   return (
-    <article css={booksInfoContainer(theme)}>
+    <article css={booksInfoContainer({ theme })}>
       <h2>독서</h2>
       <div>
         {bookList.map((item) => (
-          <section key={`book-${item.id}`}>
+          <section css={bookInfoContainer({ theme, percent: item.percent })} key={`book-${item.id}`}>
             <a href={item.bookLink} target='_blank' rel='noreferrer'>
               <img src={item.bookImage} alt={item.bookName} />
             </a>
@@ -35,7 +35,7 @@ export default function BooksInfo() {
   );
 }
 
-const booksInfoContainer = (theme) => css`
+const booksInfoContainer = ({ theme }) => css`
   margin: 30px 0;
 
   h2 {
@@ -53,25 +53,37 @@ const booksInfoContainer = (theme) => css`
       display: grid;
       grid-template-columns: 1fr;
     }
+  }
+`;
 
-    section {
-      border-radius: 10px;
-      border-width: 1.5px;
-      overflow: hidden;
-      cursor: pointer;
-      box-shadow: ${theme === "light" ? lightBoxShadow : darkBoxShadow};
-      transition: all 0.3s ease-in-out;
-      transform: translateY(0);
+const bookInfoContainer = ({ theme, percent }) => css`
+  border-radius: 10px;
+  border-width: 1.5px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: ${theme === "light" ? lightBoxShadow : darkBoxShadow};
+  transition: all 0.3s ease-in-out;
+  transform: translateY(0);
 
-      &:hover {
-        transition: all 0.3s ease-in-out;
-        transform: translateY(-8px);
-      }
+  &:hover {
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-8px);
+  }
 
-      img {
-        width: 100%;
-        display: block;
-      }
-    }
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  &::after {
+    display: block;
+    text-align: right;
+    content: "${percent}%";
+    font-weight: bold;
+    color: white;
+    padding: 2px 0px 2px 0;
+    width: ${percent}%;
+    height: 10px;
+    background-color: dodgerblue;
   }
 `;
