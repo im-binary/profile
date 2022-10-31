@@ -24,9 +24,20 @@ export default function Header() {
         <li>
           <NavLink to='/profile'>Profile</NavLink>
         </li>
-        {/* <li>
-          <NavLink to='/portfolio'>Portfolio</NavLink>
-        </li> */}
+        <li className='github-repository-link'>
+          <button
+            className='github-repository-button'
+            onClick={() => {
+              window.open("https://github.com/pongdang/profile", "_blank");
+            }}
+          >
+            {theme === "light" ? (
+              <img src='/images/icons/github-light-icon.png' alt='' />
+            ) : (
+              <img src='/images/icons/github-dark-icon.png' alt='' />
+            )}
+          </button>
+        </li>
       </ul>
     </nav>
   );
@@ -45,8 +56,7 @@ const navContainer = (theme) => css`
     align-items: center;
     justify-content: start;
     ${contentFontSize16};
-    max-width: 1200px;
-    margin: 16px 0px 0 16px;
+    margin: 16px 16px 0 16px;
   }
 
   li {
@@ -66,6 +76,20 @@ const navContainer = (theme) => css`
 
   li + li {
     margin-left: 6px;
+  }
+
+  li.github-repository-link {
+    margin-left: auto;
+    align-self: flex-end;
+    padding: 8px 16px;
+
+    button {
+      cursor: pointer;
+    }
+
+    img {
+      vertical-align: bottom;
+    }
   }
 
   a {
