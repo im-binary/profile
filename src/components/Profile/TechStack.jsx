@@ -1,10 +1,10 @@
-import React from "react";
-
 /** @jsxImportSource @emotion/react */
+import React from "react";
 import { css } from "@emotion/react";
 import { fontSize, garyTitleBorderBottom, boxTextColor, whiteTitleBorderBottom } from "../../style/main";
 import { useFetch } from "../../hooks/fetch";
 import { useTheme } from "../../hooks/theme";
+import { parseBoldString } from "../../js/parseBoldString";
 
 export default function TechStack() {
   const fetchUrl = "/data/profile/techStackData.json";
@@ -30,7 +30,15 @@ export default function TechStack() {
                 >
                   {item.teckStackName}
                 </p>
-                <p>{item.techDescription}</p>
+                <p>
+                  {parseBoldString(item.techDescription).map((x, i) => {
+                    if (x.startsWith("**")) {
+                      return <strong key={`${i}-${x}`}>{x.slice(2)}</strong>;
+                    } else {
+                      return <span key={`${i}-${x}`}>{x}</span>;
+                    }
+                  })}
+                </p>
               </div>
             </li>
           </React.Fragment>
