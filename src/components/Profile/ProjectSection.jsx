@@ -56,7 +56,7 @@ export default function ProjectSection() {
                       window.open(item.troubleshootLink, "_blank");
                     }}
                   >
-                    📜
+                    <img src='/images/icons/notion-icon.svg' alt='' />
                   </CircleButton>
                 )}
               </div>
