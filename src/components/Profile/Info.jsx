@@ -111,6 +111,7 @@ const infoContainer = (theme) => css`
     display: flex;
     align-items: center;
     flex-direction: row;
+    word-break: keep-all;
   }
 
   ul {
