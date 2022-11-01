@@ -78,7 +78,7 @@ const bookInfoContainer = ({ theme, percent }) => css`
   &::after {
     display: block;
     text-align: right;
-    content: "${percent}%";
+    content: "${percent}%ㅤ";
     font-weight: bold;
     color: white;
     padding: 2px 0px 2px 0;
