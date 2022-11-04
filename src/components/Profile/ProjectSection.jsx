@@ -69,7 +69,7 @@ export default function ProjectSection() {
 
             <ProjectCardTextContainer>
               <ProjectName>{item.name}</ProjectName>
-              <ProjectPeriod>{item.period}</ProjectPeriod>
+              <ProjectPeriod>프로젝트 기간 : {item.period}</ProjectPeriod>
               <ProjectSummary>
                 <p>{item.summary}</p>
               </ProjectSummary>
