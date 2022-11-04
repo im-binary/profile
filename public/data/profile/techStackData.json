@@ -38,7 +38,7 @@
     },
     {
       "id": 8,
-      "teckStackName": "typeScript",
+      "teckStackName": "TypeScript",
       "teckStackImage": "/images/techStack/ts-img.png",
       "techDescription": "타입 에러를 **컴파일 단계** 에서 확인할 수 있어 덕타이핑의 JS 보다 안전한 코드를 작성할 수 있습니다."
     }
