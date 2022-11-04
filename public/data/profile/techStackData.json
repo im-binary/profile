@@ -36,7 +36,7 @@
       "id": 1,
       "teckStackName": "HTML",
       "teckStackImage": "/images/techStack/html-img.png",
-      "techDescription": "div 태그를 사용하기 보다 때에 맞는 **시멘틱 태그** 를 사용하여 **접근성을 준수** 하는 구조적 문서를 만드는 것에 능숙합니다."
+      "techDescription": "div 태그를 사용하기 보다 때에 맞는 **시멘틱 태그** 를 사용하여 **접근성(a11y)을 준수** 하는 구조적 문서를 만드는 것에 능숙합니다."
     },
     {
       "id": 2,
