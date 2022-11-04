@@ -3,7 +3,7 @@ import React from "react";
 import { css } from "@emotion/react";
 import { useTheme } from "../hooks/theme";
 
-export default function ThemeButton({ handleChangeMode }) {
+export function ThemeButton({ handleChangeMode }) {
   const [theme] = useTheme();
 
   return (

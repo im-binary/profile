@@ -2,10 +2,10 @@
 import { css } from "@emotion/react";
 import { mainSectionContainer } from "../style/main";
 import { useMoveScroll } from "../hooks/useMoveScroll";
-import ProjectPart from "../components/Portfolio/ProjectPart";
+import { ProjectPart } from "../components/Portfolio/ProjectPart";
 import { useFetch } from "../hooks/fetch";
 
-export default function Portfolio() {
+export function Portfolio() {
   const menuText = ["🐶 ㅅㅊ.", "🏠 pongdang의 블로그 모음"];
   const { elementRef: menuRef, onMoveToElement: onMoveToMenu } = useMoveScroll(menuText);
 

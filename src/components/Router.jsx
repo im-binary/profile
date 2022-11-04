@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-import Home from "../pages/Home";
-import Profile from "../pages/Profile";
+import { Home } from "../pages/Home";
+import { Profile } from "../pages/Profile";
 import { useLocation } from "react-router-dom";
-import Portfolio from "../pages/Portfolio";
+import { Portfolio } from "../pages/Portfolio";
 
-export default function Router() {
+export function Router() {
   const { pathname } = useLocation();
 
   useEffect(() => {

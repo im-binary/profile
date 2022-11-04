@@ -1,11 +1,11 @@
 import React from "react";
 /** @jsxImportSource @emotion/react */
-import MotionImage from "../components/home/MotionImage";
+import { WelcomeLanding } from "../components/home/WelcomeLanding";
 
-export default function Home() {
+export function Home() {
   return (
     <section>
-      <MotionImage />
+      <WelcomeLanding />
     </section>
   );
 }

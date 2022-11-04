@@ -2,7 +2,7 @@ import { CHANGE_THEME } from "../actions/themeAction";
 
 const initialTheme = localStorage.getItem("theme") ?? "light";
 
-const themeAction = (theme = initialTheme, action) => {
+const themeReducer = (theme = initialTheme, action) => {
   if (action.type === CHANGE_THEME) {
     localStorage.setItem("theme", action.theme);
     return action.theme;
@@ -10,4 +10,4 @@ const themeAction = (theme = initialTheme, action) => {
   return theme;
 };
 
-export default themeAction;
+export { themeReducer };

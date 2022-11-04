@@ -13,10 +13,10 @@ import {
 } from "../../style/main";
 import { useFetch } from "../../hooks/fetch";
 import { useTheme } from "../../hooks/theme";
-import CircleButton from "../Common/CircleButton";
+import { CircleButton } from "../Common/CircleButton";
 import styled from "@emotion/styled";
 
-export default function ProjectSection() {
+export function ProjectSection() {
   const fetchUrl = "/data/profile/projectInfoData.json";
   const fetchStorage = "projectInfoData";
   const [theme] = useTheme();

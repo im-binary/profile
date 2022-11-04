@@ -5,7 +5,7 @@ import { css } from "@emotion/react";
 import { useTheme } from "../../hooks/theme";
 import { fontSize, garyTitleBorderBottom, whiteTitleBorderBottom } from "../../style/main";
 
-export default function Introduce() {
+export function Introduce() {
   const [theme] = useTheme();
 
   return (

@@ -2,7 +2,7 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 
-export default function ProjectPart({ projectDetailsData }) {
+export function ProjectPart({ projectDetailsData }) {
   if (projectDetailsData == null) {
     return <div>로딩중</div>;
   }

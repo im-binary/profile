@@ -3,7 +3,7 @@ import { Global, css } from "@emotion/react";
 import { darkBackgroundColor, darkFontColor, lightBackgroundColor, lightFontColor } from "./main";
 import { useTheme } from "../hooks/theme";
 
-export default function GlobalStyle() {
+export function GlobalStyle() {
   const [theme] = useTheme();
 
   return <Global styles={style(theme)} />;

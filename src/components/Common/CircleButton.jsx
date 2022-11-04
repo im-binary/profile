@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useTheme } from "../../hooks/theme";
 import { darkFontColor, lightFontColor, navDarkBackgroundColor, navLightBackgroundColor } from "../../style/main";
 
-export default function CircleButton({ className, onClick, children, light, dark }) {
+export function CircleButton({ className, onClick, children, light, dark }) {
   const [theme] = useTheme();
   const [hover, setHover] = useState(false);
 

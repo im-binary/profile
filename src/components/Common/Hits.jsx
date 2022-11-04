@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Hits({ url = window.location.href }) {
+export function Hits({ url = window.location.href }) {
   const encodedUrl = encodeURIComponent(url);
 
   return (

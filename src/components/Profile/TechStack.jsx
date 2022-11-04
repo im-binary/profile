@@ -6,7 +6,7 @@ import { useFetch } from "../../hooks/fetch";
 import { useTheme } from "../../hooks/theme";
 import { parseBoldString } from "../../js/parseBoldString";
 
-export default function TechStack() {
+export function TechStack() {
   const fetchUrl = "/data/profile/techStackData.json";
   const fetchStorage = "techStackData";
   const [theme] = useTheme();

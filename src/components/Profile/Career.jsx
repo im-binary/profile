@@ -5,7 +5,7 @@ import { css } from "@emotion/react";
 import { garyTitleBorderBottom, fontSize, mainColor, subColor, whiteTitleBorderBottom } from "../../style/main";
 import { useTheme } from "../../hooks/theme";
 
-export default function Career() {
+export function Career() {
   const [theme] = useTheme();
 
   return (
