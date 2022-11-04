@@ -63,6 +63,7 @@ const techStackContainer = (theme) => css`
     align-items: center;
     flex-wrap: wrap;
     line-height: 1.5;
+    word-break: keep-all;
 
     li {
       display: grid;

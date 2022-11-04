@@ -78,7 +78,8 @@ const educationContainer = (theme) => css`
 
     a {
       padding-bottom: 1px;
-      color: #005aad;
+      color: ${theme === "light" ? "#005aad" : "skyblue"};
+      font-weight: bold;
     }
   }
 
