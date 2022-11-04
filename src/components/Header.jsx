@@ -11,6 +11,7 @@ import {
   navLightBackgroundColor,
 } from "../style/main";
 import { useTheme } from "../hooks/theme";
+import { GithubIcon } from "./Profile/GithubIcon";
 
 export default function Header() {
   const [theme] = useTheme();
@@ -26,16 +27,11 @@ export default function Header() {
         </li>
         <li className='github-repository-link'>
           <button
-            className='github-repository-button'
             onClick={() => {
               window.open("https://github.com/pongdang/profile", "_blank");
             }}
           >
-            {theme === "light" ? (
-              <img src='/images/icons/github-light-icon.png' alt='' />
-            ) : (
-              <img src='/images/icons/github-dark-icon.png' alt='' />
-            )}
+            <GithubIcon />
           </button>
         </li>
       </ul>
@@ -85,10 +81,8 @@ const navContainer = (theme) => css`
 
     button {
       cursor: pointer;
-    }
-
-    img {
-      vertical-align: bottom;
+      width: 30px;
+      height: 30px;
     }
   }
 
