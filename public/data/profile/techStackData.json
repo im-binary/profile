@@ -10,16 +10,26 @@
       "id": 4,
       "teckStackName": "React",
       "teckStackImage": "/images/techStack/react-img.png",
-      "techDescription": "virutal DOM의 장단점을 알고 **컴포넌트 재사용** 에 익숙하고 기본적인 hook 사용에 능숙합니다."
+      "techDescription": "virutal DOM의 장단점을 알고 **컴포넌트 재사용** 에 익숙하고 기본적인 hook 사용에 능숙합니다. **Context API** 를 이용하여 **다크테마** 를 구현해본 경험이 있습니다. **ErrorBoundary** 와 **Suspense** 를 활용하여 **로딩과 에러에 대한 처리를 분리**한 경험이 있습니다."
     },
-
+    {
+      "id": 10,
+      "teckStackName": "React Query",
+      "teckStackImage": "/images/techStack/react-query-img.png",
+      "techDescription": "useQuery를 이용해 로딩중 UI를 **Suspense 레이어**로 분리할 수 있습니다."
+    },
     {
       "id": 7,
       "teckStackName": "Recoil",
       "teckStackImage": "/images/techStack/recoil-img.png",
       "techDescription": "복잡한 redux와 달리 recoil을 사용하여 쉽고 간단하게 **전역 상태를 관리** 할 수 있습니다."
     },
-
+    {
+      "id": 9,
+      "teckStackName": "Redux",
+      "teckStackImage": "/images/techStack/redux-img.png",
+      "techDescription": "flux 패턴의 기본적인 동작원리를 이해하고 있습니다."
+    },
     {
       "id": 8,
       "teckStackName": "TypeScript",

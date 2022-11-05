@@ -84,6 +84,7 @@ const contributeContainer = (theme) => css`
     padding: 20px;
     white-space: pre-wrap;
     box-shadow: ${theme === "light" ? lightBoxShadow : darkBoxShadow};
+    border-radius: 3px;
 
     p {
       line-height: 1.5;

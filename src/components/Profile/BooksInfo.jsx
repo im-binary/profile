@@ -55,7 +55,7 @@ const booksInfoContainer = ({ theme }) => css`
 `;
 
 const bookInfoContainer = ({ theme, percent }) => css`
-  border-radius: 10px;
+  border-radius: 3px;
   border-width: 1.5px;
   overflow: hidden;
   cursor: pointer;
