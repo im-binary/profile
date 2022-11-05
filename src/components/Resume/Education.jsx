@@ -6,7 +6,7 @@ import { fontSize, garyTitleBorderBottom, mainColor, subColor, whiteTitleBorderB
 import { useFetch } from "../../hooks/fetch";
 import { useTheme } from "../../hooks/theme";
 
-export function Education() {
+export default function Education() {
   const fetchUrl = "/data/resume/educationData.json";
   const fetchStorage = "educationData";
   const [theme] = useTheme();

@@ -15,7 +15,7 @@ import { useTheme } from "../../hooks/theme";
 import { UpdateDate } from "../Common/UpdateDate";
 import { Hits } from "../Common/Hits";
 
-export function Info() {
+export default function Info() {
   const [theme] = useTheme();
 
   return (

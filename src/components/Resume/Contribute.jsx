@@ -15,7 +15,7 @@ import {
 } from "../../style/main";
 import { CircleButton } from "../Common/CircleButton";
 
-export function Contribute() {
+export default function Contribute() {
   const [theme] = useTheme();
   const fetchUrl = "/data/resume/contributeData.json";
   const fetchStorage = "contributeData";

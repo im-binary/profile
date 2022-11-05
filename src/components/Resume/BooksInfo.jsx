@@ -10,7 +10,7 @@ import {
 import { useFetch } from "../../hooks/fetch";
 import { useTheme } from "../../hooks/theme";
 
-export function BooksInfo() {
+export default function BooksInfo() {
   const [theme] = useTheme();
   const fetchUrl = "/data/resume/bookInfoData.json";
   const fetchStorage = "bookInfoData";

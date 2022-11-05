@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 import { useTheme } from "../../hooks/theme";
 import { fontSize, garyTitleBorderBottom, whiteTitleBorderBottom } from "../../style/main";
 
-export function Introduce() {
+export default function Introduce() {
   const [theme] = useTheme();
 
   return (
