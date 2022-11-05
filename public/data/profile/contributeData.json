@@ -1,0 +1,20 @@
+{
+  "contributeData": [
+    {
+      "id": 1,
+      "contributeName": "@mdn 문서 오탈자 기여",
+      "contributeLink": "https://github.com/mdn/translated-content/pull/5807",
+      "contributeImage": "images/contribute/mdn.png",
+      "contributeReflection": "https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions#메소드로_사용되는_화살표_함수",
+      "contributeDescription": "평소 mdn에서 개발 중 생긴 궁금증을 해결하곤 합니다. **'화살표 함수' 문서** 를 정독 중에 발견한 오탈자를 수정하여 pr을 올렸고, 현재 반영이 되었습니다."
+    },
+    {
+      "id": 2,
+      "contributeName": "@toss/slash 문서 i18n 기여",
+      "contributeLink": "https://github.com/toss/slash/pull/51",
+      "contributeImage": "images/contribute/slash.png",
+      "contributeReflection": "https://slash.page/libraries/react/framer-motion/src/motion.i18n/",
+      "contributeDescription": "토스에서 만든 라이브러리를 구경하다가 **'motion'** 부분에 docusaurus에 live editor가 있으면 좋을 것 같다는 생각이 들었습니다.\n 해당 부분을 영어로 번역하고, live editor를 적용하여 pr을 올렸습니다.\n 영어로 번역한 부분은 적용되고, 제안한 live editor는 적용되지 않았지만, 다른 부분에서 live editor를 적용하면 좋을 것 같다는 의견을 들을 수 있었습니다.\n **현재는 영어로 번역한 부분이 반영**된 상태입니다."
+    }
+  ]
+}
