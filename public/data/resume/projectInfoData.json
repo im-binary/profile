@@ -32,7 +32,7 @@
       "summary": "우리 강아지의 사회성 향상을 위한 로컬 반려견 산책 모임 플랫폼입니다!\n'부산광역시 해운대구 우동' 설정하시면 등록된 모임을 확인할 수 있습니다!",
       "teckStack": { "id": "4", "name": ["HTML", "CSS", "Next.js", "react-query", "Recoil", "emotion"] },
       "repositoryLink": "https://github.com/codestates-seb/seb39_main_026",
-      "projectImage": "https://raw.githubusercontent.com/codestates-seb/seb39_main_026/main/metaImage.png",
+      "projectImage": "/images/project/walk.png",
       "projectLink": "https://sancheck.vercel.app/",
       "troubleshootLink": "https://pong-dang.notion.site/28f3ea78c7b74aadb1d7fa2a6bc272eb?v=4593b9711f944a2da2449bf08896989f"
     },
