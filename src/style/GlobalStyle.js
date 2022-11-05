@@ -1,4 +1,3 @@
-import React from "react";
 import { Global, css } from "@emotion/react";
 import { darkBackgroundColor, darkFontColor, lightBackgroundColor, lightFontColor } from "./main";
 import { useTheme } from "../hooks/theme";
