@@ -1,5 +1,3 @@
-import React from "react";
-
 export function Hits({ url = window.location.href }) {
   const encodedUrl = encodeURIComponent(url);
 

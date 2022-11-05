@@ -1,4 +1,3 @@
-import React from "react";
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { mainSectionContainer } from "../style/main";
@@ -9,6 +8,7 @@ import { Education } from "../components/Profile/Education";
 import { ProjectSection } from "../components/Profile/ProjectSection";
 import { BooksInfo } from "../components/Profile/BooksInfo";
 import { Introduce } from "../components/Profile/Introduce";
+import { Contribute } from "../components/Profile/Contribute";
 
 export function Profile() {
   return (
@@ -16,6 +16,7 @@ export function Profile() {
       <Info />
       <Introduce />
       <Career />
+      <Contribute />
       <TechStack />
       <Education />
       <ProjectSection />
