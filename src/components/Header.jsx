@@ -56,12 +56,13 @@ const navContainer = (theme) => css`
 
   li {
     cursor: pointer;
-    border-width: 1.8px 1.8px 0px 1.8px;
-    border-style: solid;
     border-radius: 10px 10px 0 0;
+
+    box-shadow: ${theme === "light" ? "2px -2px 3px 0px rgb(200 200 200)" : "2px 0px 3px 0px rgb(24 24 24)"};
 
     &:hover {
       background-color: ${mainColor};
+      box-shadow: none;
     }
 
     .active {
