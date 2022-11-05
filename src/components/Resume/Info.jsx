@@ -36,7 +36,7 @@ export default function Info() {
           </li>
           <li>
             <a href={URLs.github} target='_blank' rel='noreferrer'>
-              👩‍💻 <span>Github</span>
+              👩‍💻 <span>GitHub</span>
             </a>
           </li>
           <li>

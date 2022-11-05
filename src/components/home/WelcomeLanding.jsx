@@ -4,10 +4,10 @@ import { Message } from "./Message";
 
 const scrollText = [
   { id: 1, text: "안녕하세요", scale: 1 },
-  { id: 2, text: "고양이", scale: 1.5 },
-  { id: 3, text: "좋아", scale: 2 },
-  { id: 4, text: "왕", scale: 2.5 },
-  { id: 5, text: "좋아", scale: 3.3 },
+  { id: 2, text: "혹시", scale: 1.5 },
+  { id: 3, text: "고양이", scale: 2 },
+  { id: 4, text: "좋아하시나요?", scale: 2.5 },
+  { id: 5, text: "저두용 🐈🐈‍⬛", scale: 3.3 },
 ];
 
 export function WelcomeLanding() {
@@ -26,16 +26,19 @@ export function WelcomeLanding() {
           alt='하품하는 냥'
         />
       </Image>
-      {scrollText.map((item) => (
-        <Message
-          key={`${item.id}`}
-          id={item.id}
-          text={item.text}
-          transform={item.transform}
-          onViewportEnter={() => {
-            setStep(item.id);
-          }}
-        />
+      {scrollText.map((item, index) => (
+        <>
+          <Message
+            index={index}
+            key={`${item.id}`}
+            id={item.id}
+            text={item.text}
+            transform={item.transform}
+            onViewportEnter={() => {
+              setStep(item.id);
+            }}
+          />
+        </>
       ))}
     </div>
   );
