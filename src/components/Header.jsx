@@ -25,13 +25,9 @@ export function Header() {
           <NavLink to='/resume'>Resume</NavLink>
         </li>
         <li className='github-repository-link'>
-          <button
-            onClick={() => {
-              window.open("https://github.com/pongdang/profile", "_blank");
-            }}
-          >
+          <a href='https://github.com/pongdang/profile' target='_blank' rel='noreferrer'>
             <GithubIcon />
-          </button>
+          </a>
         </li>
       </ul>
     </nav>
@@ -76,16 +72,19 @@ const navContainer = (theme) => css`
   li.github-repository-link {
     margin-left: auto;
     align-self: flex-end;
-    padding: 8px 16px;
 
-    button {
-      cursor: pointer;
-      width: 30px;
-      height: 30px;
+    a {
+      display: block;
+      padding: 10px 12px;
+
+      svg {
+        width: 30px;
+        height: 30px;
+      }
     }
   }
 
-  a {
+  a:not(li.github-repository-link a) {
     display: inline-block;
     padding: 15px 30px;
     border-radius: 10px 10px 0 0;

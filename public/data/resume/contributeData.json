@@ -14,7 +14,7 @@
       "contributeLink": "https://github.com/toss/slash/pull/51",
       "contributeImage": "images/contribute/slash.png",
       "contributeReflection": "https://slash.page/libraries/react/framer-motion/src/motion.i18n/",
-      "contributeDescription": "토스에서 만든 라이브러리를 구경하다가 **'motion'** 부분에 docusaurus에 live editor가 있으면 좋을 것 같다는 생각이 들었습니다.\n 해당 부분을 영어로 번역하고, live editor를 적용하여 pr을 올렸습니다.\n 영어로 번역한 부분은 적용되고, 제안한 live editor는 적용되지 않았지만, 다른 부분에서 live editor를 적용하면 좋을 것 같다는 의견을 들을 수 있었습니다.\n **현재는 영어로 번역한 부분이 반영**된 상태입니다."
+      "contributeDescription": "토스에서 만든 라이브러리를 구경하다가 **'motion'** 부분에 live editor가 있으면 좋을 것 같다는 생각이 들었습니다.\n 해당 부분을 영어로 번역하고, live editor를 적용하여 pr을 올렸습니다.\n 영어로 번역한 부분은 적용되고, 제안한 live editor는 적용되지 않았지만, 다른 부분에서 live editor를 적용하면 좋을 것 같다는 의견을 들을 수 있었습니다.\n **현재는 영어로 번역한 부분이 반영**된 상태입니다."
     }
   ]
 }
