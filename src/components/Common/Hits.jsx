@@ -1,5 +1,12 @@
+import { useSearchParams } from "react-router-dom";
+
 export function Hits({ url = window.location.href }) {
   const encodedUrl = encodeURIComponent(url);
+  const [searchParams] = useSearchParams();
+
+  if (searchParams.get("noHits") != null) {
+    return <div style={{ height: "23px" }} />;
+  }
 
   return (
     <a
@@ -7,6 +14,7 @@ export function Hits({ url = window.location.href }) {
       style={{
         display: "block",
         textAlign: "right",
+        height: "23px",
       }}
     >
       <img
