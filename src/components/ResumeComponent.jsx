@@ -9,6 +9,8 @@
 import { lazy } from "react";
 
 export const ResumeComponentMap = {
+  ProfileImage: lazy(() => import("./Resume/ProfileImage")),
+  Name: lazy(() => import("./Resume/Name")),
   Info: lazy(() => import("./Resume/Info")),
   Introduce: lazy(() => import("./Resume/Introduce")),
   Career: lazy(() => import("./Resume/Career")),
@@ -21,6 +23,10 @@ export const ResumeComponentMap = {
 
 export const ResumeComponent = ({ name }) => {
   const Component = ResumeComponentMap[name];
+
+  if (Component == null) {
+    return <></>;
+  }
 
   return <Component />;
 };

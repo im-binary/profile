@@ -16,7 +16,7 @@ export function WelcomeLanding() {
 
   return (
     <div>
-      <Image step>
+      <Image>
         <img
           style={{
             transform: `scale(${target.scale})`,

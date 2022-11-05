@@ -13,13 +13,9 @@ export default function Career() {
         <li>회사명</li>
         <li>근무기간</li>
         <li>없음</li>
-        <li>🌹</li>
+        <li>🌹 저의 경력이,, 🌹</li>
         <li>없음</li>
-        <li>저의 경력이,,</li>
-        <li>없음</li>
-        <li>되어주세요</li>
-        <li>없음</li>
-        <li>🌹</li>
+        <li>🌹 되어주세요 🌹</li>
       </ul>
     </article>
   );

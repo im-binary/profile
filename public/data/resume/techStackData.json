@@ -16,7 +16,7 @@
       "id": 10,
       "teckStackName": "React Query",
       "teckStackImage": "/images/techStack/react-query-img.png",
-      "techDescription": "useQuery를 이용해 로딩중 UI를 **Suspense 레이어**로 분리할 수 있습니다."
+      "techDescription": "useQuery를 이용해 로딩 중 UI를 **Suspense 레이어**로 분리할 수 있습니다."
     },
     {
       "id": 7,
@@ -28,7 +28,7 @@
       "id": 9,
       "teckStackName": "Redux",
       "teckStackImage": "/images/techStack/redux-img.png",
-      "techDescription": "flux 패턴의 기본적인 동작원리를 이해하고 있습니다."
+      "techDescription": "flux 패턴의 기본적인 동작 원리를 이해하고 있습니다."
     },
     {
       "id": 8,
@@ -40,19 +40,19 @@
       "id": 3,
       "teckStackName": "JavaScript",
       "teckStackImage": "/images/techStack/js-img.png",
-      "techDescription": "es6 문법을 사용하는 것에 익숙하고 **JavaScript의 동작원리** 를 이해하고 있습니다. **브라우저 환경과 Node.js 환경의 차이점** 을 알고 있습니다."
+      "techDescription": "es6 문법을 사용하는 것에 익숙하고 **JavaScript의 동작 원리** 를 이해하고 있습니다. **브라우저 환경과 Node.js 환경의 차이점** 을 알고 있습니다."
     },
     {
       "id": 1,
       "teckStackName": "HTML",
       "teckStackImage": "/images/techStack/html-img.png",
-      "techDescription": "div 태그를 사용하기 보다 때에 맞는 **시멘틱 태그** 를 사용하여 **접근성(a11y)을 준수** 하는 구조적 문서를 만드는 것에 능숙합니다."
+      "techDescription": "div 태그를 사용하기보다 때에 맞는 **시멘틱 태그** 를 사용하여 **접근성(a11y)을 준수** 하는 구조적 문서를 만드는 것에 능숙합니다."
     },
     {
       "id": 2,
       "teckStackName": "CSS",
       "teckStackImage": "/images/techStack/css-img.png",
-      "techDescription": "**css 선택자** 사용에 능숙하며 웹을 **반응형** 으로 만들거나 다양한 환경에서도 동일한 UI를 보여주도록 스타일을 작성하는 것에 자신있습니다."
+      "techDescription": "**css 선택자** 사용에 능숙하며 웹을 **반응형** 으로 만들거나 다양한 환경에서도 동일한 UI를 보여주도록 스타일을 작성하는 것에 자신 있습니다."
     }
   ]
 }

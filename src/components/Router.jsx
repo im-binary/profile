@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { Suspense, useEffect } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { Home } from "../pages/Home";
 import { Resume } from "../pages/Resume";
@@ -16,7 +16,14 @@ export function Router() {
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/profile' element={<Navigate to='/resume' replace={true} />} />
-      <Route path='/resume' element={<Resume />} />
+      <Route
+        path='/resume'
+        element={
+          <Suspense fallback={<>로딩 중</>}>
+            <Resume />
+          </Suspense>
+        }
+      />
       <Route path='/portfolio' element={<Portfolio />} />
     </Routes>
   );

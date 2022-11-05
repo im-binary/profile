@@ -1,5 +1,3 @@
-import React from "react";
-
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { URLs } from "../../constant";
@@ -20,17 +18,6 @@ export default function Info() {
 
   return (
     <article css={infoContainer(theme)}>
-      <div className='profile'>
-        <img src='/images/my-image.jpeg' alt='전이진 프로필 사진' />
-      </div>
-      <h1>
-        전이진 (
-        <a href={URLs.github} target='_blank' rel='noreferrer'>
-          @pongdang
-        </a>
-        )
-      </h1>
-
       <Hits />
 
       <UpdateDate yyyymmdd={"20221105"} />
@@ -64,32 +51,6 @@ export default function Info() {
 }
 
 const infoContainer = (theme) => css`
-  div.profile {
-    text-align: center;
-    width: 256px;
-    height: 256px;
-    border-radius: 50%;
-    overflow: hidden;
-
-    img {
-      margin-top: -14px;
-      width: 100%;
-    }
-  }
-
-  h1 {
-    font-family: "GangwonEduPowerExtraBoldA";
-    letter-spacing: 2px;
-    margin: 40px 0;
-    ${fontSize.contentFontSize40};
-
-    a {
-      &:hover {
-        color: ${theme === "light" ? "#ffc23a" : "#80879d"};
-      }
-    }
-  }
-
   section {
     display: flex;
     justify-content: space-between;
