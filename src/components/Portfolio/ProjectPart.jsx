@@ -8,7 +8,6 @@ export function ProjectPart({ projectDetailsData }) {
   }
 
   const { part: projectPart } = projectDetailsData;
-  console.log(projectPart);
 
   return (
     <ul css={css``}>

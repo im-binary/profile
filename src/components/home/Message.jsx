@@ -5,7 +5,6 @@ import styled from "@emotion/styled";
 const LAST_PAGE = 4;
 
 function useParallax(value, distance) {
-  console.log({ value });
   return useTransform(value, [0, 1], [-distance, distance]);
 }
 

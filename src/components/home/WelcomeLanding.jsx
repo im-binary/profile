@@ -27,18 +27,16 @@ export function WelcomeLanding() {
         />
       </Image>
       {scrollText.map((item, index) => (
-        <>
-          <Message
-            index={index}
-            key={`${item.id}`}
-            id={item.id}
-            text={item.text}
-            transform={item.transform}
-            onViewportEnter={() => {
-              setStep(item.id);
-            }}
-          />
-        </>
+        <Message
+          index={index}
+          key={`${item.id}`}
+          id={item.id}
+          text={item.text}
+          transform={item.transform}
+          onViewportEnter={() => {
+            setStep(item.id);
+          }}
+        />
       ))}
     </div>
   );
