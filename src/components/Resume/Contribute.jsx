@@ -17,7 +17,7 @@ import { CircleButton } from "../Common/CircleButton";
 
 export function Contribute() {
   const [theme] = useTheme();
-  const fetchUrl = "/data/profile/contributeData.json";
+  const fetchUrl = "/data/resume/contributeData.json";
   const fetchStorage = "contributeData";
 
   const { dataList: contributeList } = useFetch(fetchUrl, fetchStorage);

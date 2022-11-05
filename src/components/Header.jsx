@@ -10,7 +10,7 @@ import {
   navLightBackgroundColor,
 } from "../style/main";
 import { useTheme } from "../hooks/theme";
-import { GithubIcon } from "./Profile/GithubIcon";
+import { GithubIcon } from "./Resume/GithubIcon";
 
 export function Header() {
   const [theme] = useTheme();
@@ -22,7 +22,7 @@ export function Header() {
           <NavLink to='/'>Home</NavLink>
         </li>
         <li>
-          <NavLink to='/profile'>Profile</NavLink>
+          <NavLink to='/resume'>Resume</NavLink>
         </li>
         <li className='github-repository-link'>
           <button

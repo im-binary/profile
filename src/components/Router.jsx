@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { Home } from "../pages/Home";
-import { Profile } from "../pages/Profile";
+import { Resume } from "../pages/Resume";
 import { useLocation } from "react-router-dom";
 import { Portfolio } from "../pages/Portfolio";
 
@@ -15,7 +15,8 @@ export function Router() {
   return (
     <Routes>
       <Route path='/' element={<Home />} />
-      <Route path='/profile' element={<Profile />} />
+      <Route path='/profile' element={<Navigate to='/resume' replace={true} />} />
+      <Route path='/resume' element={<Resume />} />
       <Route path='/portfolio' element={<Portfolio />} />
     </Routes>
   );
