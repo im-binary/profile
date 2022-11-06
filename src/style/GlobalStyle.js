@@ -33,4 +33,39 @@ const style = (theme) => css`
     font-size: inherit;
     appearance: none;
   }
+
+  .print {
+    display: none;
+  }
+
+  @page {
+    margin: 40px 20px 100px 20px;
+    padding: 100px 0;
+  }
+
+  @media print {
+    head > title {
+      opacity: hidden !important;
+    }
+
+    body {
+      position: relative;
+      padding: 0 20px;
+    }
+
+    .print {
+      display: unset !important;
+    }
+
+    .no-print {
+      display: none !important;
+    }
+
+    * {
+      font-family: unset !important;
+      font-weight: 400 !important;
+      box-shadow: unset !important;
+      color: black !important;
+    }
+  }
 `;

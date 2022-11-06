@@ -8,7 +8,7 @@ export default function Career() {
 
   return (
     <article css={careerContainer(theme)}>
-      <h2>경력</h2>
+      <h2>💍 경력</h2>
       <ul>
         <li>회사명</li>
         <li>근무기간</li>

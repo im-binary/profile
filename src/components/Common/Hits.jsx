@@ -10,6 +10,7 @@ export function Hits({ url = window.location.href }) {
 
   return (
     <a
+      className='no-print'
       href='https://hits.seeyoufarm.com'
       style={{
         display: "block",

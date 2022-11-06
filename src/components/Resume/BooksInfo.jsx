@@ -19,11 +19,15 @@ export default function BooksInfo() {
 
   return (
     <article css={booksInfoContainer({ theme })}>
-      <h2>독서</h2>
+      <h2>📚 독서</h2>
       <div>
         {bookList.map((item) => (
           <section css={bookInfoContainer({ theme, percent: item.percent })} key={`book-${item.id}`}>
-            <a href={item.bookLink} target='_blank' rel='noreferrer'>
+            <li className='print'>
+              <h1>{item.bookName}</h1>
+              <span>👉 {item.bookLink}</span>
+            </li>
+            <a href={item.bookLink} target='_blank' rel='noreferrer' className='no-print'>
               <img src={item.bookImage} alt={item.bookName} />
             </a>
           </section>
@@ -73,7 +77,7 @@ const bookInfoContainer = ({ theme, percent }) => css`
     display: block;
   }
 
-  &::after {
+  a::after {
     display: block;
     text-align: right;
     content: "${percent}%ㅤ";

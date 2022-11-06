@@ -15,7 +15,7 @@ export default function TechStack() {
 
   return (
     <article css={techStackContainer(theme)}>
-      <h2>기술 스택</h2>
+      <h2>🤹‍♀️ 기술 스택</h2>
       <ul>
         {techStackData.map((item) => (
           <React.Fragment key={`techStack-${item.id}`}>

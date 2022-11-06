@@ -2,11 +2,11 @@
 import { css } from "@emotion/react";
 import { useTheme } from "../hooks/theme";
 
-export function ThemeButton({ handleChangeMode }) {
+export function ThemeButton({ className, handleChangeMode }) {
   const [theme] = useTheme();
 
   return (
-    <button css={modeButtonContainer} onClick={handleChangeMode}>
+    <button className={className} css={modeButtonContainer} onClick={handleChangeMode}>
       {theme === "light" ? "🌞" : "🌚"}
     </button>
   );

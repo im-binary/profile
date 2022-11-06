@@ -15,8 +15,19 @@ import { GithubIcon } from "./Resume/GithubIcon";
 export function Header() {
   const [theme] = useTheme();
 
+  const downloadReusmePdf = () => {
+    const title = window.document.title;
+
+    window.addEventListener("afterprint", () => {
+      window.document.title = title;
+    });
+
+    window.document.title = "　";
+    window.print();
+  };
+
   return (
-    <nav css={navContainer(theme)}>
+    <nav css={navContainer(theme)} className='no-print'>
       <ul>
         <li>
           <NavLink to='/'>Home</NavLink>
@@ -24,7 +35,19 @@ export function Header() {
         <li>
           <NavLink to='/resume'>Resume</NavLink>
         </li>
-        <li className='github-repository-link'>
+
+        <li style={{ marginLeft: "auto" }}>
+          <button
+            css={css`
+              padding: 16px;
+              cursor: pointer;
+            `}
+            onClick={downloadReusmePdf}
+          >
+            resume
+          </button>
+        </li>
+        <li className='github-repository-link' style={{ marginLeft: "10px" }}>
           <a href='https://github.com/pongdang/profile' target='_blank' rel='noreferrer'>
             <GithubIcon />
           </a>

@@ -17,7 +17,7 @@ export function App() {
   return (
     <>
       <Header />
-      <ThemeButton handleChangeMode={handleChangeMode} />
+      <ThemeButton className='no-print' handleChangeMode={handleChangeMode} />
       <GreetingLog />
     </>
   );

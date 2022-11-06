@@ -8,7 +8,7 @@ export default function Introduce() {
 
   return (
     <article css={introduce(theme)}>
-      <h2>Hello</h2>
+      <h2>😉 자기소개</h2>
       <section>
         <p
           css={css`

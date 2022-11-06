@@ -3,3 +3,35 @@ export const URLs = {
   github: "https://github.com/pongdang",
   velog: "https://velog.io/@pongdang",
 };
+
+export const ResumeType = {
+  default: {
+    components: [
+      "ProfileImage",
+      "Name",
+      "Info",
+      "Introduce",
+      "Career",
+      "TechStack",
+      "Education",
+      "ProjectSection",
+      "Contribute",
+      "BooksInfo",
+    ],
+  },
+  onlyResume: {
+    components: [
+      "ProfileImage",
+      "Name",
+      "Career",
+      "TechStack",
+      "Education",
+      "ProjectSection",
+      "Contribute",
+      "BooksInfo",
+    ],
+  },
+  onlyIntroduce: {
+    components: ["ProfileImage", "Name", "Info", "Introduce"],
+  },
+};

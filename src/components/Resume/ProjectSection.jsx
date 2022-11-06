@@ -23,11 +23,12 @@ export default function ProjectSection() {
 
   return (
     <article css={projectInfoContainer(theme)}>
-      <h2>프로젝트</h2>
+      <h2>🤼‍♀️ 프로젝트</h2>
       <Container>
         {projectList.map((item) => (
           <ProjectCard key={`project-${item.id}`} theme>
             <img
+              className='no-print'
               css={css`
                 display: block;
                 width: 100%;
@@ -39,7 +40,7 @@ export default function ProjectSection() {
               alt=''
             />
 
-            <ButtonContainer>
+            <ButtonContainer className='no-print'>
               <div className='circle-button-container'>
                 <CircleButton
                   onClick={() => {
@@ -64,10 +65,10 @@ export default function ProjectSection() {
                 </CircleButton>
               </a>
             </ButtonContainer>
-
             <ProjectCardTextContainer>
               <ProjectName>{item.name}</ProjectName>
               <ProjectPeriod>프로젝트 기간 : {item.period}</ProjectPeriod>
+              <div className='print'>👉 {item.projectLink}</div>
               <ProjectSummary>
                 <p>{item.summary}</p>
               </ProjectSummary>

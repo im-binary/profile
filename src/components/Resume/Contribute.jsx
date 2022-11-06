@@ -24,11 +24,11 @@ export default function Contribute() {
 
   return (
     <article css={contributeContainer(theme)}>
-      <h2>Open Source Contribute</h2>
+      <h2>🚀 오픈 소스 기여</h2>
       <ul>
         {contributeList.map((item) => (
           <li key={item.id}>
-            <LinkContainer theme={theme}>
+            <LinkContainer theme={theme} className='no-print'>
               <a href={item.contributeLink} target='_blank' rel='noreferrer'>
                 <CircleButton type='button' className='themore-button'>
                   👉 PR 확인
@@ -40,8 +40,10 @@ export default function Contribute() {
                 </CircleButton>
               </a>
             </LinkContainer>
-            <Image src={item.contributeImage} />
+            <Image src={item.contributeImage} className='no-print' />
             <Name>{item.contributeName}</Name>
+            <p className='print'>👉 PR: {item.contributeLink}</p>
+            <p className='print'>👉 결과: {item.contributeReflection}</p>
 
             <Description>
               {parseBoldString(item.contributeDescription).map((x, i) => {
