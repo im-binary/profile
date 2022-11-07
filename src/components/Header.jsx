@@ -81,7 +81,6 @@ const navContainer = (theme) => css`
     gap: 6px;
     ${fontSize.contentFontSize16};
     margin: 16px 16px 0 16px;
-    overflow-x: scroll;
   }
 
   li {
