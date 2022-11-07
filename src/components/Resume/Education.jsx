@@ -62,7 +62,7 @@ const educationContainer = (theme) => css`
   }
 
   ul {
-    padding: 20px;
+    padding: 20px 0;
     display: grid;
     grid-template-columns: 1fr 1fr 60px;
     gap: 5px 10px;

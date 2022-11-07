@@ -3,9 +3,13 @@ import { css } from "@emotion/react";
 export const mainSectionContainer = css`
   min-height: 100vh;
   max-width: 1200px;
-  min-width: 334px;
+  min-width: 320px;
   margin: 0 auto;
   padding: 100px 40px;
+
+  @media (max-width: 600px) {
+    padding: 100px 20px;
+  }
 `;
 
 export const mainColor = "rgba(135,131,120,0.15)";

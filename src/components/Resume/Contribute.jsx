@@ -73,7 +73,7 @@ const contributeContainer = (theme) => css`
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 16px;
-    margin: 20px 0;
+    padding: 20px 0;
 
     @media (max-width: 400px) {
       display: grid;

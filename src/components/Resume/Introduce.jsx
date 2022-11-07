@@ -65,7 +65,7 @@ const introduce = (theme) => css`
   }
 
   section {
-    margin: 20px;
+    padding: 20px 0;
     ${fontSize.contentFontSize16};
     line-height: 1.5;
 

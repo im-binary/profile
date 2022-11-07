@@ -30,7 +30,7 @@ const careerContainer = (theme) => css`
   }
 
   ul {
-    padding: 20px;
+    padding: 20px 0;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 5px 10px;

@@ -47,7 +47,7 @@ export function Header() {
           >
             <button
               css={css`
-                padding: 16px;
+                padding: 15px 10px;
                 cursor: pointer;
               `}
               onClick={downloadReusmePdf}
@@ -81,6 +81,7 @@ const navContainer = (theme) => css`
     gap: 6px;
     ${fontSize.contentFontSize16};
     margin: 16px 16px 0 16px;
+    overflow-x: scroll;
   }
 
   li {
@@ -107,7 +108,7 @@ const navContainer = (theme) => css`
 
     a {
       display: block;
-      padding: 10px 12px;
+      padding: 9px 12px;
 
       svg {
         width: 30px;
@@ -117,8 +118,12 @@ const navContainer = (theme) => css`
   }
 
   a:not(li.github-repository-link a) {
-    display: inline-block;
+    display: block;
     padding: 15px 30px;
     border-radius: 10px 10px 0 0;
+
+    @media (max-width: 420px) {
+      padding: 15px 10px;
+    }
   }
 `;

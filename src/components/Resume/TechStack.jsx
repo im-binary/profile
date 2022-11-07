@@ -57,7 +57,7 @@ const techStackContainer = (theme) => css`
   }
 
   ul {
-    padding: 20px;
+    padding: 20px 0;
     gap: 14px;
     ${fontSize.contentFontSize16};
     align-items: center;
