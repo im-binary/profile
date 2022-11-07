@@ -18,7 +18,7 @@ export default function BooksInfo() {
   const { dataList: bookList } = useFetch(fetchUrl, fetchStorage);
 
   return (
-    <article css={booksInfoContainer({ theme })}>
+    <article css={booksInfoContainer({ theme })} name='BooksInfo'>
       <h2>📚 독서</h2>
       <div>
         {bookList.map((item) => (

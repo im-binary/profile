@@ -7,7 +7,7 @@ export default function Career() {
   const [theme] = useTheme();
 
   return (
-    <article css={careerContainer(theme)}>
+    <article css={careerContainer(theme)} name='Career'>
       <h2>💍 경력</h2>
       <ul>
         <li>회사명</li>

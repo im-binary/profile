@@ -22,7 +22,7 @@ export default function ProjectSection() {
   const { dataList: projectList } = useFetch(fetchUrl, fetchStorage);
 
   return (
-    <article css={projectInfoContainer(theme)}>
+    <article name='ProjectSection' css={projectInfoContainer(theme)}>
       <h2>🤼‍♀️ 프로젝트</h2>
       <Container>
         {projectList.map((item) => (

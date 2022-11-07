@@ -17,7 +17,7 @@ export default function Info() {
   const [theme] = useTheme();
 
   return (
-    <article css={infoContainer(theme)}>
+    <article name='Info' css={infoContainer(theme)}>
       <Hits />
 
       <UpdateDate yyyymmdd={"20221105"} />

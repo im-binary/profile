@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import {
   fontSize,
   darkBackgroundColor,
@@ -14,6 +14,9 @@ import { GithubIcon } from "./Resume/GithubIcon";
 
 export function Header() {
   const [theme] = useTheme();
+  const location = useLocation();
+
+  const resume = location.pathname === "/resume";
 
   const downloadReusmePdf = () => {
     const title = window.document.title;
@@ -36,18 +39,24 @@ export function Header() {
           <NavLink to='/resume'>Resume</NavLink>
         </li>
 
-        <li style={{ marginLeft: "auto" }}>
-          <button
+        {resume && (
+          <li
             css={css`
-              padding: 16px;
-              cursor: pointer;
+              margin-left: auto;
             `}
-            onClick={downloadReusmePdf}
           >
-            resume
-          </button>
-        </li>
-        <li className='github-repository-link' style={{ marginLeft: "10px" }}>
+            <button
+              css={css`
+                padding: 16px;
+                cursor: pointer;
+              `}
+              onClick={downloadReusmePdf}
+            >
+              pdf
+            </button>
+          </li>
+        )}
+        <li className={`github-repository-link ${!resume ? "home" : ""}`}>
           <a href='https://github.com/pongdang/profile' target='_blank' rel='noreferrer'>
             <GithubIcon />
           </a>
@@ -69,6 +78,7 @@ const navContainer = (theme) => css`
     display: flex;
     align-items: center;
     justify-content: start;
+    gap: 6px;
     ${fontSize.contentFontSize16};
     margin: 16px 16px 0 16px;
   }
@@ -76,7 +86,7 @@ const navContainer = (theme) => css`
   li {
     cursor: pointer;
     border-radius: 10px 10px 0 0;
-    box-shadow: ${theme === "light" ? "2px -2px 3px 0px rgb(200 200 200)" : "2px 0px 3px 0px rgb(24 24 24)"};
+    box-shadow: ${theme === "light" ? "2px -2px 3px 0px rgb(200 200 200)" : "2px 0px 7px 0px rgb(24 24 24)"};
 
     &:hover {
       background-color: ${mainColor};
@@ -88,13 +98,12 @@ const navContainer = (theme) => css`
     }
   }
 
-  li + li {
-    margin-left: 6px;
-  }
-
   li.github-repository-link {
-    margin-left: auto;
     align-self: flex-end;
+
+    &.home {
+      margin-left: auto;
+    }
 
     a {
       display: block;

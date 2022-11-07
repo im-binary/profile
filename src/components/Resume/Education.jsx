@@ -14,7 +14,7 @@ export default function Education() {
   const { dataList: educatioList } = useFetch(fetchUrl, fetchStorage);
 
   return (
-    <article css={educationContainer(theme)}>
+    <article name='Education' css={educationContainer(theme)}>
       <h2>🎓 교육</h2>
       <ul>
         <li>과정</li>

@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 
 export default function ProfileImage() {
   return (
-    <article css={infoContainer}>
+    <article css={infoContainer} name='ProfileImage'>
       <div className='profile'>
         <img src='/images/my-image.jpeg' alt='전이진 프로필 사진' />
       </div>

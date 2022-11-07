@@ -22,8 +22,8 @@ export function Resume() {
 
   return (
     <main css={resumeContainer(type)}>
-      {components.map((x) => (
-        <Suspense key={x.name} fallback={<ResumeComponent.Skeleton name={x} />}>
+      {components.map((x, index) => (
+        <Suspense key={`${x.name}-${index}`} fallback={<ResumeComponent.Skeleton name={x} />}>
           <ResumeComponent name={x} />
         </Suspense>
       ))}

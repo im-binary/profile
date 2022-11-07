@@ -23,7 +23,7 @@ export default function Contribute() {
   const { dataList: contributeList } = useFetch(fetchUrl, fetchStorage);
 
   return (
-    <article css={contributeContainer(theme)}>
+    <article name='Contribute' css={contributeContainer(theme)}>
       <h2>🚀 오픈 소스 기여</h2>
       <ul>
         {contributeList.map((item) => (

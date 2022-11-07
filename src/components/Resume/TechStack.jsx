@@ -14,7 +14,7 @@ export default function TechStack() {
   const { dataList: techStackData } = useFetch(fetchUrl, fetchStorage);
 
   return (
-    <article css={techStackContainer(theme)}>
+    <article name='TechStack' css={techStackContainer(theme)}>
       <h2>🤹‍♀️ 기술 스택</h2>
       <ul>
         {techStackData.map((item) => (

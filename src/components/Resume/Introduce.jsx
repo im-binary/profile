@@ -7,7 +7,7 @@ export default function Introduce() {
   const [theme] = useTheme();
 
   return (
-    <article css={introduce(theme)}>
+    <article name='Introduce' css={introduce(theme)}>
       <h2>😉 자기소개</h2>
       <section>
         <p

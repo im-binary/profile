@@ -5,14 +5,14 @@ const printStyle = css`
     padding: 40px;
 
     // Name 컴포넌트
-    article[class$="Name"] > h1 {
+    article[name="Name"] > h1 {
       @media print {
         margin-top: 0px !important;
       }
     }
 
     // ProjectSection 컴포넌트
-    article[class$="ProjectSection"] {
+    article[name="ProjectSection"] {
       > div {
         display: block;
 
@@ -55,12 +55,12 @@ const printStyle = css`
     }
 
     // ProjectSection 컴포넌트
-    article[class$="ProjectSection"] {
+    article[name="ProjectSection"] {
       color: red;
     }
 
     // Contribute 컴포넌트
-    article[class$="Contribute"] {
+    article[name="Contribute"] {
       ul {
         display: block;
 
@@ -87,7 +87,7 @@ const printStyle = css`
     }
 
     // BooksInfo 컴포넌트
-    article[class$="BooksInfo"] > div {
+    article[name="BooksInfo"] > div {
       display: block;
       padding-left: 0 !important;
 
@@ -107,17 +107,17 @@ const printStyle = css`
 const defaultType = css`
   // ProfileImage 컴포넌트
   @media print {
-    article[class$="ProfileImage"] {
+    article[name="ProfileImage"] {
       display: none;
     }
 
     // ProfileImage 컴포넌트
-    article[class$="Career"] {
+    article[name="Career"] {
       display: none;
     }
 
     // TechStack 컴포넌트
-    article[class$="TechStack"] {
+    article[name="TechStack"] {
       margin-top: 120px;
       page-break-before: always;
 
@@ -128,13 +128,13 @@ const defaultType = css`
     }
 
     // ProjectSection 컴포넌트
-    article[class$="ProjectSection"] {
+    article[name="ProjectSection"] {
       margin-top: 120px;
       page-break-before: always;
     }
 
     // Contribute 컴포넌트
-    article[class$="Contribute"] {
+    article[name="Contribute"] {
       margin-top: 120px;
       page-break-before: always;
     }
@@ -144,12 +144,12 @@ const defaultType = css`
 const onlyResumeType = css`
   // ProfileImage 컴포넌트
   @media print {
-    article[class$="ProfileImage"] {
+    article[name="ProfileImage"] {
       display: none;
     }
 
     // TechStack 컴포넌트
-    article[class$="TechStack"] {
+    article[name="TechStack"] {
       li:nth-of-type(6n) {
         margin-top: 120px;
         page-break-before: always;
@@ -157,13 +157,13 @@ const onlyResumeType = css`
     }
 
     // ProjectSection 컴포넌트
-    article[class$="ProjectSection"] {
+    article[name="ProjectSection"] {
       margin-top: 120px;
       page-break-before: always;
     }
 
     // Contribute 컴포넌트
-    article[class$="Contribute"] {
+    article[name="Contribute"] {
       margin-top: 120px;
       page-break-before: always;
     }
@@ -173,12 +173,12 @@ const onlyResumeType = css`
 const onlyIntroduceType = css`
   // ProfileImage 컴포넌트
   @media print {
-    article[class$="ProfileImage"] {
+    article[name="ProfileImage"] {
       display: none;
     }
 
     // Introduce 컴포넌트
-    article[class$="Introduce"] {
+    article[name="Introduce"] {
       p {
         line-height: 3rem !important;
       }
