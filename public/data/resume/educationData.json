@@ -1,25 +1,11 @@
 {
   "educationData": [
     {
-      "id": 2,
-      "course": "빔캠프 CSS 첫걸음",
-      "period": "21.07.20 ~ 21.08.06 (3주)",
-      "site": "https://veamcamp.com/camp/css-babystep/",
-      "certificates": "https://certificates.pongdang.me/css-babystep.png"
-    },
-    {
-      "id": 3,
-      "course": "일팔공 REACT 기초반",
-      "period": "21.12.13 ~ 22.03.04 (12주)",
-      "site": "https://certificates.pongdang.me/mega-react-class.pdf",
-      "certificates": "https://certificates.pongdang.me/react-basiccamp.jpg"
-    },
-    {
-      "id": 4,
-      "course": "코드스테이츠",
-      "period": "22.04.25 ~ 22.10.19 (16주)",
-      "site": "https://www.codestates.com/course/frontend-engineering?gclid=CjwKCAjw5P2aBhAlEiwAAdY7dMdI6OKTI-9GmijFvfouSMqLb160-nc5GuQYxtocIQ2ipyjhhoOcuxoCTTIQAvD_BwE",
-      "certificates": "https://certificates.pongdang.me/codestates.pdf"
+      "id": 6,
+      "course": "원티드 프리온보딩 프론트엔드 코스",
+      "period": "22.10.24 ~ ing (4주)",
+      "site": "https://www.wanted.co.kr/events/pre_ob_fe_7",
+      "certificates": "https://www.wanted.co.kr/events/pre_ob_fe_7"
     },
     {
       "id": 5,
@@ -29,11 +15,25 @@
       "certificates": "https://certificates.pongdang.me/css-nextstep.png"
     },
     {
-      "id": 6,
-      "course": "원티드 프리온보딩 프론트엔드 코스",
-      "period": "22.10.24 ~ ing (4주)",
-      "site": "https://www.wanted.co.kr/events/pre_ob_fe_7",
-      "certificates": "https://www.wanted.co.kr/events/pre_ob_fe_7"
+      "id": 4,
+      "course": "코드스테이츠",
+      "period": "22.04.25 ~ 22.10.19 (16주)",
+      "site": "https://www.codestates.com/course/frontend-engineering?gclid=CjwKCAjw5P2aBhAlEiwAAdY7dMdI6OKTI-9GmijFvfouSMqLb160-nc5GuQYxtocIQ2ipyjhhoOcuxoCTTIQAvD_BwE",
+      "certificates": "https://certificates.pongdang.me/codestates.pdf"
+    },
+    {
+      "id": 3,
+      "course": "일팔공 REACT 기초반",
+      "period": "21.12.13 ~ 22.03.04 (12주)",
+      "site": "https://certificates.pongdang.me/mega-react-class.pdf",
+      "certificates": "https://certificates.pongdang.me/react-basiccamp.jpg"
+    },
+    {
+      "id": 2,
+      "course": "빔캠프 CSS 첫걸음",
+      "period": "21.07.20 ~ 21.08.06 (3주)",
+      "site": "https://veamcamp.com/camp/css-babystep/",
+      "certificates": "https://certificates.pongdang.me/css-babystep.png"
     }
   ]
 }
