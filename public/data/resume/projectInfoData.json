@@ -44,7 +44,8 @@
       "teckStack": { "id": "4", "name": ["HTML", "CSS", "React", "context API", "emotion"] },
       "repositoryLink": "https://github.com/pongdang/modern-todo",
       "projectImage": "/images/project/todo.png",
-      "projectLink": "https://todo.pongdang.today/todo"
+      "projectLink": "https://todo.pongdang.today/todo",
+      "troubleshootLink": "https://pong-dang.notion.site/28f3ea78c7b74aadb1d7fa2a6bc272eb?v=09d738d29c484f7f9da05bec6e9d1517"
     }
   ]
 }
