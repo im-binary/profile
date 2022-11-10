@@ -1,7 +1,8 @@
 export const URLs = {
-  email: "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=pongpong0121@kakao.com",
+  email: "mailto:pongpong0121@kakao.com",
   github: "https://github.com/pongdang",
   velog: "https://velog.io/@pongdang",
+  profile: "https://profile.pongdang.me/resume",
 };
 
 export const ResumeType = {
@@ -12,24 +13,15 @@ export const ResumeType = {
       "Info",
       "Introduce",
       "Career",
-      "TechStack",
       "Education",
+      "TechStack",
       "ProjectSection",
       "Contribute",
       "BooksInfo",
     ],
   },
   onlyResume: {
-    components: [
-      "ProfileImage",
-      "Name",
-      "Career",
-      "TechStack",
-      "Education",
-      "ProjectSection",
-      "Contribute",
-      "BooksInfo",
-    ],
+    components: ["ProfileImage", "Name", "Education", "TechStack", "ProjectSection", "Contribute", "BooksInfo"],
   },
   onlyIntroduce: {
     components: ["ProfileImage", "Name", "Info", "Introduce"],

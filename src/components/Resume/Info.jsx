@@ -20,7 +20,7 @@ export default function Info() {
     <article name='Info' css={infoContainer(theme)}>
       <Hits />
 
-      <UpdateDate yyyymmdd={"20221105"} />
+      <UpdateDate yyyymmdd={"20221111"} />
 
       <section>
         <p className='description'>
@@ -36,12 +36,19 @@ export default function Info() {
           </li>
           <li>
             <a href={URLs.github} target='_blank' rel='noreferrer'>
-              👩‍💻 <span>GitHub</span>
+              👩‍💻 <span className='no-print'>GitHub</span>
+              <span className='print'>{URLs.github}</span>
             </a>
           </li>
           <li>
             <a href={URLs.velog} target='_blank' rel='noreferrer'>
-              ✏️ <span>Velog</span>
+              ✏️ <span className='no-print'>Velog</span>
+              <span className='print'>{URLs.velog}</span>
+            </a>
+          </li>
+          <li>
+            <a className='print' href={URLs.velog} target='_blank' rel='noreferrer'>
+              🙋‍♀️ <span className='print'>{URLs.profile}</span>
             </a>
           </li>
         </ul>

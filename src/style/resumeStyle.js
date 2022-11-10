@@ -112,16 +112,22 @@ const defaultType = css`
     }
 
     // ProfileImage 컴포넌트
+    article[name="Education"] {
+      margin-top: 120px;
+      page-break-before: always;
+    }
+
+    // ProfileImage 컴포넌트
     article[name="Career"] {
       display: none;
     }
 
     // TechStack 컴포넌트
     article[name="TechStack"] {
-      margin-top: 120px;
-      page-break-before: always;
+      /* margin-top: 120px;
+      page-break-before: always; */
 
-      li:nth-of-type(6n) {
+      li:nth-of-type(4) {
         margin-top: 120px;
         page-break-before: always;
       }
@@ -129,12 +135,6 @@ const defaultType = css`
 
     // ProjectSection 컴포넌트
     article[name="ProjectSection"] {
-      margin-top: 120px;
-      page-break-before: always;
-    }
-
-    // Contribute 컴포넌트
-    article[name="Contribute"] {
       margin-top: 120px;
       page-break-before: always;
     }
@@ -150,20 +150,16 @@ const onlyResumeType = css`
 
     // TechStack 컴포넌트
     article[name="TechStack"] {
-      li:nth-of-type(6n) {
+      /* margin-top: 120px;
+      page-break-before: always; */
+
+      li:nth-of-type(4) {
         margin-top: 120px;
         page-break-before: always;
       }
     }
-
     // ProjectSection 컴포넌트
     article[name="ProjectSection"] {
-      margin-top: 120px;
-      page-break-before: always;
-    }
-
-    // Contribute 컴포넌트
-    article[name="Contribute"] {
       margin-top: 120px;
       page-break-before: always;
     }
