@@ -25,7 +25,12 @@ export default function BooksInfo() {
           <section css={bookInfoContainer({ theme, percent: item.percent })} key={`book-${item.id}`}>
             <li className='print'>
               <h1>{item.bookName}</h1>
-              <span>👉 {item.bookLink}</span>
+              <span>
+                👉
+                <a class='print-link' href={item.bookLink}>
+                  {item.bookLink}
+                </a>
+              </span>
             </li>
             <a href={item.bookLink} target='_blank' rel='noreferrer' className='no-print'>
               <img src={item.bookImage} alt={item.bookName} />
@@ -77,7 +82,7 @@ const bookInfoContainer = ({ theme, percent }) => css`
     display: block;
   }
 
-  a::after {
+  a:not(.print-link)::after {
     display: block;
     text-align: right;
     content: "${percent}%ㅤ";

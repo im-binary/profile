@@ -42,8 +42,12 @@ export default function Contribute() {
             </LinkContainer>
             <Image src={item.contributeImage} className='no-print' />
             <Name>{item.contributeName}</Name>
-            <p className='print'>👉 PR: {item.contributeLink}</p>
-            <p className='print'>👉 결과: {item.contributeReflection}</p>
+            <p className='print'>
+              👉 PR: <a href={item.contributeLink}>{item.contributeLink}</a>
+            </p>
+            <p className='print'>
+              👉 결과: <a href={item.contributeReflection}>{item.contributeReflection}</a>
+            </p>
 
             <Description>
               {parseBoldString(item.contributeDescription).map((x, i) => {
