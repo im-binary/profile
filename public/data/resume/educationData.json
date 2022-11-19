@@ -1,18 +1,18 @@
 {
   "educationData": [
     {
-      "id": 6,
-      "course": "원티드 프리온보딩 프론트엔드 코스",
-      "period": "22.10.24 ~ ing (4주)",
-      "site": "https://www.wanted.co.kr/events/pre_ob_fe_7",
-      "certificates": "https://www.wanted.co.kr/events/pre_ob_fe_7"
-    },
-    {
       "id": 5,
       "course": "빔캠프 CSS 한 걸음 더",
       "period": "22.10.23 ~ ing (6주)",
       "site": "https://veamcamp.com/camp/css-nextstep/",
       "certificates": "https://certificates.pongdang.me/css-nextstep.png"
+    },
+    {
+      "id": 6,
+      "course": "원티드 프리온보딩 프론트엔드 코스",
+      "period": "22.10.24 ~ 22.11.19 (4주)",
+      "site": "https://www.wanted.co.kr/events/pre_ob_fe_7",
+      "certificates": "https://www.wanted.co.kr/events/pre_ob_fe_7"
     },
     {
       "id": 4,
