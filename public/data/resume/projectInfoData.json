@@ -29,7 +29,7 @@
       "id": "4",
       "name": "🐶 ㅅㅊ. [팀]",
       "period": "2022.09.07 ~ 2022.10.12",
-      "summary": "코드스테이츠 과정에서 진행했던 팀 프로젝트입니다. 우리 강아지의 사회성 향상을 위한 로컬 반려견 산책 모임 플랫폼을 만들었습니다.",
+      "summary": "코드스테이츠 과정에서 팀 프로젝트로 제작된 강아지의 사회성 향상을 위한 로컬 산책 모임 플랫폼입니다. 모임 상세페이지와 모임 작성 페이지, 로그인, 각종 모달을 구현하였습니다. ",
       "teckStack": { "id": "4", "name": ["Next.js", "react-query", "Recoil", "emotion", "HTML", "CSS"] },
       "repositoryLink": "https://github.com/codestates-seb/seb39_main_026",
       "projectImage": "/images/project/walk.png",
