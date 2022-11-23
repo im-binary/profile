@@ -47,7 +47,7 @@ export default function Info() {
             </a>
           </li>
           <li>
-            <a className='print' href={URLs.velog} target='_blank' rel='noreferrer'>
+            <a className='print' href={URLs.profile} target='_blank' rel='noreferrer'>
               🙋‍♀️ <span className='print'>{URLs.profile}</span>
             </a>
           </li>
