@@ -5,7 +5,7 @@ export default function ProfileImage() {
   return (
     <article css={infoContainer} name='ProfileImage'>
       <div className='profile'>
-        <img src='/images/my-image.jpeg' alt='전이진 프로필 사진' />
+        <img src='/images/my-image.jpg' alt='전이진 프로필 사진' />
       </div>
     </article>
   );
@@ -20,8 +20,9 @@ const infoContainer = css`
     overflow: hidden;
 
     img {
-      margin-top: -14px;
       width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 `;
