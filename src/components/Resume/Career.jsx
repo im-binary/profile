@@ -10,12 +10,11 @@ export default function Career() {
     <article css={careerContainer(theme)} name='Career'>
       <h2>💍 경력</h2>
       <ul>
-        <li>회사명</li>
+        <li>회사명 / 직무명</li>
         <li>근무기간</li>
-        <li>없음</li>
-        <li>🌹 저의 경력이,, 🌹</li>
-        <li>없음</li>
-        <li>🌹 되어주세요 🌹</li>
+        {/* 구분 */}
+        <li>비바리퍼블리카 / UX Engineer Assistant</li>
+        <li>2022.12.19 ~ (재직중)</li>
       </ul>
     </article>
   );
