@@ -2,14 +2,7 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { useTheme } from "../../hooks/theme";
-import {
-  garyTitleBorderBottom,
-  fontSize,
-  lightBoxShadow,
-  darkBoxShadow,
-  whiteTitleBorderBottom,
-  mainColor,
-} from "../../style/main";
+import { garyTitleBorderBottom, fontSize, whiteTitleBorderBottom, mainColor } from "../../style/main";
 import { useFetch } from "../../hooks/fetch";
 
 export default function Work() {
