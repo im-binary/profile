@@ -25,7 +25,7 @@ export default function Info() {
       <section>
         <p className='description'>
           <span>🙌</span>
-          <span>어제보다 오늘이 더 나은 신입 프론트엔드 개발자, 전이진입니다.</span>
+          <span>어제보다 오늘이 더 나은 프론트엔드 개발자, 전이진입니다.</span>
         </p>
 
         <ul>
