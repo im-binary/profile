@@ -13,6 +13,7 @@ export const ResumeType = {
       "Info",
       "Introduce",
       "Career",
+      "Work",
       "Education",
       "TechStack",
       "ProjectSection",
@@ -21,7 +22,7 @@ export const ResumeType = {
     ],
   },
   onlyResume: {
-    components: ["ProfileImage", "Name", "Education", "TechStack", "ProjectSection", "Contribute", "BooksInfo"],
+    components: ["ProfileImage", "Name", "Education", "Work", "TechStack", "ProjectSection", "Contribute", "BooksInfo"],
   },
   onlyIntroduce: {
     components: ["ProfileImage", "Name", "Info", "Introduce"],
