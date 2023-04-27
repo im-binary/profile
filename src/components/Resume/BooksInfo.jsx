@@ -27,7 +27,7 @@ export default function BooksInfo() {
               <h1>{item.bookName}</h1>
               <span>
                 👉
-                <a class='print-link' href={item.bookLink}>
+                <a className='print-link' href={item.bookLink}>
                   {item.bookLink}
                 </a>
               </span>
