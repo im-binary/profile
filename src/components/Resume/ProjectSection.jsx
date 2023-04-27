@@ -74,11 +74,11 @@ export default function ProjectSection() {
               <ProjectSummary>
                 <p>{item.summary}</p>
               </ProjectSummary>
-              <TeckStackContainer>
+              <TechStackContainer>
                 {item.teckStack.name.map((x, index) => (
                   <li key={`techStack-${index}`}>{x}</li>
                 ))}
-              </TeckStackContainer>
+              </TechStackContainer>
             </ProjectCardTextContainer>
           </ProjectCard>
         ))}
@@ -165,7 +165,7 @@ const ProjectPeriod = styled.p`
   font-style: italic;
 `;
 
-const TeckStackContainer = styled.ul`
+const TechStackContainer = styled.ul`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
