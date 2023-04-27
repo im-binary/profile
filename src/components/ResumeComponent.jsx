@@ -24,6 +24,10 @@ export const ResumeComponentMap = {
     Component: lazy(() => import("./Resume/Career")),
     height: 239,
   },
+  Work: {
+    Component: lazy(() => import("./Resume/Work")),
+    height: 239,
+  },
   Contribute: {
     Component: lazy(() => import("./Resume/Contribute")),
     height: 860,
