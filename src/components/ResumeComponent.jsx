@@ -4,7 +4,7 @@ import { lazy } from "react";
 export const ResumeComponentMap = {
   ProfileImage: {
     Component: lazy(() => import("./Resume/ProfileImage")),
-    height: 100,
+    height: 256,
     marginBottom: 40,
   },
   Name: {
