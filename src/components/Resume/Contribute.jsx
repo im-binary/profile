@@ -4,7 +4,6 @@ import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { useFetch } from "../../hooks/fetch";
 import { useTheme } from "../../hooks/theme";
-import { parseBoldString } from "../../js/parseBoldString";
 import {
   boxTextColor,
   darkBoxShadow,
@@ -14,6 +13,7 @@ import {
   whiteTitleBorderBottom,
 } from "../../style/main";
 import { CircleButton } from "../Common/CircleButton";
+import { TranslateBold } from "../util/TranslateBold";
 
 export default function Contribute() {
   const [theme] = useTheme();
@@ -48,15 +48,8 @@ export default function Contribute() {
             <p className='print'>
               👉 결과: <a href={item.contributeReflection}>{item.contributeReflection}</a>
             </p>
-
             <Description>
-              {parseBoldString(item.contributeDescription).map((x, i) => {
-                if (x.startsWith("**")) {
-                  return <strong key={`${i}-${x}`}>{x.slice(2)}</strong>;
-                } else {
-                  return <span key={`${i}-${x}`}>{x}</span>;
-                }
-              })}
+              <TranslateBold as='span'>{item.contributeDescription}</TranslateBold>
             </Description>
           </li>
         ))}
