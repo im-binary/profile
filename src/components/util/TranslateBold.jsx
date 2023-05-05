@@ -1,6 +1,6 @@
 import React from "react";
 
-export function TranslateBold({ children, style }) {
+export function TranslateBold({ children, className }) {
   const pattern = /(\*\*.*?\*\*)/;
 
   const text = children;
@@ -14,5 +14,5 @@ export function TranslateBold({ children, style }) {
     }
   });
 
-  return <p style={style}>{elements}</p>;
+  return <p className={className}>{elements}</p>;
 }
