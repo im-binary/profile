@@ -20,7 +20,7 @@ export default function Info() {
     <article name='Info' css={infoContainer(theme)}>
       <Hits />
 
-      <UpdateDate yyyymmdd={"20230118"} />
+      <UpdateDate yyyymmdd={"20230505"} />
 
       <section>
         <p className='description'>
