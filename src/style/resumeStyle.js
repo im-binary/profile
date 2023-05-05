@@ -11,6 +11,14 @@ const printStyle = css`
       }
     }
 
+    // Work 컴포넌트
+    article[name="Work"] {
+      @media print {
+        margin-top: 120px;
+        page-break-before: always;
+      }
+    }
+
     // ProjectSection 컴포넌트
     article[name="ProjectSection"] {
       > div {
@@ -57,10 +65,15 @@ const printStyle = css`
     // ProjectSection 컴포넌트
     article[name="ProjectSection"] {
       color: red;
+      margin-top: 120px;
+      page-break-before: always;
     }
 
     // Contribute 컴포넌트
     article[name="Contribute"] {
+      margin-top: 120px;
+      page-break-before: always;
+
       ul {
         display: block;
 
