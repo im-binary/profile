@@ -2,56 +2,56 @@
   "techStackData": [
     {
       "id": 5,
-      "teckStackName": "Next.js",
-      "teckStackImage": "/images/techStack/nextjs-img.png",
+      "techStackName": "Next.js",
+      "techStackImage": "/images/techStack/nextjs-img.png",
       "techDescription": "React의 한계인 SEO 문제를 Next.js의 **SSR 방식**을 통해 해결할 수 있다는 것을 알고 있습니다. 또한 UX를 해치는 **layout shift**를 Next.js의 기능을 통해 해결할 수 있습니다."
     },
     {
       "id": 4,
-      "teckStackName": "React",
-      "teckStackImage": "/images/techStack/react-img.png",
+      "techStackName": "React",
+      "techStackImage": "/images/techStack/react-img.png",
       "techDescription": "virutal DOM의 장단점을 알고 **컴포넌트 재사용** 에 익숙하고 기본적인 hook 사용에 능숙합니다. **Context API** 를 이용하여 **다크테마** 를 구현해본 경험이 있습니다. **ErrorBoundary** 와 **Suspense** 를 활용하여 **로딩과 에러에 대한 처리를 분리**한 경험이 있습니다."
     },
     {
       "id": 10,
-      "teckStackName": "React Query",
-      "teckStackImage": "/images/techStack/react-query-img.png",
+      "techStackName": "React Query",
+      "techStackImage": "/images/techStack/react-query-img.png",
       "techDescription": "useQuery를 이용해 로딩 중 UI를 **Suspense 레이어**로 분리할 수 있습니다."
     },
     {
       "id": 7,
-      "teckStackName": "Recoil",
-      "teckStackImage": "/images/techStack/recoil-img.png",
+      "techStackName": "Recoil",
+      "techStackImage": "/images/techStack/recoil-img.png",
       "techDescription": "복잡한 redux와 달리 recoil을 사용하여 쉽고 간단하게 **전역 상태를 관리** 할 수 있습니다."
     },
     {
       "id": 9,
-      "teckStackName": "Redux",
-      "teckStackImage": "/images/techStack/redux-img.png",
+      "techStackName": "Redux",
+      "techStackImage": "/images/techStack/redux-img.png",
       "techDescription": "flux 패턴의 기본적인 동작 원리를 이해하고 있습니다."
     },
     {
       "id": 8,
-      "teckStackName": "TypeScript",
-      "teckStackImage": "/images/techStack/ts-img.png",
+      "techStackName": "TypeScript",
+      "techStackImage": "/images/techStack/ts-img.png",
       "techDescription": "타입 에러를 **컴파일 단계** 에서 확인할 수 있어 덕타이핑의 JS 보다 안전한 코드를 작성할 수 있습니다."
     },
     {
       "id": 3,
-      "teckStackName": "JavaScript",
-      "teckStackImage": "/images/techStack/js-img.png",
+      "techStackName": "JavaScript",
+      "techStackImage": "/images/techStack/js-img.png",
       "techDescription": "es6 문법을 사용하는 것에 익숙하고 **JavaScript의 동작 원리** 를 이해하고 있습니다. **브라우저 환경과 Node.js 환경의 차이점** 을 알고 있습니다."
     },
     {
       "id": 1,
-      "teckStackName": "HTML",
-      "teckStackImage": "/images/techStack/html-img.png",
+      "techStackName": "HTML",
+      "techStackImage": "/images/techStack/html-img.png",
       "techDescription": "div 태그를 사용하기보다 때에 맞는 **시멘틱 태그** 를 사용하여 **접근성(a11y)을 준수** 하는 구조적 문서를 만드는 것에 능숙합니다."
     },
     {
       "id": 2,
-      "teckStackName": "CSS",
-      "teckStackImage": "/images/techStack/css-img.png",
+      "techStackName": "CSS",
+      "techStackImage": "/images/techStack/css-img.png",
       "techDescription": "**css 선택자** 사용에 능숙하며 웹을 **반응형** 으로 만들거나 다양한 환경에서도 동일한 UI를 보여주도록 스타일을 작성하는 것에 자신 있습니다."
     }
   ]
