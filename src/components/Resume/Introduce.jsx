@@ -2,6 +2,7 @@
 import { css } from "@emotion/react";
 import { useTheme } from "../../hooks/theme";
 import { fontSize, garyTitleBorderBottom, whiteTitleBorderBottom } from "../../style/main";
+import { TranslateBold } from "../util/TranslateBold";
 
 export default function Introduce() {
   const [theme] = useTheme();
@@ -10,15 +11,15 @@ export default function Introduce() {
     <article name='Introduce' css={introduce(theme)}>
       <h2>😉 자기소개</h2>
       <section>
-        <p
+        <TranslateBold
           css={css`
             text-indent: 16px;
           `}
         >
-          안녕하세요! 어제보다 더 나은 프론트엔드 개발자, 전이진입니다. 현재 비바리퍼블리카에서 UX Engineer Assistant로
-          디자이너 생산성을 위한 Framer Chrome Extension 개발과 제품의 일관성을 위한 디자인시스템 컴포넌트의 완성도를
-          높이는 일을 하고 있습니다.
-        </p>
+          안녕하세요! 어제보다 더 나은 프론트엔드 개발자, 전이진입니다. 현재 비바리퍼블리카에서 **UX Engineer
+          Assistant** 로 디자이너 생산성을 위한 **Framer Chrome Extension 개발** 과 제품의 일관성을 위한 **디자인시스템
+          컴포넌트의 완성도** 를 높이는 일을 하고 있습니다.
+        </TranslateBold>
         <p
           css={css`
             margin-top: 6px;
@@ -46,9 +47,5 @@ const introduce = (theme) => css`
     padding: 20px 0;
     ${fontSize.contentFontSize16};
     line-height: 1.5;
-
-    p span {
-      color: transparent;
-    }
   }
 `;
