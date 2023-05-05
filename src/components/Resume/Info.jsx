@@ -4,10 +4,10 @@ import { URLs } from "../../constant";
 import {
   fontSize,
   grayBorder,
-  graytNomalBorderBottom,
+  grayNormalBorderBottom,
   mainColor,
   whiteBorder,
-  whiteNomalBorderBottom,
+  whiteNormalBorderBottom,
 } from "../../style/main";
 import { useTheme } from "../../hooks/theme";
 import { UpdateDate } from "../Common/UpdateDate";
@@ -100,7 +100,7 @@ const infoContainer = (theme) => css`
 
       a span {
         margin-right: 10px;
-        ${theme === "light" ? graytNomalBorderBottom : whiteNomalBorderBottom};
+        ${theme === "light" ? grayNormalBorderBottom : whiteNormalBorderBottom};
       }
     }
   }

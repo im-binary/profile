@@ -27,7 +27,7 @@ export const navLightBackgroundColor = "#eeeeee";
 
 export const lightBoxShadow = "rgb(15 15 15 / 10%) 2px 4px 4px 0px, rgb(15 15 15 / 10%) 4px 4px 10px";
 
-export const graytNomalBorderBottom = css`
+export const grayNormalBorderBottom = css`
   border-bottom: 1px solid rgba(55, 53, 47, 0.16);
 `;
 
@@ -47,7 +47,7 @@ export const navDarkBackgroundColor = "#2c2c2f";
 
 export const darkBoxShadow = "rgb(0 0 0 / 10%) 2px 4px 4px 0px, rgb(0 0 0 / 10%) 4px 4px 10px";
 
-export const whiteNomalBorderBottom = css`
+export const whiteNormalBorderBottom = css`
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 `;
 
