@@ -11,7 +11,7 @@ import {
 } from "../../style/main";
 import { useFetch } from "../../hooks/fetch";
 import { useTheme } from "../../hooks/theme";
-import { CircleButton } from "../Common/CircleButton";
+import { CircleButton } from "../common/CircleButton";
 import styled from "@emotion/styled";
 
 export default function ProjectSection() {

@@ -10,8 +10,8 @@ import {
   whiteNormalBorderBottom,
 } from "../../style/main";
 import { useTheme } from "../../hooks/theme";
-import { UpdateDate } from "../Common/UpdateDate";
-import { Hits } from "../Common/Hits";
+import { UpdateDate } from "../common/UpdateDate";
+import { Hits } from "../common/Hits";
 
 export default function Info() {
   const [theme] = useTheme();

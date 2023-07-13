@@ -12,7 +12,7 @@ import {
   lightBoxShadow,
   whiteTitleBorderBottom,
 } from "../../style/main";
-import { CircleButton } from "../Common/CircleButton";
+import { CircleButton } from "../common/CircleButton";
 import { TranslateBold } from "../../utils/TranslateBold";
 
 export default function Contribute() {
