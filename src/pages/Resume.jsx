@@ -5,7 +5,7 @@ import { ResumeComponent } from "../components/ResumeComponent";
 import { Suspense } from "react";
 import { useSearchParams } from "react-router-dom";
 import { ResumeType } from "../constant";
-import { printStyle, resumtStyle } from "../style/resumeStyle";
+import { printStyle, resumeStyle } from "../style/resumeStyle";
 
 export function Resume() {
   const [searchParams] = useSearchParams();
@@ -34,5 +34,5 @@ export function Resume() {
 const resumeContainer = (type) => css`
   ${mainSectionContainer};
   ${printStyle}
-  ${resumtStyle[type] == null ? "" : resumtStyle[type]}
+  ${resumeStyle[type] == null ? "" : resumeStyle[type]}
 `;

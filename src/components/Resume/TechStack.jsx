@@ -4,7 +4,7 @@ import { css } from "@emotion/react";
 import { fontSize, garyTitleBorderBottom, boxTextColor, whiteTitleBorderBottom } from "../../style/main";
 import { useFetch } from "../../hooks/fetch";
 import { useTheme } from "../../hooks/theme";
-import { TranslateBold } from "../util/TranslateBold";
+import { TranslateBold } from "../../utils/TranslateBold";
 
 export default function TechStack() {
   const fetchUrl = "/data/resume/techStackData.json";

@@ -13,6 +13,7 @@ export function useFetch(url, storage) {
 
   useEffect(() => {
     getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return { dataList };

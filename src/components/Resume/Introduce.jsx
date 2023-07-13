@@ -2,7 +2,7 @@
 import { css } from "@emotion/react";
 import { useTheme } from "../../hooks/theme";
 import { fontSize, garyTitleBorderBottom, whiteTitleBorderBottom } from "../../style/main";
-import { TranslateBold } from "../util/TranslateBold";
+import { TranslateBold } from "../../utils/TranslateBold";
 
 export default function Introduce() {
   const [theme] = useTheme();

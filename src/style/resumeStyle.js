@@ -195,10 +195,10 @@ const onlyIntroduceType = css`
   }
 `;
 
-const resumtStyle = {
+const resumeStyle = {
   default: defaultType,
   onlyResume: onlyResumeType,
   onlyIntroduce: onlyIntroduceType,
 };
 
-export { printStyle, resumtStyle };
+export { printStyle, resumeStyle };

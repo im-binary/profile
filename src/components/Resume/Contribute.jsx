@@ -13,7 +13,7 @@ import {
   whiteTitleBorderBottom,
 } from "../../style/main";
 import { CircleButton } from "../Common/CircleButton";
-import { TranslateBold } from "../util/TranslateBold";
+import { TranslateBold } from "../../utils/TranslateBold";
 
 export default function Contribute() {
   const [theme] = useTheme();
