@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import React, { useRef } from "react";
+import { useRef } from "react";
 import CardTitle from "./CardTitle";
 import CardContent from "./CardContent";
 import { useTheme } from "../../../hooks/theme";
