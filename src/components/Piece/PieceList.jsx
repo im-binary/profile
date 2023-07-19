@@ -4,7 +4,7 @@ import Rabbits from "./Rabbit/Rabbits";
 import { useModal } from "../../hooks/useModal";
 import { fontSize } from "../../style/main";
 import { useTheme } from "../../hooks/theme";
-import Card from "../common/Card/Card.jsx";
+import Card from "../common/Card/Card";
 import styled from "@emotion/styled";
 
 export function PieceList() {
