@@ -4,8 +4,8 @@ import Rabbits from "./Rabbit/Rabbits";
 import { useModal } from "../../hooks/useModal";
 import { fontSize } from "../../style/main";
 import { useTheme } from "../../hooks/theme";
-import Card from "../common/Card/Card";
 import styled from "@emotion/styled";
+import Card from "../Card/Card";
 
 export function PieceList() {
   const { open: openModal } = useModal();
