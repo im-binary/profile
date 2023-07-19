@@ -67,16 +67,24 @@ export const dialogDescriptionCss = css({
 export const dialogCloseButtonCss = css({
   fontFamily: "inherit",
   borderRadius: "100%",
-  height: "25px",
-  width: "25px",
-  display: "inlineFlex",
+  display: "inline-flex",
   alignItems: "center",
   justifyContent: "center",
-  color: `${lightFontColor}`,
   position: "absolute",
-  top: "10px",
-  right: "10px",
+  top: "18px",
+  right: "25px",
   cursor: "pointer",
+  fontSize: "20px",
+  padding: "0px 8px",
+  transition: "border 0.3s ease 0s",
+  border: "2px solid transparent",
+  color: "#d2b4ff",
+
+  "&:hover": {
+    border: "2px solid #d2b4ff",
+    borderRadius: "100%",
+    transition: "border 0.3s ease 0s",
+  },
 });
 
 export const dialogOpenButtonCss = css({
