@@ -4,6 +4,7 @@ import { Home } from "../pages/Home";
 import { Resume } from "../pages/Resume";
 import { useLocation } from "react-router-dom";
 import { Portfolio } from "../pages/Portfolio";
+import { Piece } from "../pages/Piece";
 
 export function Router() {
   const { pathname } = useLocation();
@@ -25,6 +26,7 @@ export function Router() {
         }
       />
       <Route path='/portfolio' element={<Portfolio />} />
+      <Route path='/piece' element={<Piece />} />
     </Routes>
   );
 }
