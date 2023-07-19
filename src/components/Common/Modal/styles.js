@@ -1,3 +1,4 @@
+/** @jsxImportSource @emotion/react */
 import { css, keyframes } from "@emotion/react";
 import { lightFontColor, mainColor } from "../../../style/main";
 
@@ -51,16 +52,16 @@ export const dialogContentCss = css({
 });
 
 export const dialogTitleCss = css({
-  margin: "0",
-  fontWeight: 500,
+  margin: "0 0 20px 0",
+  fontWeight: 700,
   color: `${lightFontColor}`,
-  fontSize: "17px",
+  fontSize: "2rem",
 });
 
 export const dialogDescriptionCss = css({
   margin: "10px 0 20px",
   color: `${lightFontColor}`,
-  fontSize: "15px",
+  fontSize: "1.6rem",
   lineHeight: "1.5",
 });
 
@@ -71,7 +72,7 @@ export const dialogCloseButtonCss = css({
   alignItems: "center",
   justifyContent: "center",
   position: "absolute",
-  top: "18px",
+  top: "22px",
   right: "25px",
   cursor: "pointer",
   fontSize: "20px",
@@ -92,7 +93,7 @@ export const dialogOpenButtonCss = css({
   color: `${lightFontColor}`,
   padding: "10px 20px",
   borderRadius: "6px",
-  fontSize: "15px",
+  fontSize: "1.5rem",
   fontWeight: 500,
   cursor: "pointer",
   transition: "background-color 0.2s ease 0s",
