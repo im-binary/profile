@@ -11,8 +11,8 @@ import {
 } from "../../style/main";
 import { useFetch } from "../../hooks/fetch";
 import { useTheme } from "../../hooks/theme";
-import { CircleButton } from "../common/CircleButton";
 import styled from "@emotion/styled";
+import { CircleButton } from "../CircleButton";
 
 export default function ProjectSection() {
   const fetchUrl = "/data/resume/projectInfoData.json";

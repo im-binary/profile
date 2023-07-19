@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css, keyframes } from "@emotion/react";
-import { lightFontColor, mainColor } from "../../../style/main";
+import { lightFontColor, mainColor } from "../../style/main";
 
 const overlayShow = keyframes({
   from: {

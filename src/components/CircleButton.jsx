@@ -2,8 +2,8 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { useState } from "react";
-import { useTheme } from "../../hooks/theme";
-import { darkFontColor, lightFontColor, navDarkBackgroundColor, navLightBackgroundColor } from "../../style/main";
+import { useTheme } from "../hooks/theme";
+import { darkFontColor, lightFontColor, navDarkBackgroundColor, navLightBackgroundColor } from "../style/main";
 
 export function CircleButton({ className, onClick, children, light, dark }) {
   const [theme] = useTheme();

@@ -1,6 +1,6 @@
 import { useOverlay } from "@toss/use-overlay";
 import { useMemo } from "react";
-import Modal from "../components/common/Modal/Modal";
+import Modal from "../components/Modal/Modal";
 
 export const useModal = () => {
   const overlay = useOverlay();
