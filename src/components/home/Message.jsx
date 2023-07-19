@@ -23,15 +23,15 @@ export function Message({ text, onViewportEnter, onViewportLeave, index }) {
         onViewportLeave={onViewportLeave}
       >{`${text}`}</H2>
       {LAST_PAGE === index && (
-        <ResumLink>
+        <ResumeLink>
           <a href='/resume'>떼껄룩 ~</a>
-        </ResumLink>
+        </ResumeLink>
       )}
     </Container>
   );
 }
 
-const ResumLink = styled.div`
+const ResumeLink = styled.div`
   width: 100%;
   height: 80%;
   display: flex;
