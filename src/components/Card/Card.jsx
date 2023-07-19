@@ -3,8 +3,8 @@ import { css } from "@emotion/react";
 import { useRef } from "react";
 import CardTitle from "./CardTitle";
 import CardContent from "./CardContent";
-import { useTheme } from "../../../hooks/theme";
-import { darkBoxShadow, lightBoxShadow, mainColor } from "../../../style/main";
+import { useTheme } from "../../hooks/theme";
+import { darkBoxShadow, lightBoxShadow, mainColor } from "../../style/main";
 
 export default function Card({ children, mode, ...restProps }) {
   const carRef = useRef(null);
