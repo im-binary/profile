@@ -11,15 +11,20 @@ export default function CardContent({ ready, children, ...props }) {
 
 const cardContentCss = css`
   position: relative;
-  margin-top: 20px;
-
-  & > * {
-    width: 100%;
-    aspect-ratio: 1/1;
-  }
 
   & > img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1/1;
     object-fit: cover;
     aspect-ratio: 1/1;
+    transition: all 0.5s;
+  }
+
+  &:hover {
+    & > img {
+      transform: scale(1.05);
+      transition: all 0.5s;
+    }
   }
 `;

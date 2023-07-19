@@ -13,4 +13,5 @@ export default function CardTitle({ as = "p", children, ...restProps }) {
 
 const cardTitleCss = css`
   word-break: keep-all;
+  padding: 20px;
 `;

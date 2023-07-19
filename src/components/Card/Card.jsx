@@ -23,8 +23,9 @@ Card.Content = CardContent;
 const cardCss = (theme) => css`
   background-color: ${mainColor};
   box-shadow: ${theme === "light" ? lightBoxShadow : darkBoxShadow};
-  padding: 20px;
   transition: all 0.5s;
+  overflow: hidden;
+  cursor: pointer;
 
   &:nth-of-type(2n - 1) {
     border-radius: 0 40px 0 40px;
@@ -32,10 +33,5 @@ const cardCss = (theme) => css`
 
   &:nth-of-type(2n) {
     border-radius: 40px 0 40px 0;
-  }
-
-  &:hover {
-    transform: scale(1.04);
-    transition: all 0.5s;
   }
 `;
