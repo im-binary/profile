@@ -15,5 +15,11 @@ const cardContentCss = css`
 
   & > * {
     width: 100%;
+    aspect-ratio: 1/1;
+  }
+
+  & > img {
+    object-fit: cover;
+    aspect-ratio: 1/1;
   }
 `;
