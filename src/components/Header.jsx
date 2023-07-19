@@ -38,6 +38,9 @@ export function Header() {
         <li>
           <NavLink to='/resume'>Resume</NavLink>
         </li>
+        <li>
+          <NavLink to='/piece'>Piece</NavLink>
+        </li>
 
         {resume && (
           <li
