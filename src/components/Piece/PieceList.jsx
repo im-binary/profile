@@ -6,6 +6,7 @@ import { fontSize } from "../../style/main";
 import { useTheme } from "../../hooks/theme";
 import styled from "@emotion/styled";
 import Card from "../Card/Card";
+import Calculate from "./Calculator";
 
 export function PieceList() {
   const { open: openModal } = useModal();
@@ -27,9 +28,18 @@ export function PieceList() {
             <img src='/images/piece/example-rabbit.png' alt='rabbit' />
           </Card.Content>
         </Card>
-        <Card>
-          <Card.Title>🚧</Card.Title>
-          <Card.Content>준비중 ...</Card.Content>
+        <Card
+          onClick={() =>
+            openModal({
+              title: "⚫️ 올록볼록 UI",
+              content: <Calculate />,
+            })
+          }
+        >
+          <Card.Title css={cardCss}>⚫️ 올록볼록 UI</Card.Title>
+          <Card.Content>
+            <img src='/images/piece/example-calc.png' alt='calculator' />
+          </Card.Content>
         </Card>
       </CardWrapper>
     </section>
