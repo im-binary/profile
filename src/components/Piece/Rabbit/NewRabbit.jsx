@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
+import { css, keyframes } from "@emotion/react";
 
 export default function NewRabbit() {
   return (
@@ -22,6 +22,15 @@ export default function NewRabbit() {
     </div>
   );
 }
+
+const spin = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+`;
 
 const newRabbitCss = css`
   margin: 0 auto;
@@ -68,23 +77,26 @@ const newRabbitCss = css`
   }
 
   .rabbit .eye {
+    position: relative;
     display: inline-block;
     border-radius: 50px;
     width: 50px;
     height: 50px;
     margin: 20px 30px;
     background-color: black;
+    animation: ${spin} 3s linear infinite;
 
     &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
       content: "";
       display: inline-block;
       border-radius: 50px;
       width: 20px;
       height: 20px;
-      margin: 10px 10px;
       background-color: white;
-      transform: translate(10px, 10px);
-      transition: transform 0.5s ease-in-out;
+      transform: translate(-50%, 0%);
     }
   }
 
