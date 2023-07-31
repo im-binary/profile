@@ -74,6 +74,18 @@ const newRabbitCss = css`
     height: 50px;
     margin: 20px 30px;
     background-color: black;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      border-radius: 50px;
+      width: 20px;
+      height: 20px;
+      margin: 10px 10px;
+      background-color: white;
+      transform: translate(10px, 10px);
+      transition: transform 0.5s ease-in-out;
+    }
   }
 
   .rabbit .mouse {
