@@ -3,25 +3,75 @@ import { css, keyframes } from "@emotion/react";
 
 export default function NewRabbit() {
   return (
-    <div css={newRabbitCss}>
-      <div className='rabbit'>
-        <div className='ear'>
-          <div className='ear1'></div>
-        </div>
-        <div className='ear'>
-          <div className='ear1'></div>
-        </div>
-        <div className='face'>
-          <div className='eye'></div>
-          <div className='eye'></div>
-          <div className='mouse'></div>
-          <div className='teeth left'></div>
-          <div className='teeth right'></div>
+    <div css={container}>
+      <div css={newRabbitCss}>
+        <div className='rabbit'>
+          <div className='ear'>
+            <div className='ear1'></div>
+          </div>
+          <div className='ear'>
+            <div className='ear1'></div>
+          </div>
+          <div className='face'>
+            <div className='eye'></div>
+            <div className='eye'></div>
+            <div className='mouse'></div>
+            <div className='teeth left'></div>
+            <div className='teeth right'></div>
+          </div>
         </div>
       </div>
+      <div css={carrot}></div>
     </div>
   );
 }
+
+const up = keyframes`
+  0% {
+    bottom: -88px;
+    height: 80px;
+  }
+  95%{
+    opacity: 1;
+  }
+  96% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    bottom: 35px;
+    height: 0px;
+  }
+`;
+
+const container = css`
+  position: relative;
+  background-color: aliceblue;
+`;
+
+const carrot = css`
+  position: absolute;
+  left: 50%;
+  bottom: -88px;
+  width: 40px;
+  height: 80px;
+  background-color: orange;
+  transform: translate(-50%, -50%);
+  border-radius: 63% 63% 50% 50%;
+  animation: ${up} 8s linear infinite;
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: -22px;
+    left: 10px;
+    width: 0;
+    height: 0;
+    border: 10px solid green;
+    border-radius: 60% 0 60% 0;
+    transform: rotate(135deg);
+  }
+`;
 
 const spin = keyframes`
   0% {
@@ -84,7 +134,7 @@ const newRabbitCss = css`
     height: 50px;
     margin: 20px 30px;
     background-color: black;
-    animation: ${spin} 3s linear infinite;
+    animation: ${spin} 3s linear infinite alternate 0.5s;
 
     &::after {
       position: absolute;
