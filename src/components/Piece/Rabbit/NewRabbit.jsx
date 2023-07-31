@@ -46,7 +46,6 @@ const up = keyframes`
 
 const container = css`
   position: relative;
-  background-color: aliceblue;
 `;
 
 const carrot = css`
