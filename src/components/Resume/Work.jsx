@@ -2,8 +2,9 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { useTheme } from "../../hooks/theme";
-import { garyTitleBorderBottom, fontSize, whiteTitleBorderBottom, mainColor } from "../../style/main";
+import { garyTitleBorderBottom, fontSize, whiteTitleBorderBottom, mainColor, subColor } from "../../style/main";
 import { useFetch } from "../../hooks/fetch";
+import { Fragment } from "react";
 
 export default function Work() {
   const fetchUrl = "/data/resume/workData.json";
@@ -19,19 +20,39 @@ export default function Work() {
         <ul>
           {workList.map((work) => (
             <WorkItem key={work.id} theme>
-              <div className='work-left'>
+              <div className='work-item-title'>
                 <p>{work.period} ~</p>
-                {/* <p>({calc재직개월수(work.period)})</p> */}
-                <p className='work-item-company'>{work.companyName}</p>
-                <p>{work.task}</p>
+                <p>
+                  <span>{work.companyName}</span>
+                  <span>{work.task}</span>
+                </p>
               </div>
               <div>
                 {work.contributions.map((contribution, index) => (
                   <ContributionContainer key={index}>
-                    <p>{contribution.title}</p>
-                    {contribution.contents.map((content, index) => (
-                      <li key={index}>{content}</li>
-                    ))}
+                    <ContributionDateBox>
+                      <p>{contribution.contributionDate}</p>
+                    </ContributionDateBox>
+
+                    <ContributionDescriptionBox>
+                      <p>🌈 {contribution.contributionDescription}</p>
+                    </ContributionDescriptionBox>
+
+                    <ContributionContentBox>
+                      <p>✨ {contribution.title}</p>
+                      {contribution.contents.map((content, index) => (
+                        <Fragment key={index}>
+                          <li>{content.contentTitle}</li>
+                          {content.contentDescription && (
+                            <ul>
+                              {content.contentDescription.map((description, index) => (
+                                <li key={index}>{description}</li>
+                              ))}
+                            </ul>
+                          )}
+                        </Fragment>
+                      ))}
+                    </ContributionContentBox>
                   </ContributionContainer>
                 ))}
               </div>
@@ -45,6 +66,7 @@ export default function Work() {
 
 const work = (theme) => css`
   margin: 30px 0;
+  word-break: keep-all;
 
   h2 {
     ${theme === "light" ? garyTitleBorderBottom : whiteTitleBorderBottom}
@@ -53,81 +75,113 @@ const work = (theme) => css`
 
   section {
     padding: 20px 0;
-    ${fontSize.contentFontSize16};
+    ${fontSize.contentFontSize30};
     line-height: 1.5;
   }
 `;
 
 const WorkItem = styled.li`
-  display: grid;
-  grid-template-columns: 150px 4fr;
-  gap: 20px;
   padding: 20px;
-  ${fontSize.contentFontSize16}
   border-radius: 5px;
   overflow: hidden;
   border: 3px solid ${mainColor};
 
-  @media (max-width: 540px) {
-    display: block;
-  }
-
-  .work-left {
-    border-right: 2px solid ${mainColor};
+  .work-item-title {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid ${mainColor};
+    ${fontSize.contentFontSize20}
 
     p:nth-of-type(1) {
       font-weight: bold;
+      position: relative;
     }
 
     p:nth-of-type(2) {
-      font-weight: bold;
-    }
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
 
-    p:nth-of-type(3) {
-      color: grey;
-    }
-
-    p + p {
-      margin-top: 4px;
-    }
-
-    @media (max-width: 540px) {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      column-gap: 8px;
-      border-right: none;
-      margin-bottom: 4px;
-      padding-bottom: 4px;
-      border-bottom: 2px solid ${mainColor};
-
-      p + p {
-        margin-top: 0px;
+      & > span:nth-of-type(1) {
+        position: relative;
+        font-weight: bold;
       }
 
-      p:nth-of-type(1) {
-        margin-bottom: 4px;
-      }
-
-      p:nth-of-type(2) {
-        grid-column: 1/2;
+      & > span:nth-of-type(2) {
+        position: relative;
+        color: grey;
+        font-weight: normal;
       }
     }
   }
 `;
 
-const ContributionContainer = styled.ul`
-  & + & {
-    margin-top: 10px;
+const ContributionContainer = styled.div`
+  ${fontSize.contentFontSize16}
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 20px;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
   }
 
-  p {
-    font-weight: bold;
-    margin-bottom: 10px;
+  & + & {
+    margin-top: 20px;
   }
 
   li {
-    margin-left: 35px;
+    margin-left: 30px;
     list-style: disc;
     line-height: 1.8;
   }
+
+  li + ul {
+    margin-left: 14px;
+
+    & > li {
+      list-style: circle;
+    }
+  }
+`;
+
+const ContributionDateBox = styled.div`
+  background-color: ${subColor};
+  padding: 10px;
+  border-radius: 5px;
+  grid-row: 1/3;
+
+  & > p:nth-of-type(1) {
+    font-weight: bold;
+  }
+
+  @media (max-width: 640px) {
+    grid-row: unset;
+  }
+`;
+
+const ContributionContentBox = styled.ul`
+  background-color: ${mainColor};
+  padding: 10px;
+  border-radius: 5px;
+  grid-column: 2/3;
+
+  & > p {
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 640px) {
+    grid-column: unset;
+  }
+`;
+
+const ContributionDescriptionBox = styled.div`
+  padding: 10px;
+  border-radius: 5px;
+  background-color: ${mainColor};
 `;

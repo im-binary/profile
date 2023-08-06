@@ -7,22 +7,93 @@
       "period": "2022.12",
       "contributions": [
         {
-          "title": "디자인시스템의 컴포넌트 개발 및 오류 수정",
+          "contributionDate": "2023.05.17 ~",
+          "contributionDescription": "레거시 TDS-PC 패키지의 컴포넌트를 css in js 기반으로 다시 구성한 TDS-Desktop 패키지 개발, 운영, 유지보수에 기여",
+          "title": "TDS-Desktop (Toss Design System Desktop)",
           "contents": [
-            "디자이너가 제보한 컴포넌트 디자인 불일치 픽스 및 요청사항 추가 반영",
-            "새롭게 요청된 컴포넌트의 디자인을 CSS에 반영",
-            "새롭게 추가된 컴포넌트 개발",
-            "패널에 전체적인 변경점이 생겼을 때 기존 패널을 새로운 패널로 마이그레이션 (패널: 컴포넌트를 조작할 수 있는 컨트롤러)"
+            {
+              "contentTitle": "TDS-PC 패키지의 컴포넌트를 TDS-Desktop 패키지로 마이그레이션"
+            },
+            {
+              "contentTitle": "컴포넌트 유지보수 및 전면 개편",
+              "contentDescription": [
+                "Headless 기반의 radix-ui 라이브러리를 이용하여 컴포넌트 구현",
+                "키보드로 조작할 수 있도록 유저의 접근성 개선",
+                "테스트 코드를 짜기 쉬운 컴포넌트로 개선"
+              ]
+            },
+            {
+              "contentTitle": "테스크 코드 작성",
+              "contentDescription": [
+                "`jest`, `@testing-library/user-event` , `@testing-library/react` 를 활용한 유저 인터렉션 테스트 코드"
+              ]
+            },
+            {
+              "contentTitle": "스토리북을 통해 개발자를 위한 TDS Desktop 패키지의 컴포넌트 스펙 문서화"
+            }
           ]
         },
         {
-          "title": "디자이너 생산성을 위한 Framer Chrome Extension 개발",
+          "contributionDate": "2023.02.14 ~",
+          "contributionDescription": "Framer 디자인툴에서 TDS-PC 패키지의 컴포넌트를 사용하여 디자인을 할 수 있도록 Framer용 컴포넌트 개발 및 유지보수에 기여",
+          "title": "Framer용 TDS-PC",
           "contents": [
-            "Markdown 이 생소한 작업자를 위한 Markdown 가이드 View 개발",
-            "내부 정적 리소스를 검색하고 정보를 확인할 수 있는 View 개발",
-            "컴포넌트의 라이트/다크 모드 확인할 수 있는 기능 개발",
-            "컴포넌트의 큰 글씨 모드를 확인할 수 있는 기능 개발",
-            "컴포넌트에서 사용되는 리소스 사용 사례 가이드를 보여주는 토스트 개발"
+            {
+              "contentTitle": "Framer 컴포넌트 구현과 컴포넌트 패널 구현"
+            },
+            {
+              "contentTitle": "Framer 전체 프로젝트 컴포넌트의 패널 마이그레이션",
+              "contentDescription": [
+                "컴포넌트를 조작할 수 있는 패널에 변경 사항이 생기면 해당 컴포넌트의 패널을 마이그레이션하는 코드 작성"
+              ]
+            },
+            {
+              "contentTitle": "테스크 코드 작성",
+              "contentDescription": [
+                "`jest`, `@testing-library/user-event` , `@testing-library/react` 를 활용한 유저 인터렉션 테스트 코드"
+              ]
+            },
+            {
+              "contentTitle": "스토리북을 통해 개발자를 위한 TDS-Desktop 패키지의 컴포넌트 스펙 문서화"
+            }
+          ]
+        },
+        {
+          "contributionDate": "2023.02.14 ~",
+          "contributionDescription": "토스 디자인 시스템의 PC 전용 컴포넌트 라이브러리의 컴포넌트 개발 및 유지보수에 기여",
+          "title": "TDS-PC (Toss Design System PC)",
+          "contents": [
+            {
+              "contentTitle": "컴포넌트 개발 및 개편"
+            },
+            {
+              "contentTitle": "기존 컴포넌트 유지보수 및 크로스브라우징 대응"
+            }
+          ]
+        },
+        {
+          "contributionDate": "2023.01.02 ~ 2023.02.14",
+          "contributionDescription": "Framer 디자인 툴을 사용하는 디자이너의 생산성을 극대화시켜주는 토스 크롬 익스텐션의 기능 개발 및 유지보수에 기여",
+          "title": "XT (Toss Framer Chrome Extension)",
+          "contents": [
+            {
+              "contentTitle": "새로운 기능 개발",
+              "contentDescription": [
+                "디자이너를 위한 마크다운 치트시트 패널 추가",
+                "토스에서 사용하는 리소스(이모지, 로띠, mp4 등)을 검색하고 url을 복사할 수 있는 모달 추가",
+                "Framer 프로젝트에서 사용하는 컴포넌트들의 다크모드와 라이트모드를 테스트 할 수 있는 토글 추가",
+                "Framer 프로젝트에서 사용하는 컴포넌트들의 큰글씨모드를 테스트 할 수 있는 슬라이더 추가",
+                "토스에서 사용되는 리소스(이미지, 로띠, mp4 등)가 어떤 상황에 쓰여야 하는지 가이드해주는 토스트 추가"
+              ]
+            },
+            {
+              "contentTitle": "구조 개선 및 리팩토링",
+              "contentDescription": [
+                "react-query, Suspense 도입하여 리소스 검색시 초기 로딩 개선",
+                "중복 코드 컴포넌트화 (CopyButton)",
+                "`chrome.storage` / `localStorage` 의 key를 공통 관리할 수 있도록 개선하고 복잡하고 반복적인 코드를 추상화하여 인터페이스 개선"
+              ]
+            }
           ]
         }
       ]
