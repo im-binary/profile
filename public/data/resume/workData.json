@@ -23,7 +23,7 @@
               ]
             },
             {
-              "contentTitle": "테스크 코드 작성",
+              "contentTitle": "테스트 코드 작성",
               "contentDescription": [
                 "`jest`, `@testing-library/user-event` , `@testing-library/react` 를 활용한 유저 인터렉션 테스트 코드"
               ]
@@ -46,15 +46,6 @@
               "contentDescription": [
                 "컴포넌트를 조작할 수 있는 패널에 변경 사항이 생기면 해당 컴포넌트의 패널을 마이그레이션하는 코드 작성"
               ]
-            },
-            {
-              "contentTitle": "테스크 코드 작성",
-              "contentDescription": [
-                "`jest`, `@testing-library/user-event` , `@testing-library/react` 를 활용한 유저 인터렉션 테스트 코드"
-              ]
-            },
-            {
-              "contentTitle": "스토리북을 통해 개발자를 위한 TDS-Desktop 패키지의 컴포넌트 스펙 문서화"
             }
           ]
         },
