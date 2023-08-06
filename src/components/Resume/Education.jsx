@@ -67,7 +67,6 @@ const educationContainer = (theme) => css`
     grid-template-columns: 1fr 1fr 60px;
     gap: 5px 10px;
     ${fontSize.contentFontSize16};
-    overflow: scroll;
   }
 
   li {

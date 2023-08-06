@@ -83,7 +83,6 @@ const infoContainer = (theme) => css`
 
   ul {
     width: 40%;
-    overflow: scroll;
     border-left-color: ${theme === "light" ? grayBorder : whiteBorder};
     border-left-width: 10px;
     border-left-style: solid;

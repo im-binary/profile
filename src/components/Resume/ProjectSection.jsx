@@ -187,7 +187,7 @@ const ProjectSummary = styled.div`
   padding: 10px;
   height: 100px;
   margin-top: 16px;
-  overflow: scroll;
+  overflow-y: scroll;
   white-space: pre-wrap;
   word-break: keep-all;
 `;
