@@ -35,11 +35,11 @@ export default function Work() {
                     </ContributionDateBox>
 
                     <ContributionDescriptionBox>
-                      <p>🌈 {contribution.contributionDescription}</p>
+                      <p>✨ {contribution.title}</p>
+                      <p>{contribution.contributionDescription}</p>
                     </ContributionDescriptionBox>
 
                     <ContributionContentBox>
-                      <p>✨ {contribution.title}</p>
                       {contribution.contents.map((content, index) => (
                         <Fragment key={index}>
                           <li>{content.contentTitle}</li>
@@ -159,7 +159,8 @@ const ContributionDateBox = styled.div`
   }
 
   @media (max-width: 640px) {
-    grid-row: unset;
+    grid-row: 2/3;
+    margin-left: 20px;
   }
 `;
 
@@ -169,19 +170,19 @@ const ContributionContentBox = styled.ul`
   border-radius: 5px;
   grid-column: 2/3;
 
-  & > p {
-    font-weight: bold;
-    font-size: 17px;
-    margin-bottom: 10px;
-  }
-
   @media (max-width: 640px) {
     grid-column: unset;
+    margin-left: 20px;
   }
 `;
 
 const ContributionDescriptionBox = styled.div`
+  font-weight: bold;
   padding: 10px;
   border-radius: 5px;
   background-color: ${mainColor};
+
+  & > p:nth-of-type(2) {
+    font-weight: normal;
+  }
 `;
