@@ -62,6 +62,9 @@ export const fontSize = {
   contentFontSize16: css`
     font-size: 1.6rem;
   `,
+  contentFontSize20: css`
+    font-size: 2rem;
+  `,
   contentFontSize30: css`
     font-size: 3rem;
   `,
