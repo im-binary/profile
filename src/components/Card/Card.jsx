@@ -26,12 +26,5 @@ const cardCss = (theme) => css`
   transition: all 0.5s;
   overflow: hidden;
   cursor: pointer;
-
-  &:nth-of-type(2n - 1) {
-    border-radius: 0 40px 0 40px;
-  }
-
-  &:nth-of-type(2n) {
-    border-radius: 40px 0 40px 0;
-  }
+  border-radius: 40px;
 `;

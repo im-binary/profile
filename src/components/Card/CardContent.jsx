@@ -11,6 +11,7 @@ export default function CardContent({ ready, children, ...props }) {
 
 const cardContentCss = css`
   position: relative;
+  overflow: hidden;
 
   & > img {
     display: block;
