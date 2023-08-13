@@ -14,7 +14,7 @@ const printStyle = css`
     // Work 컴포넌트
     article[name="Work"] {
       @media print {
-        margin-top: 120px;
+        /* margin-top: 120px; */
         page-break-before: always;
       }
     }
@@ -65,13 +65,13 @@ const printStyle = css`
     // ProjectSection 컴포넌트
     article[name="ProjectSection"] {
       color: red;
-      margin-top: 120px;
+      /* margin-top: 120px; */
       page-break-before: always;
     }
 
     // Contribute 컴포넌트
     article[name="Contribute"] {
-      margin-top: 120px;
+      /* margin-top: 120px; */
       page-break-before: always;
 
       ul {
@@ -126,7 +126,7 @@ const defaultType = css`
 
     // ProfileImage 컴포넌트
     article[name="Education"] {
-      margin-top: 120px;
+      /* margin-top: 120px; */
       page-break-before: always;
     }
 
@@ -141,14 +141,14 @@ const defaultType = css`
       page-break-before: always; */
 
       li:nth-of-type(4) {
-        margin-top: 120px;
+        /* margin-top: 120px; */
         page-break-before: always;
       }
     }
 
     // ProjectSection 컴포넌트
     article[name="ProjectSection"] {
-      margin-top: 120px;
+      /* margin-top: 120px; */
       page-break-before: always;
     }
   }
@@ -167,13 +167,13 @@ const onlyResumeType = css`
       page-break-before: always; */
 
       li:nth-of-type(4) {
-        margin-top: 120px;
+        /* margin-top: 120px; */
         page-break-before: always;
       }
     }
     // ProjectSection 컴포넌트
     article[name="ProjectSection"] {
-      margin-top: 120px;
+      /* margin-top: 120px; */
       page-break-before: always;
     }
   }
