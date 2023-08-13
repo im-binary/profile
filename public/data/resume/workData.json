@@ -81,7 +81,7 @@
               "contentTitle": "구조 개선 및 리팩토링",
               "contentDescription": [
                 "react-query, Suspense 도입하여 리소스 검색시 초기 로딩 개선",
-                "중복 코드 컴포넌트화 (CopyButton)",
+                "중복 코드 컴포넌트화 (e.g. CopyButton)",
                 "`chrome.storage` / `localStorage` 의 key를 공통 관리할 수 있도록 개선하고 복잡하고 반복적인 코드를 추상화하여 인터페이스 개선"
               ]
             }
