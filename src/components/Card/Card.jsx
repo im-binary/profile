@@ -26,5 +26,5 @@ const cardCss = (theme) => css`
   transition: all 0.5s;
   overflow: hidden;
   cursor: pointer;
-  border-radius: 40px;
+  border-radius: 14px;
 `;
