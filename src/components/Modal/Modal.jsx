@@ -8,6 +8,7 @@ import {
   dialogOverlayCss,
   dialogTitleCss,
 } from "./styles";
+import { useTheme } from "../../hooks/theme";
 
 export default function Modal({ children, ...modalProps }) {
   return <Dialog.Root {...modalProps}>{children}</Dialog.Root>;
@@ -22,10 +23,12 @@ export const ModalTrigger = ({ children, ...triggerProps }) => {
 };
 
 export const ModalContent = ({ children, ...modalContentProps }) => {
+  const [theme] = useTheme();
+
   return (
     <Dialog.Portal>
       <Dialog.Overlay css={dialogOverlayCss} />
-      <Dialog.Content css={dialogContentCss} {...modalContentProps}>
+      <Dialog.Content css={dialogContentCss({ theme })} {...modalContentProps}>
         {children}
       </Dialog.Content>
     </Dialog.Portal>
@@ -33,25 +36,31 @@ export const ModalContent = ({ children, ...modalContentProps }) => {
 };
 
 export const ModalTitle = ({ children, ...modalTitleProps }) => {
+  const [theme] = useTheme();
+
   return (
-    <Dialog.Title css={dialogTitleCss} {...modalTitleProps}>
+    <Dialog.Title css={dialogTitleCss({ theme })} {...modalTitleProps}>
       {children}
     </Dialog.Title>
   );
 };
 
 export const ModalDescription = ({ children, ...modalDescriptionProps }) => {
+  const [theme] = useTheme();
+
   return (
-    <Dialog.Description css={dialogDescriptionCss} {...modalDescriptionProps}>
+    <Dialog.Description css={dialogDescriptionCss({ theme })} {...modalDescriptionProps}>
       {children}
     </Dialog.Description>
   );
 };
 
 export const ModalClose = ({ children, ...modalCloseProps }) => {
+  const [theme] = useTheme();
+
   return (
     <Dialog.Close asChild>
-      <button css={dialogCloseButtonCss} aria-label='Close' {...modalCloseProps}>
+      <button css={dialogCloseButtonCss({ theme })} aria-label='Close' {...modalCloseProps}>
         {children}
       </button>
     </Dialog.Close>

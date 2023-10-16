@@ -21,7 +21,6 @@ export default function RabbitComponent() {
 
 const rabbitTitleCss = css`
   ${fontSize.contentFontSize16};
-  color: #000;
   font-weight: 700;
   margin: 20px 0;
   text-align: center;
