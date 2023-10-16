@@ -23,10 +23,10 @@ export function PieceList() {
             })
           }
         >
-          <Card.Title css={cardCss}>🐰 CSS로 만든 토끼</Card.Title>
           <Card.Content>
             <img src='/images/piece/example-rabbit.png' alt='rabbit' />
           </Card.Content>
+          <Card.Title css={cardCss}>🐰 CSS로 만든 토끼</Card.Title>
         </Card>
         <Card
           onClick={() =>
@@ -36,10 +36,10 @@ export function PieceList() {
             })
           }
         >
-          <Card.Title css={cardCss}>⚫️ 올록볼록 UI</Card.Title>
           <Card.Content>
             <img src='/images/piece/example-calc.png' alt='calculator' />
           </Card.Content>
+          <Card.Title css={cardCss}>⚫️ 올록볼록 UI</Card.Title>
         </Card>
       </CardWrapper>
     </section>
