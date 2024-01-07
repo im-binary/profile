@@ -29,13 +29,13 @@ export default function Work() {
               </div>
               <div>
                 {work.contributions.map((contribution, index) => (
-                  <ContributionContainer key={index}>
+                  <ContributionContainer className="print-work-container" key={index}>
                     <ContributionDateBox>
-                      <p>{contribution.contributionDate}</p>
+                      <p className="print-bold-text">{contribution.contributionDate}</p>
                     </ContributionDateBox>
 
                     <ContributionDescriptionBox>
-                      <p>✨ {contribution.title}</p>
+                      <p className="print-bold-text">✨ {contribution.title}</p>
                       <p>{contribution.contributionDescription}</p>
                     </ContributionDescriptionBox>
 

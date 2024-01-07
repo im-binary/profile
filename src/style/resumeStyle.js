@@ -2,7 +2,8 @@ import { css } from "@emotion/react";
 
 const printStyle = css`
   @media print {
-    padding: 40px;
+    padding: 20px;
+    max-width: 100%;
 
     // Name 컴포넌트
     article[name="Name"] > h1 {
@@ -15,12 +16,33 @@ const printStyle = css`
     article[name="Work"] {
       @media print {
         /* margin-top: 120px; */
-        page-break-before: always;
+        .print-work-container {
+          grid-template-columns: 110px 1fr !important;
+          gap: 5px !important;
+          & > div {
+            padding: 2px !important;
+          }
+        }
+
+        .work-item-title {
+          & * {
+            font-weight: bold !important;
+          }
+
+        }
+
+        .print-bold-text {
+          font-weight: bold !important;
+          font-size: 1.8rem !important;
+        }
       }
     }
 
     // ProjectSection 컴포넌트
     article[name="ProjectSection"] {
+      @media print {
+        page-break-before: always;
+      }
       > div {
         display: block;
 
