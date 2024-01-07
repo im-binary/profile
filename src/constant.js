@@ -1,5 +1,5 @@
 export const URLs = {
-  email: "mailto:pongpong0121@kakao.com",
+  email: "mailto:imbinary.dev@gmail.com",
   github: "https://github.com/im-binary",
   velog: "https://velog.io/@pongdang",
   profile: "https://profile.pongdang.me/resume",

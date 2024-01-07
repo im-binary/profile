@@ -31,7 +31,7 @@ export default function Info() {
         <ul>
           <li>
             <a href={URLs.email} target='_blank' rel='noreferrer'>
-              ✉️ <span>pongpong0121@kakao.com</span>
+              ✉️ <span>imbinary.dev@gmail.com</span>
             </a>
           </li>
           <li>
