@@ -17,7 +17,7 @@
             {
               "contentTitle": "컴포넌트 유지보수 및 전면 개편",
               "contentDescription": [
-                "Headless 기반의 radix-ui 라이브러리를 이용하여 컴포넌트 구현",
+                "Headless 기반의 radix-ui 라이브러리를 이용하여 컴포넌트 구현 (e.g. `Drawer`, `YearPicker`, `Slider`, `Stepper`, ﹒﹒﹒)",
                 "키보드로 조작할 수 있도록 유저의 접근성 개선",
                 "테스트 코드를 짜기 쉬운 컴포넌트로 개선"
               ]
@@ -30,6 +30,12 @@
             },
             {
               "contentTitle": "스토리북을 통해 개발자를 위한 TDS Desktop 패키지의 컴포넌트 스펙 문서화"
+            },
+            {
+              "contentTitle": "jscodeshift 를 이용한 TDS-PC 패키지의 컴포넌트를 TDS-Desktop 패키지로 마이그레이션 기능 지원"
+            },
+            {
+              "contentTitle": "디자인 시스템 개발에 유용한 유틸 함수 패키지 (tds-desktop-css-utils) 개발"
             }
           ]
         },
