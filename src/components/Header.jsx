@@ -60,7 +60,7 @@ export function Header() {
           </li>
         )}
         <li className={`github-repository-link ${!resume ? "home" : ""}`}>
-          <a href='https://github.com/pongdang/profile' target='_blank' rel='noreferrer'>
+          <a href='https://github.com/im-binary/profile' target='_blank' rel='noreferrer'>
             <GithubIcon />
           </a>
         </li>

@@ -10,7 +10,7 @@
         "id": "1",
         "name": ["JavaScript", "React", "Next.js", "emotion", "styled-components", "React Redux", "HTML", "CSS"]
       },
-      "repositoryLink": "https://github.com/pongdang/pongdang.today",
+      "repositoryLink": "https://github.com/im-binary/pongdang.today",
       "projectImage": "/images/project/blog.png",
       "projectLink": "https://pongdang-today.vercel.app",
       "troubleshootLink": "https://pong-dang.notion.site/28f3ea78c7b74aadb1d7fa2a6bc272eb?v=1ade1d2dc741401eb08429175706e9f2"
@@ -22,7 +22,7 @@
       "period": "2022.07.18",
       "summary": "giphy API를 이용한 짤 검색 프로젝트입니다.\n무한 스크롤과 masonry Grid UI로 핀터레스트와 같은 UX를 주었습니다.",
       "teckStack": { "id": "2", "name": ["React", "styled-components", "HTML", "CSS"] },
-      "repositoryLink": "https://github.com/pongdang/cat-project",
+      "repositoryLink": "https://github.com/im-binary/search-jjal",
       "projectImage": "/images/project/jjal.png",
       "projectLink": "https://search-jjal.vercel.app/"
     },
@@ -32,7 +32,7 @@
       "period": "2022.09.07 ~ 2022.10.12",
       "summary": "(현재는 서버를 내린 상태 입니다 🥲) \n코드스테이츠 과정에서 팀 프로젝트로 제작된 강아지의 사회성 향상을 위한 로컬 산책 모임 플랫폼입니다. 모임 상세페이지와 모임 작성 페이지, 로그인, 각종 모달을 구현하였습니다. ",
       "teckStack": { "id": "4", "name": ["Next.js", "react-query", "Recoil", "emotion", "HTML", "CSS"] },
-      "repositoryLink": "https://github.com/codestates-seb/seb39_main_026",
+      "repositoryLink": "https://github.com/project-sancheck/sancheck",
       "projectImage": "/images/project/walk.png",
       "projectLink": "https://sancheck.vercel.app/walks/1",
       "troubleshootLink": "https://pong-dang.notion.site/28f3ea78c7b74aadb1d7fa2a6bc272eb?v=4593b9711f944a2da2449bf08896989f"
@@ -43,7 +43,7 @@
       "period": "2022.10.12 ~ 2022.10.16",
       "summary": "3rd party 라이브러리 없이 만든 순수 todo App 입니다.\nSuspense와 ErrorBoundary를 활용해 깔끔하게 코드를 작성했습니다.",
       "teckStack": { "id": "4", "name": ["React", "context API", "emotion", "HTML", "CSS"] },
-      "repositoryLink": "https://github.com/pongdang/modern-todo",
+      "repositoryLink": "https://github.com/im-binary/modern-todo",
       "projectImage": "/images/project/todo.png",
       "projectLink": "https://todo.pongdang.today/todo",
       "troubleshootLink": "https://pong-dang.notion.site/28f3ea78c7b74aadb1d7fa2a6bc272eb?v=09d738d29c484f7f9da05bec6e9d1517"

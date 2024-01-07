@@ -146,7 +146,7 @@
         "id": "1",
         "name": ["HTML", "CSS", "JavaScript", "React", "Next.js", "emotion", "styled-components", "React Redux"]
       },
-      "repositoryLink": "https://github.com/pongdang/pongdang.today",
+      "repositoryLink": "https://github.com/im-binary/pongdang.today",
       "projectImage": "/images/project/today.png",
       "projectLink": "https://pongdang-today.vercel.app"
     }

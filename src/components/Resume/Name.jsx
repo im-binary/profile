@@ -12,7 +12,7 @@ export default function Name() {
       <h1>
         전이진 (
         <a href={URLs.github} target='_blank' rel='noreferrer'>
-          @pongdang
+          @im-binary
         </a>
         )
       </h1>
