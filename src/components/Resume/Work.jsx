@@ -5,6 +5,7 @@ import { useTheme } from "../../hooks/theme";
 import { garyTitleBorderBottom, fontSize, whiteTitleBorderBottom, mainColor, subColor } from "../../style/main";
 import { useFetch } from "../../hooks/fetch";
 import { Fragment } from "react";
+import {calc재직개월수} from "../../utils/calc재직개월수";
 
 export default function Work() {
   const fetchUrl = "/data/resume/workData.json";
@@ -25,6 +26,7 @@ export default function Work() {
                 <p>
                   <span>{work.companyName}</span>
                   <span>{work.task}</span>
+                  <span>({calc재직개월수(work.period)})</span>
                 </p>
               </div>
               <div>
@@ -114,6 +116,11 @@ const WorkItem = styled.li`
         position: relative;
         color: grey;
         font-weight: normal;
+      }
+
+      & > span:nth-of-type(3) {
+        font-size: 1.4rem;
+        margin: auto 0;
       }
     }
   }
