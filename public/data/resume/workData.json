@@ -4,10 +4,10 @@
       "id": 1,
       "companyName": "비바리퍼블리카",
       "task": "UX Engineer Assistant",
-      "period": "2022.12",
+      "period": ["2022-12", "2024-03"],
       "contributions": [
         {
-          "contributionDate": "2023.05.17 ~",
+          "contributionDate": "2023.05.17 ~ 2024.03.15",
           "contributionDescription": "레거시 TDS-PC 패키지의 컴포넌트를 css in js 기반으로 다시 구성한 TDS-Desktop 패키지 개발, 운영, 유지보수에 기여",
           "title": "TDS-Desktop (Toss Design System Desktop)",
           "contents": [
@@ -40,7 +40,7 @@
           ]
         },
         {
-          "contributionDate": "2023.02.14 ~",
+          "contributionDate": "2023.02.14 ~ 2024.03.15",
           "contributionDescription": "Framer 디자인툴에서 TDS-PC 패키지의 컴포넌트를 사용하여 디자인을 할 수 있도록 Framer용 컴포넌트 개발 및 유지보수에 기여",
           "title": "Framer용 TDS-PC",
           "contents": [
@@ -56,7 +56,7 @@
           ]
         },
         {
-          "contributionDate": "2023.02.14 ~",
+          "contributionDate": "2023.02.14 ~ 2024.03.15",
           "contributionDescription": "토스 디자인 시스템의 PC 전용 컴포넌트 라이브러리의 컴포넌트 개발 및 유지보수에 기여",
           "title": "TDS-PC (Toss Design System PC)",
           "contents": [

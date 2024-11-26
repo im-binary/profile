@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
-import { URLs } from "../../constant";
+import { css } from '@emotion/react';
+import { URLs } from '../../constant';
 import {
   fontSize,
   grayBorder,
@@ -8,47 +8,52 @@ import {
   mainColor,
   whiteBorder,
   whiteNormalBorderBottom,
-} from "../../style/main";
-import { useTheme } from "../../hooks/theme";
-import { UpdateDate } from "../UpdateDate";
-import { Hits } from "../Hits";
+} from '../../style/main';
+import { useTheme } from '../../hooks/theme';
+import { UpdateDate } from '../UpdateDate';
+import { Hits } from '../Hits';
 
 export default function Info() {
   const [theme] = useTheme();
 
   return (
-    <article name='Info' css={infoContainer(theme)}>
+    <article name="Info" css={infoContainer(theme)}>
       <Hits />
 
-      <UpdateDate yyyymmdd={"20230806"} />
+      <UpdateDate yyyymmdd={'20241126'} />
 
       <section>
-        <p className='description'>
+        <p className="description">
           <span>🙌</span>
           <span>어제보다 오늘이 더 나은 프론트엔드 개발자, 전이진입니다.</span>
         </p>
 
         <ul>
           <li>
-            <a href={URLs.email} target='_blank' rel='noreferrer'>
+            <a href={URLs.email} target="_blank" rel="noreferrer">
               ✉️ <span>imbinary.dev@gmail.com</span>
             </a>
           </li>
           <li>
-            <a href={URLs.github} target='_blank' rel='noreferrer'>
-              👩‍💻 <span className='no-print'>GitHub</span>
-              <span className='print'>{URLs.github}</span>
+            <a href={URLs.github} target="_blank" rel="noreferrer">
+              👩‍💻 <span className="no-print">GitHub</span>
+              <span className="print">{URLs.github}</span>
             </a>
           </li>
           <li>
-            <a href={URLs.velog} target='_blank' rel='noreferrer'>
-              ✏️ <span className='no-print'>Velog</span>
-              <span className='print'>{URLs.velog}</span>
+            <a href={URLs.velog} target="_blank" rel="noreferrer">
+              ✏️ <span className="no-print">Velog</span>
+              <span className="print">{URLs.velog}</span>
             </a>
           </li>
           <li>
-            <a className='print' href={URLs.profile} target='_blank' rel='noreferrer'>
-              🙋‍♀️ <span className='print'>{URLs.profile}</span>
+            <a
+              className="print"
+              href={URLs.profile}
+              target="_blank"
+              rel="noreferrer"
+            >
+              🙋‍♀️ <span className="print">{URLs.profile}</span>
             </a>
           </li>
         </ul>
@@ -67,7 +72,7 @@ const infoContainer = (theme) => css`
   }
 
   .description {
-    border-left-color: ${theme === "light" ? grayBorder : whiteBorder};
+    border-left-color: ${theme === 'light' ? grayBorder : whiteBorder};
     border-left-width: 10px;
     border-left-style: solid;
     padding: 10px 20px;
@@ -83,7 +88,7 @@ const infoContainer = (theme) => css`
 
   ul {
     width: 40%;
-    border-left-color: ${theme === "light" ? grayBorder : whiteBorder};
+    border-left-color: ${theme === 'light' ? grayBorder : whiteBorder};
     border-left-width: 10px;
     border-left-style: solid;
     padding: 10px 20px;
@@ -99,7 +104,7 @@ const infoContainer = (theme) => css`
 
       a span {
         margin-right: 10px;
-        ${theme === "light" ? grayNormalBorderBottom : whiteNormalBorderBottom};
+        ${theme === 'light' ? grayNormalBorderBottom : whiteNormalBorderBottom};
       }
     }
   }

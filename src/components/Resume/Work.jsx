@@ -1,39 +1,54 @@
 /** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
-import styled from "@emotion/styled";
-import { useTheme } from "../../hooks/theme";
-import { garyTitleBorderBottom, fontSize, whiteTitleBorderBottom, mainColor, subColor } from "../../style/main";
-import { useFetch } from "../../hooks/fetch";
-import { Fragment } from "react";
-import {calc재직개월수} from "../../utils/calc재직개월수";
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
+import { useTheme } from '../../hooks/theme';
+import {
+  garyTitleBorderBottom,
+  fontSize,
+  whiteTitleBorderBottom,
+  mainColor,
+  subColor,
+} from '../../style/main';
+import { useFetch } from '../../hooks/fetch';
+import { Fragment } from 'react';
+import { calc재직개월수 } from '../../utils/calc재직개월수';
 
 export default function Work() {
-  const fetchUrl = "/data/resume/workData.json";
-  const fetchStorage = "workData";
+  const fetchUrl = '/data/resume/workData.json';
+  const fetchStorage = 'workData';
   const [theme] = useTheme();
 
   const { dataList: workList } = useFetch(fetchUrl, fetchStorage);
 
   return (
-    <article name='Work' css={work(theme)}>
+    <article name="Work" css={work(theme)}>
       <h2>👽 업무 경험</h2>
       <section>
         <ul>
           {workList.map((work) => (
             <WorkItem key={work.id} theme>
-              <div className='work-item-title'>
-                <p>{work.period} ~</p>
+              <div className="work-item-title">
+                <p>
+                  {work.period[0]} ~ {work.period[1]}
+                </p>
                 <p>
                   <span>{work.companyName}</span>
                   <span>{work.task}</span>
-                  <span>({calc재직개월수(work.period)})</span>
+                  <span>
+                    ({calc재직개월수(work.period[0], work.period[1])})
+                  </span>
                 </p>
               </div>
               <div>
                 {work.contributions.map((contribution, index) => (
-                  <ContributionContainer className="print-work-container" key={index}>
+                  <ContributionContainer
+                    className="print-work-container"
+                    key={index}
+                  >
                     <ContributionDateBox>
-                      <p className="print-bold-text">{contribution.contributionDate}</p>
+                      <p className="print-bold-text">
+                        {contribution.contributionDate}
+                      </p>
                     </ContributionDateBox>
 
                     <ContributionDescriptionBox>
@@ -47,9 +62,11 @@ export default function Work() {
                           <li>{content.contentTitle}</li>
                           {content.contentDescription && (
                             <ul>
-                              {content.contentDescription.map((description, index) => (
-                                <li key={index}>{description}</li>
-                              ))}
+                              {content.contentDescription.map(
+                                (description, index) => (
+                                  <li key={index}>{description}</li>
+                                )
+                              )}
                             </ul>
                           )}
                         </Fragment>
@@ -71,7 +88,7 @@ const work = (theme) => css`
   word-break: keep-all;
 
   h2 {
-    ${theme === "light" ? garyTitleBorderBottom : whiteTitleBorderBottom}
+    ${theme === 'light' ? garyTitleBorderBottom : whiteTitleBorderBottom}
     ${fontSize.contentFontSize30}
   }
 

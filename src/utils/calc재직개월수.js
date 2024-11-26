@@ -3,7 +3,8 @@ export const calc재직개월수 = (startDate, stopDate = new Date()) => {
   const stopDateObj = new Date(stopDate);
 
   const 재직개월수 =
-    (stopDateObj.getFullYear() - startDateObj.getFullYear()) * 12 + (stopDateObj.getMonth() - startDateObj.getMonth());
+    (stopDateObj.getFullYear() - startDateObj.getFullYear()) * 12 +
+    (stopDateObj.getMonth() - startDateObj.getMonth());
 
   if (재직개월수 >= 12) {
     const years = Math.floor(재직개월수 / 12);
